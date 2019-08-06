@@ -1,0 +1,167 @@
+/* 
+
+ Стилизуем первый контейнер. 
+ Секция первая
+
+*/
+
+.intro {
+    padding-bottom: 100px;
+}
+
+.description-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 370px;
+    height: 100%;
+    padding: 20px 0 0;
+}
+
+.description-title {
+    font-size: 50px;
+    line-height: 62px;
+    margin-bottom: 20px;
+}
+
+.description-text {
+    color: #a7a7a7;
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 35px;
+    max-width: 300px;
+}
+
+.description-btn {
+    width: 190px;
+    height: 52px;
+    padding: 18px 35px;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    background-color: #0b0b0b;
+    cursor: pointer;
+    border: 0;
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+    box-sizing: border-box;
+}
+
+.intro-image {
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+
+/* 
+
+ Стилизуем первый контейнер. 
+ Секция вторая
+
+*/
+
+.releases-line {
+    margin-bottom: 45px;
+}
+
+.releases-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 13px;
+    color: #0b0b0b;
+}
+
+.releases-link::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: #0b0b0b;
+    bottom: 10px;
+    left: 0;
+}
+
+.releases-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.releases-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3) ;
+    font-family: "Roboto", serif;
+}
+
+.releases-image {
+    max-width: 150px;
+    height: 140px;
+}
+
+.releases-item p {
+    margin-bottom: 0;
+}
+
+.releases-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0b0b0b;
+}
+
+.releases-value {
+    margin-top: 4px;
+    color: #a7a7a7;
+    font-size: 13px;
+}
+
+.releases-cost {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 992px) {
+
+    .description-column {
+        text-align: center;
+    }
+
+    .description-title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .description-text {
+        font-size: 14px;
+        margin: 0 auto 35px;
+        max-width: 300px;
+    }
+
+    .description-btn {
+        margin: 0 auto;
+    }
+
+    .releases-container {
+        /* justify-content: space-around; */
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 568px) {
+
+    .releases-item {
+        width: calc(100% / 2) ;
+    }
+
+    .releases-image {
+        width: 120px;
+    }
+
+}

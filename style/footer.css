@@ -1,0 +1,81 @@
+
+
+/* Общие стили для подвала */
+
+.footer {
+    
+    background: #0a0a0a;
+    color: #777777;
+}
+
+.footer-container {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo-link, .footer-logo {
+    height: 100%;
+}
+
+/* Стилизация меню футера */
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: #7e7e7e;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+/* Сслыки на социальные сети */
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} 
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0;
+}
+
+.social-link {
+    height: 100%;
+    padding: 0 15px;
+    color: #7e7e7e;
+}
+
+.social-link:last-child {
+    padding-right: 0;
+}
+
+.fab {
+    font-size: 24px;
+}
+
+.footer-text {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .footer-logo-container, .footer-socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-link:last-child {
+        padding-right: 15px;
+    }
+}
