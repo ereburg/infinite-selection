@@ -19,60 +19,48 @@
 
 
     <header class="header fixed-top">
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="navbar navbar-expand-md navbar-light bg-white">
-                            <a class="navbar-brand brand-logo" href="#"></a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+        <div class="container ">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                        <a class="basket-icon d-flex d-lg-none" href="#"></a>
+                        <a class="navbar-brand brand-logo" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon" id="mobileMenu"></span>
+                        </button>
 
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Browse Sneakers <span
-                                                class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">How We Clean</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Ways to Rent
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Authenticity Guarantee</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <div class="authorization-layout">
-                                <a class="nav-text" href="#">Login</a>
-                                <a class="search-icon" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="mx-3" focusable="false" role="img">
-                                        <title>Search</title>
-                                        <circle cx="10.5" cy="10.5" r="7.5"></circle>
-                                        <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
-                                    </svg>
-                                </a>
-                                <a class="basket-icon" href="#"></a>
-                            </div>
-                        </nav>
-                    </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#">Browse Sneakers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">How We Clean</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#">Ways to Rent</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Authenticity Guarantee</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="authorization-layout d-none d-lg-flex">
+                            <a class="authorization-text" href="#">Login</a>
+                            <a class="search-icon" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="mx-3" focusable="false" role="img">
+                                    <title>Search</title>
+                                    <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                                    <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
+                                </svg>
+                            </a>
+                            <a class="basket-icon" href="#"></a>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -80,75 +68,266 @@
 
     <main class="main">
 
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row intro">
-                    <div class="col-lg-4 order-2 order-lg-1">
-                        <div class="description-column">
-                            <h1 class="description-title">
-                                Rent Authentic Sneakers
-                            </h1>
-                            <p class="description-text">
-                                Rent Collectable Sneakers From Top Brands Like Nike, Air Jordan, Adidas and More
-                            </p>
-                            <a href="#" class="description-btn">Rent Now</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 order-1 order-lg-2">
-                        <img class="intro-image" src="images/intro/intro-image.gif" alt="">
+        <div class="container">
+            <div class="row intro">
+                <div class="col-lg-4 order-2 order-lg-1">
+                    <div class="description-column">
+                        <h1 class="description-title">
+                            Rent Authentic Sneakers
+                        </h1>
+                        <p class="description-text">
+                            Rent Collectable Sneakers From Top Brands Like Nike, Air Jordan, Adidas and More
+                        </p>
+                        <a href="#" class="infinite-button mx-auto mx-lg-0">Rent Now</a>
                     </div>
                 </div>
-                <div class="row releases">
-                    <div class="col-12 releases-line d-flex justify-content-between">
-                        <h3 class="infinite-title">
-                            New Releases
-                        </h3>
-                        <a class="releases-link" href="#">View All</a>
+                <div class="col-lg-8 order-1 order-lg-2 intro-image-container">
+                    <img class="intro-image" src="images/intro/intro-optimized.gif" alt="">
+                </div>
+            </div>
+            <div class="row releases">
+                <div class="col-12 releases-line d-flex justify-content-between">
+                    <h3 class="infinite-header">
+                        New Releases
+                    </h3>
+                    <a class="releases-link" href="#">View All</a>
+                </div>
+                <div class="col-12 releases-container">
+                    <div class="releases-item">
+                        <img class="releases-image" src="images/releases/releases-1.jpg" alt="sneakers">
+                        <p class="releases-title">Adidas Yeezy 500</p>
+                        <p class="releases-value">$330 Value</p>
+                        <p class="releases-cost">$130</p>
                     </div>
-                    <div class="col-12 releases-container">
-                        <div class="releases-item">
-                            <img class="releases-image" src="images/releases/releases-1.png" alt="sneakers">
-                            <p class="releases-title">Adidas Yeezy 500</p>
-                            <p class="releases-value">$330 Value</p>
-                            <p class="releases-cost">$130</p>
-                        </div>
-                        <div class="releases-item">
-                            <img class="releases-image" src="images/releases/releases-2.jpg" alt="sneakers">
-                            <p class="releases-title">Adidas Yeezy 500</p>
-                            <p class="releases-value">$330 Value</p>
-                            <p class="releases-cost">$130</p>
-                        </div>
-                        <div class="releases-item">
-                            <img class="releases-image" src="images/releases/releases-3.jpg" alt="sneakers">
-                            <p class="releases-title">Adidas Yeezy 500</p>
-                            <p class="releases-value">$330 Value</p>
-                            <p class="releases-cost">$130</p>
-                        </div>
-                        <div class="releases-item">
-                            <img class="releases-image" src="images/releases/releases-4.jpg" alt="sneakers">
-                            <p class="releases-title">Adidas Yeezy 500</p>
-                            <p class="releases-value">$330 Value</p>
-                            <p class="releases-cost">$130</p>
-                        </div>
-                        <div class="releases-item">
-                            <img class="releases-image" src="images/releases/releases-5.jpg" alt="sneakers">
-                            <p class="releases-title">Adidas Yeezy 500</p>
-                            <p class="releases-value">$330 Value</p>
-                            <p class="releases-cost">$130</p>
-                        </div>
-                        <div class="releases-item">
-                            <img class="releases-image" src="images/releases/releases-6.jpg" alt="sneakers">
-                            <p class="releases-title">Adidas Yeezy 500</p>
-                            <p class="releases-value">$330 Value</p>
-                            <p class="releases-cost">$130</p>
-                        </div>
+                    <div class="releases-item">
+                        <img class="releases-image" src="images/releases/releases-2.jpg" alt="sneakers">
+                        <p class="releases-title">Adidas Yeezy 500</p>
+                        <p class="releases-value">$330 Value</p>
+                        <p class="releases-cost">$130</p>
+                    </div>
+                    <div class="releases-item">
+                        <img class="releases-image" src="images/releases/releases-3.jpg" alt="sneakers">
+                        <p class="releases-title">Adidas Yeezy 500</p>
+                        <p class="releases-value">$330 Value</p>
+                        <p class="releases-cost">$130</p>
+                    </div>
+                    <div class="releases-item">
+                        <img class="releases-image" src="images/releases/releases-4.jpg" alt="sneakers">
+                        <p class="releases-title">Adidas Yeezy 500</p>
+                        <p class="releases-value">$330 Value</p>
+                        <p class="releases-cost">$130</p>
+                    </div>
+                    <div class="releases-item">
+                        <img class="releases-image" src="images/releases/releases-5.jpg" alt="sneakers">
+                        <p class="releases-title">Adidas Yeezy 500</p>
+                        <p class="releases-value">$330 Value</p>
+                        <p class="releases-cost">$130</p>
+                    </div>
+                    <div class="releases-item">
+                        <img class="releases-image" src="images/releases/releases-6.jpg" alt="sneakers">
+                        <p class="releases-title">Adidas Yeezy 500</p>
+                        <p class="releases-value">$330 Value</p>
+                        <p class="releases-cost">$130</p>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
+        <section class="authenticity">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-xl-9 mx-auto authenticity-text-container">
+                        <h2 class="authenticity-text">
+                            We Feel You, No One Should Ever Spend Money On Fake Sneakers.
+                            Or Have To Spend Hundreds To Rock The Real Ones.
+                        </h2>
+                        <a href="#" class="button-white infinite-button">Authenticity Guarantee</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clean">
+            <h2 class="clean-text">
+                How we clean
+            </h2>
+            <img class="clean-image" src="images/homepage-section/section-clean.jpg" alt="How we clean">
+            <a href="#" class="infinite-link mx-auto mx-lg-0">Learn More</a>
+        </section>
+
+        <section class="action">
+            <h2 class="action-text">
+                Same Sneakers, Better Prices
+            </h2>
+            <a href="#" class="infinite-button action-link">Rent Now</a>
+            <img class="action-image" src="images/homepage-section/section-action.png" alt="How we clean">
+        </section>
+
+        <article class="work-cycle">
+            <div class="container">
+                <section class="work-scheme">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="infinite-header text-center mb-4">How it works</h2>
+                        </div>
+                        <div class="col-md-12 col-lg-4 work-scheme-item">
+                            <h4 class="infinite-header-small mb-3">1. Choose your way to rent</h4>
+                            <p class="infinite-text text-grey">
+                                We offer one-time and unlimited rentals. Our rentals last
+                                either 4 or 8 days. Book rentals days or months in advance.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-lg-4 work-scheme-item">
+                            <h4 class="infinite-header-small mb-3">2. We ship. You enjoy</h4>
+                            <p class="infinite-text text-grey">
+                                Choose the sneakers you want to rent and complete checkout.
+                                We pack and ship the sneakers to you. Your order will arrive
+                                at your door on your rental start date. Enjoy the sneakers for
+                                the length of your rental.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-lg-4 work-scheme-item">
+                            <h4 class="infinite-header-small mb-3">3. Repeat</h4>
+                            <p class="infinite-text text-grey">
+                                Simply return sneakers to us on the due date using the Free return
+                                label provided in the return kit and submit another order.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="advantages-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="infinite-header text-center mt-5 mb-4">
+                                Two Ways
+                                <span class="subheader-text">
+                                    to Become a Sneakerhead
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 advantages-item">
+                            <div class="advantages-item-text">
+                                <h4 class="infinite-header-small mb-3">
+                                    Unlimited Rentals
+                                    <span class="subheader-text-small">
+                                        Price $249/Month
+                                    </span>
+                                </h4>
+                            </div>
+                            <div class="advantages-item-list">
+                                <ul class="advantages-list infinite-text text-grey">
+                                    <li>Rent Any Pair of Sneakers for Free</li>
+                                    <li>Rent Sneakers For 4 or 8 Days</li>
+                                    <li>Rent Sneakers On Rotation</li>
+                                    <li>Free Shipping And Insurance</li>
+                                </ul>
+                            </div>
+                            <div class="advantages-item-action">
+                                <a href="#" class="infinite-button advantages-button">Rent Now</a>
+                                <a href="#" class="infinite-link">Learn More</a>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 advantages-item">
+                            <div class="advantages-item-text">
+                                <h4 class="infinite-header-small mb-3">
+                                    One-Time Rental
+                                    <span class="subheader-text-small">
+                                        Price Starting at $30/Rental
+                                    </span>
+                                </h4>
+                            </div>
+                            <div class="advantages-item-list">
+                                <ul class="advantages-list infinite-text text-grey">
+                                    <li>Reserve SneakersFor Future Plans</li>
+                                    <li>Rent Sneakers For 4 or 8 Days</li>
+                                    <li>Book For As Soon As Tommorow Or Months From Now</li>
+                                    <li>Free Return Shipping</li>
+                                </ul>
+                            </div>
+                            <div class="advantages-item-action">
+                                <a href="#" class="infinite-button advantages-button">Rent Now</a>
+                                <a href="#" class="infinite-link">Learn More</a>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12 col-lg-4 d-none d-lg-block advantages-item">
+                            <img class="advantages-image" src="images/homepage-section/section-ways.jpg"
+                                alt="Our Advantages">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="testimonials">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="infinite-header text-center mt-5 mb-4">
+                                What They Say
+                            </h2>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 testimonials-item">
+                            <div class="testimonials-header">
+                                <img class="testimonials-image" src="images/homepage-section/testimonials-1.jpg" alt="Jessica Johns">
+                                <p class="infinite-header-small">
+                                    Jessica Johns
+                                    <span class="testimonials-date">
+                                        18 hour ago
+                                    </span>
+                                </p>
+                            </div>
+                            <p class="infinite-text text-grey">
+                                Amazing sneakers! Adidas Continental 80 is very well-made.
+                                I have rented it for 3 months and very happy. It's so soft,
+                                comfortable and high quality.
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 testimonials-item">
+                            <div class="testimonials-header">
+                                <img class="testimonials-image" src="images/homepage-section/testimonials-2.jpg" alt="Alex Lawsone">
+                                <p class="infinite-header-small">
+                                    Alex Lawsone
+                                    <span class="testimonials-date">
+                                        13 hour ago
+                                    </span>
+                                </p>
+                            </div>
+                            <p class="infinite-text text-grey">
+                                I'm so exited of my rental. Sneakers is comfortable, refreshing,
+                                funky, and smart-looking. Thank you for good service!
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 testimonials-item">
+                            <div class="testimonials-header">
+                                <img class="testimonials-image" src="images/homepage-section/testimonials-3.jpg" alt="Ygritte Lesley ">
+                                <p class="infinite-header-small">
+                                    Ygritte Lesley 
+                                    <span class="testimonials-date">
+                                        10 hour ago
+                                    </span>
+                                </p>
+                            </div>
+                            <p class="infinite-text text-grey">
+                                Thank you for the quality sneakers and amazing service. I'm satisfied
+                                and happy with my rental and will rent again.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </article>
+
+        <section class="action-2">
+            <h2 class="infinite-title action-2-text">
+                Become the Sneakerhead You've Always Dreamed of
+            </h2>
+            <a href="#" class="infinite-button action-2-link">Rent Now</a>
+            <img class="action-2-image" src="images/homepage-section/section-action-2.png" alt="Lucky You Are!">
+        </section>
 
     </main>
 

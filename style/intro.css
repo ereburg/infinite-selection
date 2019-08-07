@@ -70,8 +70,6 @@
 
 .releases-link {
     position: relative;
-    font-weight: 500;
-    font-size: 13px;
     color: #0b0b0b;
 }
 
@@ -96,7 +94,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100% / 3) ;
     font-family: "Roboto", serif;
 }
 
@@ -126,7 +123,23 @@
     font-size: 12px;
 }
 
+@media (min-width: 993px) and (max-width: 1199px) {
+
+    .releases-item {
+        width: calc(100% / 6);
+    }
+
+}
+
 @media screen and (max-width: 992px) {
+
+    main {
+        overflow: hidden;
+    }
+
+    .releases-item {
+        width: calc((100% / 3) - 30px);
+    }
 
     .description-column {
         text-align: center;
@@ -148,16 +161,26 @@
     }
 
     .releases-container {
-        /* justify-content: space-around; */
         align-content: center;
         flex-wrap: wrap;
         padding: 0;
     }
 }
+
 @media screen and (max-width: 568px) {
 
+    .intro-image-container {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0 25px;
+    }
+    .intro-image {
+        transform: scale(1.2);
+        max-width: 400px;
+    }
+
     .releases-item {
-        width: calc(100% / 2) ;
+        width: calc(100% / 2);
     }
 
     .releases-image {

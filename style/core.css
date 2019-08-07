@@ -3,7 +3,8 @@
     padding: 0;
 }
 
-html, header {
+html,
+header {
     background: rgb(250, 250, 250);
 }
 
@@ -12,20 +13,36 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
- main {
+main {
     position: relative;
     z-index: 10;
     margin-top: 95px;
-} 
-
-.container-custom {
-    max-width: 1270px;
-    margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; font-weight: 700; }
+.container {
+    padding: 0 25px;
+}
 
-li {text-decoration: none; list-style-type: none;}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1190px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
 
 .bg-white {
     background: #fff;
