@@ -19,6 +19,15 @@ main {
     margin-top: 95px;
 }
 
+a {
+    text-decoration: none !important;
+}
+
+/* a:hover,
+a:focus {
+    color: #e74c3c;
+} */
+
 .container {
     padding: 0 25px;
 }
@@ -48,3 +57,15 @@ li {
     background: #fff;
     z-index: 100;
 }
+
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #7e7e7e;
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #7e7e7e;
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #7e7e7e;
+} 

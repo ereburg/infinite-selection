@@ -30,9 +30,14 @@
 
 .footer-link {
     color: #7e7e7e;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     margin: 0 10px;
+    transition: all .3s ease-out;
+}
+
+.footer-link:hover {
+    color: #d3d3d3;
 }
 
 /* Сслыки на социальные сети */
@@ -43,13 +48,93 @@
     align-items: flex-end;
 } 
 
-.social-icons {
+.socials-container {
     display: flex;
     justify-content: flex-end;
-    margin: 15px 0;
+
+    text-align: center;
+    /* margin: 15px 0; */
 }
 
 .social-link {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    /* background: #f1f1f1; */
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    overflow: hidden;
+    color: #7e7e7e;
+}
+
+.social-link:nth-child(2) {
+    margin: 10px 0;
+}
+
+.social-link i {
+    line-height: 40px;
+    font-size: 24px;
+    transition: .2s linear;
+}
+
+.social-link:hover i {
+    transform: scale(1.2);
+    color: #f1f1f1 ;
+    color: #0b0b0b;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: -110%;
+    width: 120%;
+    height: 120%;
+    transform: rotate(45deg);
+    background-color: #7e7e7e;
+}
+
+/* .facebook-link::before {
+    background: #3b5998;
+}
+
+.twitter-link::before {
+    background: #00acee;
+}
+
+.instagram-link::before {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+} */
+
+.social-link:hover::before {
+    animation: socialsIconHover .7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes socialsIconHover {
+    0% {
+        top: 90%;
+        left: -110%;
+    }
+
+    50% {
+        top: -30%;
+        left: 10%;
+    }
+
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
+
+/* .social-link {
     height: 100%;
     padding: 0 15px;
     color: #7e7e7e;
@@ -61,7 +146,7 @@
 
 .fab {
     font-size: 24px;
-}
+} */
 
 .footer-text {
     font-size: 12px;
@@ -74,8 +159,5 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .social-link:last-child {
-        padding-right: 15px;
     }
 }

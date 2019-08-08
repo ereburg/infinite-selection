@@ -110,8 +110,6 @@
         margin: 0 auto;
         text-align: center;
     }
-
-
 }
 
 
@@ -139,6 +137,7 @@
 }
 
 @media screen and (max-width: 768px) {
+
     .work-scheme-item:nth-of-type(3) {
         margin: 0px auto;
     }
@@ -146,6 +145,11 @@
 
 
 /* Advantages section */
+
+.advantages-item {
+    display: grid;
+    grid-template-rows: max-content 110px 57px;
+}
 
 .subheader-text {
     display: block;
@@ -193,6 +197,13 @@
 
 .advantages-image {
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .advantages-item {
+        grid-template-rows: repeat(3, max-content);
+    }
 }
 
 @media screen and (max-width: 374px) {

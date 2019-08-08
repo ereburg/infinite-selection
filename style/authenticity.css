@@ -19,13 +19,6 @@
     color: #fff;
 }
 
-/* Buttons */
-
-.button-white {
-    color: #0b0b0b;
-    background: #fff;
-}
-
 @media screen and (max-width: 992px) {
 
     .authenticity-text {

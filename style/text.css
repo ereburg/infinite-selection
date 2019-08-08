@@ -1,3 +1,6 @@
+/* Major Headings */
+
+
 .infinite-title-main {
     font-size: 50px;
     line-height: 62px;
@@ -13,9 +16,9 @@
     text-transform: capitalize;
 }
 
-/* .infinity-header-large {
 
-} */
+/* Regular Text */
+
 
 .infinite-header {
     font-size: 28px;
@@ -39,13 +42,20 @@
     line-height: 23px;
 }
 
-.infinite-link {
+
+/* Links */
+
+
+.infinite-link,
+.infinite-link-dark {
     color: #7e7e7e;
     font-size: 14px;
     font-weight: 500;
+    transition: all .3s ease-out;
 }
 
-.infinite-link::after {
+.infinite-link::after, 
+.infinite-link-dark::after {
     display: block;
     content: '';
     position: relative;
@@ -55,7 +65,37 @@
     background-color: #7e7e7e;
     bottom: -5px;
     left: 0;
+    transition: all .3s ease-out;
 }
+
+.infinite-link:hover {
+    color: #0b0b0b;
+}
+
+.infinite-link:hover::after {
+    background-color: #0b0b0b;
+}
+
+
+.infinite-link-dark {
+    color: #0b0b0b;
+}
+
+.infinite-link-dark::after {
+    background-color: #0b0b0b;
+}
+
+.infinite-link-dark:hover {
+    color: #0b0b0bad;
+}
+
+.infinite-link-dark:hover::after {
+    background-color: #0b0b0bad;
+}
+
+
+/* Buttons */
+
 
 .infinite-button {
     width: 100%;
@@ -63,15 +103,32 @@
     padding: 18px 0;
     font-size: 14px;
     font-weight: normal;
-    letter-spacing: 0.2px;
+    letter-spacing: .2px;
     color: #fff;
     text-align: center;
     background-color: #0b0b0b;
     cursor: pointer;
     border: 0;
-    -webkit-transition: color 0.5s;
-    -o-transition: color 0.5s;
-    transition: color 0.5s;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.infinite-button:hover {
+    color: #0b0b0b;
+    background-color: #ffffff;
+    outline: 1px solid #0b0b0b;
+}
+
+.button-white {
+    color: #0b0b0b;
+    background: #fff;
+}
+
+.button-white:hover {
+    color: #fff;
+    background: #0b0b0b;
+    outline: 1px solid #fff;
 }

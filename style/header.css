@@ -10,14 +10,26 @@
     width: 100%;
 }
 
-.nav-text, .nav-link {
-    color: #9d9d9d;
-    font-size: 13px;
+.nav-text,
+.nav-link {
+    color: #7e7e7e;
+    font-size: 14px;
 }
 
-.nav-item:not(:last-child) {
-    margin-right: 25px;
+.nav-text:hover,
+.nav-link:hover {
+    color: #202020;
 }
+
+
+@media screen and (min-width: 1200px) {
+
+    /* Margin in nav-links */
+    .nav-item:not(:last-child) {
+        margin-right: 25px;
+    }
+}
+
 
 /*  */
 
@@ -28,7 +40,6 @@
     max-width: 200px;
     width: 100%;
     min-width: 100px;
-    background: rgb(204, 107, 107);
     background: #fff;
 }
 
@@ -46,7 +57,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: rgb(173, 156, 58);
     background: #fff;
 }
 
@@ -55,28 +65,86 @@
     margin: 0;
 }
 
-/*  */
+/* 
+
+    Login, search input and basket
+    Stylish
+    
+*/
 
 .authorization-layout {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     min-width: 100px;
-    background: rgb(90, 173, 58);
     background: #fff;
 }
 
+/* Login */
+
 .authorization-text {
     line-height: 15px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
-    color: #9d9d9d;
+    color: #7e7e7e;
 }
 
-.search-icon {
-    height: 20px;
-    color: #000;
+/* Search Icon & hover behavior */
+
+.searchbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 30px;
 }
+
+.search_input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: all .8s ease-in-out;
+}
+
+.searchbar:hover {
+    background-color: #0b0b0b;
+}
+
+.searchbar:hover>.search_input {
+    padding: 0 10px;
+    width: 200px;
+    caret-color: #e74c3c;
+    /* transition: all .8s ease-in-out; */
+}
+
+@media screen and (max-width: 1200px) {
+    /* Searchbar */
+    .searchbar:hover>.search_input {
+        width: 150px;
+    }
+}
+
+.searchbar:hover>.search_icon {
+    background: white;
+    color: #e74c3c;
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #0b0b0b;
+}
+
+/* Basket */
 
 .basket-icon {
     width: 20px;
@@ -86,9 +154,16 @@
 }
 
 
+/* 
+
+    Navigation toggler & mobile resposive behavior
+    
+*/
+
+
 .navbar {
-   justify-content: space-between !important;
-   padding: 20px 0;
+    justify-content: space-between !important;
+    padding: 20px 0;
 }
 
 .navbar-collapse {
@@ -112,7 +187,7 @@
 
 @media screen and (max-width: 992px) {
     .header {
-        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05); 
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
     }
 
     .navbar-brand {

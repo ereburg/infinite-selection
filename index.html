@@ -32,7 +32,7 @@
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ">
+                            <ul class="navbar-nav d-flex juctify-content-between">
                                 <li class="nav-item ">
                                     <a class="nav-link" href="#">Browse Sneakers</a>
                                 </li>
@@ -48,16 +48,11 @@
                             </ul>
                         </div>
                         <div class="authorization-layout d-none d-lg-flex">
-                            <a class="authorization-text" href="#">Login</a>
-                            <a class="search-icon" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="mx-3" focusable="false" role="img">
-                                    <title>Search</title>
-                                    <circle cx="10.5" cy="10.5" r="7.5"></circle>
-                                    <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
-                                </svg>
-                            </a>
+                            <a class="nav-text" href="#">Login</a>
+                            <div class="searchbar">
+                                <input class="search_input" type="text" name="" placeholder="Search...">
+                                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                            </div>
                             <a class="basket-icon" href="#"></a>
                         </div>
                     </nav>
@@ -90,7 +85,7 @@
                     <h3 class="infinite-header">
                         New Releases
                     </h3>
-                    <a class="releases-link" href="#">View All</a>
+                    <a class="infinite-link-dark" href="#">View All</a>
                 </div>
                 <div class="col-12 releases-container">
                     <div class="releases-item">
@@ -174,7 +169,8 @@
                             <h4 class="infinite-header-small mb-3">1. Choose your way to rent</h4>
                             <p class="infinite-text text-grey">
                                 We offer one-time and unlimited rentals. Our rentals last
-                                either 4 or 8 days. Book rentals days or months in advance.
+                                either 4 or 8 days. Book rentals days or months in advance 
+                                to suit all your sneaker needs.
                             </p>
                         </div>
                         <div class="col-md-12 col-lg-4 work-scheme-item">
@@ -263,13 +259,14 @@
                 <section class="testimonials">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="infinite-header text-center mt-5 mb-4">
+                            <h2 class="infinite-header text-center mt-5 mt-xl-0 mb-4">
                                 What They Say
                             </h2>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 testimonials-item">
                             <div class="testimonials-header">
-                                <img class="testimonials-image" src="images/homepage-section/testimonials-1.jpg" alt="Jessica Johns">
+                                <img class="testimonials-image" src="images/homepage-section/testimonials-1.jpg"
+                                    alt="Jessica Johns">
                                 <p class="infinite-header-small">
                                     Jessica Johns
                                     <span class="testimonials-date">
@@ -286,7 +283,8 @@
 
                         <div class="col-12 col-md-6 col-lg-4 testimonials-item">
                             <div class="testimonials-header">
-                                <img class="testimonials-image" src="images/homepage-section/testimonials-2.jpg" alt="Alex Lawsone">
+                                <img class="testimonials-image" src="images/homepage-section/testimonials-2.jpg"
+                                    alt="Alex Lawsone">
                                 <p class="infinite-header-small">
                                     Alex Lawsone
                                     <span class="testimonials-date">
@@ -302,9 +300,10 @@
 
                         <div class="col-12 col-md-6 col-lg-4 testimonials-item">
                             <div class="testimonials-header">
-                                <img class="testimonials-image" src="images/homepage-section/testimonials-3.jpg" alt="Ygritte Lesley ">
+                                <img class="testimonials-image" src="images/homepage-section/testimonials-3.jpg"
+                                    alt="Ygritte Lesley ">
                                 <p class="infinite-header-small">
-                                    Ygritte Lesley 
+                                    Ygritte Lesley
                                     <span class="testimonials-date">
                                         10 hour ago
                                     </span>
@@ -332,7 +331,6 @@
     </main>
 
 
-
     <footer class="footer">
         <div class="container">
             <div class="row footer-container">
@@ -350,20 +348,19 @@
                     </nav>
                 </div>
                 <div class="col-12 col-lg footer-socials">
-                    <div class="social-icons">
-                        <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                    <div class="socials-container">
+                        <a class="social-link facebook-link" href="http://" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                        <a class="social-link instagram-link" href="http://" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="social-link" href="http://" target="_blank" rel="noopener noreferrer">
+                        <a class="social-link twitter-link" href="http://" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-twitter"></i>
                         </a>
-
                     </div>
                     <p class="footer-text">
-                        © 2019 Infinite Selection. All rights reserved.
+                        © 2019 Infinity by Ereburg. All rights reserved.
                     </p>
                 </div>
             </div>
