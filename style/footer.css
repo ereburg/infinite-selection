@@ -21,6 +21,10 @@
 
 /* Стилизация меню футера */
 
+.footer-menu {
+    padding: 0;
+}
+
 .footer-nav {
     display: flex;
     justify-content: center;

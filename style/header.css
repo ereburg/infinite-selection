@@ -131,7 +131,7 @@
 
 .searchbar:hover>.search_icon {
     background: white;
-    color: #e74c3c;
+    color: #0b0b0b;
 }
 
 .search_icon {
@@ -141,7 +141,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color: #0b0b0b;
+    color: #7e7e7e;
 }
 
 /* Basket */

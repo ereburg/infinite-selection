@@ -1,13 +1,18 @@
 /* 
 
  Стилизуем первый контейнер. 
- Секция первая
 
 */
+
+.intro-container {
+    overflow: hidden;
+}
 
 .intro {
     padding-bottom: 100px;
 }
+
+/* Left Column */
 
 .description-column {
     display: flex;
@@ -50,39 +55,107 @@
     box-sizing: border-box;
 }
 
-.intro-image {
-    width: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
+/* Right Column */
+
+
+.animate-container {
+    display: grid;
+    grid-template-columns: minmax(170px, 360px) minmax(180px, 390px);
+    grid-template-rows: repeat(2, minmax(130px, 275px));
+    justify-content: center;
+    padding: 25px 0 0;
 }
 
+.animate {
+    position: relative;
+    width: 100%;
+    animation: 5s cubic-bezier(.25, .25, .25, .5) infinite alternate;
+    object-fit: contain;
+    grid-row: 1 / 3;
+}
+
+.leftSneaker {
+    align-self: start;
+    animation-name: leftSneaker;
+}
+
+.rightSneaker {
+    align-self: end;
+    animation-name: rightSneaker;
+}
+
+/* Animations for our Sneakers */
+
+@keyframes leftSneaker {
+    from {}
+
+    to {
+        transform: translateX(20px) translateY(-10px);
+    }
+}
+
+@keyframes rightSneaker {
+    from {
+        transform: translateX(-10px) translateY(-8px);
+    }
+
+    to {
+        transform: translateX(-34px) translateY(-30px);
+    }
+}
+
+/* End of Animations */
+
+/* Responsive */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .animate-container {
+        grid-template-rows: repeat(2, minmax(130px, 225px));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .animate-container {
+        grid-template-columns: minmax(130px, 315px) minmax(150px, 315px);
+        grid-template-rows: repeat(2, minmax(130px, 225px));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .animate-container {
+        grid-column-gap: 20px;
+        grid-template-columns: minmax(130px, 250px) minmax(150px, 250px);
+        grid-template-rows: repeat(2, minmax(130px, 195px));
+        padding: 30px 0 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .animate-container {
+        grid-column-gap: 8vmin;
+        grid-template-columns: repeat(2, minmax(80px, 195px));
+        grid-template-rows: repeat(2, minmax(130px, 135px));
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .animate-container {
+        grid-template-columns: repeat(2, minmax(190px, 195px));
+        grid-template-rows: repeat(2, minmax(130px, 135px));
+    }
+}
+
+/* End Resposive for intro-container */
 
 /* 
 
- Стилизуем первый контейнер. 
- Секция вторая
+ Стилизуем второй контейнер. 
 
 */
 
 .releases-line {
     align-items: center;
     margin-bottom: 45px;
-}
-
-.releases-link {
-    position: relative;
-    color: #0b0b0b;
-}
-
-.releases-link::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    content: '';
-    background-color: #0b0b0b;
-    bottom: 10px;
-    left: 0;
 }
 
 .releases-container {
@@ -92,10 +165,20 @@
 }
 
 .releases-item {
+    font-family: "Roboto", serif;
+}
+
+.releases-item-link {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Roboto", serif;
+    padding: 0 10px 20px;
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+.releases-item-link:hover {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.116);
 }
 
 .releases-image {
@@ -120,8 +203,9 @@
 }
 
 .releases-cost {
-    margin-top: 10px;
+    margin-top: 6px;
     font-size: 12px;
+    color: #0b0b0b;
 }
 
 @media (min-width: 993px) and (max-width: 1199px) {
@@ -169,17 +253,6 @@
 }
 
 @media screen and (max-width: 568px) {
-
-    .intro-image-container {
-        display: flex;
-        justify-content: center;
-        padding: 50px 0 25px;
-    }
-    .intro-image {
-        transform: scale(1.2);
-        max-width: 400px;
-    }
-
     .releases-item {
         width: calc(100% / 2);
     }
@@ -187,5 +260,4 @@
     .releases-image {
         width: 120px;
     }
-
 }
