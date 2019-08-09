@@ -53,9 +53,8 @@ li {
     list-style-type: none;
 }
 
-.bg-white {
-    background: #fff;
-    z-index: 100;
+button {
+    outline: 0 !important;
 }
 
 ::placeholder { /* Firefox, Chrome, Opera */ 

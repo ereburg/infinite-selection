@@ -14,55 +14,29 @@
 .nav-link {
     color: #7e7e7e;
     font-size: 14px;
+    text-align: center;
 }
 
 .nav-text:hover,
 .nav-link:hover {
-    color: #202020;
+    color: #0b0b0b;
 }
-
 
 @media screen and (min-width: 1200px) {
 
-    /* Margin in nav-links */
     .nav-item:not(:last-child) {
         margin-right: 25px;
     }
 }
 
 
-/*  */
-
-.brand-layout {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: 200px;
-    width: 100%;
-    min-width: 100px;
-    background: #fff;
-}
+/* Logo */
 
 .brand-logo {
     display: block;
     width: 85px;
     height: 55px;
     background: url("../images/logo/logo-black.svg") no-repeat;
-}
-
-/*  */
-
-.menu-layout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background: #fff;
-}
-
-.header-menu {
-    display: flex;
-    margin: 0;
 }
 
 /* 
@@ -119,7 +93,6 @@
     padding: 0 10px;
     width: 200px;
     caret-color: #e74c3c;
-    /* transition: all .8s ease-in-out; */
 }
 
 @media screen and (max-width: 1200px) {
@@ -170,10 +143,10 @@
     flex-grow: 0;
 }
 
-#mobileMenu {
+.navbar-toggler.collapsed > #mobileMenu {
     width: 20px;
     height: 17px;
-    background-image: url('../images/logo/mobile-menu-icon.svg') !important;
+    background-image: url('../images/logo/mobile-menu-icon.svg') ;
 }
 
 .navbar-toggler {
@@ -185,12 +158,37 @@
     border: none;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     .header {
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
     }
 
     .navbar-brand {
         margin-right: 0;
+    }
+
+    .navbar-nav {
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 35px; 
+        height: calc(100vh - 90px);
+    }
+
+    .nav-link {
+        font-size: 25px;
+        font-family: 'Playfair Display', serif;
+        line-height: 1.6;
+        color: rgba(63, 63, 63, 0.678);
+        font-weight: 600;
+    }
+
+    .nav-link:hover {
+        color: #3F3F3F;
+    }
+
+    .navbar-toggler > #mobileMenu {
+        width: 20px;
+        height: 17px;
+        background-image: url('../images/logo/icon-close.svg');
     }
 }

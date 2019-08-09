@@ -172,13 +172,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10px 20px;
+    padding: 0 0 20px;
     transition: all .3s ease;
     overflow: hidden;
 }
 
 .releases-item-link:hover {
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.116);
+    /* transform: scale(1.15); */
 }
 
 .releases-image {
@@ -224,6 +225,7 @@
 
     .releases-item {
         width: calc((100% / 3) - 30px);
+        margin: 0 0 15px;
     }
 
     .description-column {
@@ -255,6 +257,7 @@
 @media screen and (max-width: 568px) {
     .releases-item {
         width: calc(100% / 2);
+        /* transform: scale(1.05); */
     }
 
     .releases-image {
