@@ -42,6 +42,11 @@
     line-height: 23px;
 }
 
+.text-dark-medium {
+    font-weight: 600;
+    color: #0b0b0b;
+}
+
 .text-dark-bold {
     font-weight: 800;
     color: #0b0b0b;
@@ -66,7 +71,9 @@
     color: #7e7e7e;
     font-size: 14px;
     font-weight: 500;
-    transition: all .3s ease-out;
+    -webkit-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
 }
 
 .infinite-link::after, 
@@ -80,7 +87,9 @@
     background-color: #7e7e7e;
     bottom: -5px;
     left: 0;
-    transition: all .3s ease-out;
+    -webkit-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
 }
 
 .infinite-link:hover {
@@ -90,7 +99,6 @@
 .infinite-link:hover::after {
     background-color: #0b0b0b;
 }
-
 
 .infinite-link-dark {
     color: #0b0b0b;
@@ -113,6 +121,7 @@
 
 
 .infinite-button {
+    display: block;
     width: 100%;
     max-width: 200px;
     padding: 18px 0;
@@ -124,9 +133,9 @@
     background-color: #0b0b0b;
     cursor: pointer;
     border: 0;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -134,13 +143,14 @@
 .infinite-button:hover {
     color: #0b0b0b;
     background-color: #ffffff;
-    /* outline: 1px solid #0b0b0b; */
-    box-shadow: inset 0px 0px 1px 0px;
+    outline: 1px solid #0b0b0b;
+    /* box-shadow: inset 0px 0px 1px 0px #0b0b0b; */
 }
 
 .button-white {
     color: #0b0b0b;
     background: #fff;
+    outline: 1px solid #0b0b0b;
 }
 
 .button-white:hover {
@@ -149,7 +159,11 @@
     outline: 1px solid #fff;
 }
 
-/* Для договора и лицензий */
+.rent-banner-button:hover {
+    background-color: #F9F9F8;
+}
+
+/* Для договора и лицензий; списки / Lists */
 
 .paragraph-privacy {
     display: block;
@@ -169,5 +183,17 @@
 }
 
 .list-item {
-    list-style-type: circle;
+    position: relative;
+}
+
+.list-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6.75px;
+    left: -17px;
+    width: 8px;
+    height: 8px;
+    background: #0b0b0b;
+    border-radius: 50%;
 }

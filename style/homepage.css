@@ -159,13 +159,12 @@
 
 .releases-line {
     align-items: center;
-    margin-bottom: 45px;
 }
 
 .releases-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 70px;
+    margin: 70px 0;
 }
 
 .releases-item {
@@ -407,10 +406,6 @@
 
 .action-text {
     grid-column: 1 / 2;
-    margin-bottom: 0;
-    font-size: 40px;
-    color: #0b0b0b;
-    line-height: 50px;
 }
 
 .action-image {

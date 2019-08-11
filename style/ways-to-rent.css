@@ -101,14 +101,11 @@
     }
 }
 
-/* Основной контент */
+/* 
 
-.rent-content {
-    padding: 70px 25px;
-}
-
-
-
+    Основной контент 
+    
+*/
 
 /* rent-action */
 
@@ -125,5 +122,164 @@
 .rent-small-text {
     display: block;
     margin: 15px 0 30px;
-    /* font-weight: bold; */
+}
+
+
+
+/* Rent Perk */
+
+.rent-perks {
+    display: grid;
+    grid-template-columns: minmax(420px, 500px) max-content;
+    grid-template-rows: 57px 380px;
+    grid-column-gap: 50px;
+    justify-content: center;
+    align-content: center;
+    padding: 70px 25px;
+}
+
+.grid-title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+.rent-perks-image {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    transform: rotate(15deg) translateY(25%);
+}
+
+.rent-list {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.rent-list li {
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 700px) {
+    .rent-perks {
+        grid-template-columns: minmax(320px, calc(100vw - 50px));
+        grid-template-rows: 57px 380px max-content;
+    }
+
+    .grid-title {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+
+    .rent-perks-image {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .rent-list {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .rent-perks {
+        grid-template-columns: minmax(320px, calc(100vw - 50px));
+        grid-template-rows: 57px 300px max-content;
+    }
+
+    .rent-perks-image {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+}
+
+
+/* Rent Exclusives */
+
+.rent-exclusives {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 75px 0;
+}
+
+
+
+/* Rent Ways */
+
+.rent-ways {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr);
+    grid-template-rows: 100px 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.table-container {
+    overflow-x: scroll;
+}
+
+
+
+/* Rent Table */
+
+.rent-table {
+    width: 100%;
+    /* margin: 70px 0; */
+    text-align: center;
+}
+
+td,
+th {
+    width: calc(100% / 3);
+    padding: 35px 35px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+
+th {
+    height: 115px;
+    background-color: rgba(227, 227, 227, 0.5);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table-dark-td {
+    background-color: rgba(227, 227, 227, 0.5);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+td {
+    height: 85px;
+    background-color: rgba(227, 227, 227, 0.2);
+    font-size: 16px;
+}
+
+.table-button {
+    margin: 0 auto;
+}
+
+.table-button-light {
+    background-color: #F9F9F8;
+}
+
+@media screen and (max-width: 992px) {
+
+    .rent-ways {
+        grid-template-columns: 100vw;
+    }
+
+    .rent-table {
+        min-width: 800px;
+    }
 }

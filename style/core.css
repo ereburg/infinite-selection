@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto:300,400,500,700,900&display=swap');
 
 * {
     margin: 0;
@@ -90,4 +90,11 @@ button {
 
 .current-link:hover:before {
     background-color: #0b0b0b;
+}
+
+/* Изображения */
+
+.infinite-image {
+    width: 100%;
+    object-fit: contain;
 }
