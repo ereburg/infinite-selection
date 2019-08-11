@@ -65,7 +65,6 @@
     font-weight: 700;
 }
 
-
 .infinite-link,
 .infinite-link-dark {
     color: #7e7e7e;
@@ -144,7 +143,6 @@
     color: #0b0b0b;
     background-color: #ffffff;
     outline: 1px solid #0b0b0b;
-    /* box-shadow: inset 0px 0px 1px 0px #0b0b0b; */
 }
 
 .button-white {
@@ -190,10 +188,19 @@
     content: '';
     display: block;
     position: absolute;
-    top: 6.75px;
+    top: 6.25px;
     left: -17px;
+    width: 7px;
+    height: 7px;
+    background: #7e7e7e;
+    border-radius: 50%;
+}
+
+.rent-perks .list-item::before {
+    top: 0;
+    left: 0;
     width: 8px;
     height: 8px;
     background: #0b0b0b;
-    border-radius: 50%;
+    transform: translateX(-200%) translateY(120%);
 }
