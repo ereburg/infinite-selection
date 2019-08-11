@@ -74,12 +74,12 @@
         font-size: 25px;
         font-family: 'Playfair Display', serif;
         line-height: 1.6;
-        color: rgba(63, 63, 63, 0.678);
+        color: #0b0b0b;
         font-weight: 600;
     }
 
     .nav-link:hover {
-        color: #3F3F3F;
+        color: #7e7e7e;
     }
 
     .navbar-toggler > #mobileMenu {

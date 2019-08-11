@@ -1,0 +1,104 @@
+.cleaning {
+    margin-bottom: 50px;
+}
+
+.cleaning-banner {
+    margin: 30px 0 0;
+}
+
+.cleaning-banner .col-12 {
+    padding: 0;
+}
+
+.cleaning-subtitle-text {
+    font-size: 14px;
+    color: #a7a7a7;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.cleaning-video {
+    width: 100%;
+    height: 540px;
+}
+
+.cleaning-container {
+    margin: 100px 0 0;
+}
+
+.cleaning-text-container {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.cleaning-step {
+    font-size: 14px;
+    color: #0b0b0b;
+    margin-bottom: 5px;
+}
+
+.cleaning-header {
+    margin-bottom: 13px;
+}
+
+
+.cleaning-image {
+    width: 100%;
+    height: 650px;
+    background: url(../images/cleaning/cleaning-1.jpg) center no-repeat;
+    background-size: contain;
+}
+
+.cleaning-image-2 {
+    background: url(../images/cleaning/cleaning-2.jpg) center no-repeat;
+    background-size: contain;
+}
+
+.cleaning-image-3 {
+    background: url(../images/cleaning/cleaning-3.jpg) center no-repeat;
+    background-size: contain;
+}
+
+.cleaning-image-4 {
+    background: url(../images/cleaning/cleaning-4.jpg) center no-repeat;
+    background-size: contain;
+}
+
+.cleaning-image-5 {
+    background: url(../images/cleaning/cleaning-5.jpg) center no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width: 992px) {
+    .cleaning-video {
+        height: 408px;
+    }
+
+    .cleaning-image {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cleaning-video {
+        height: 268px;
+    }
+
+    .cleaning-image {
+        height: 330px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cleaning-video {
+        height: 50vmin;
+        max-height: 268px;
+    }
+
+    .cleaning-image {
+        height: 60vmin;
+        max-height: 330px;
+        padding: 0;
+    }
+}
