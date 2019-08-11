@@ -20,7 +20,6 @@ body {
 main {
     position: relative;
     z-index: 10;
-    /* margin-top: 95px; */
 }
 
 a {
@@ -60,17 +59,20 @@ button {
     outline: 0 !important;
 }
 
-::placeholder { /* Firefox, Chrome, Opera */ 
+::placeholder {
+    /* Firefox, Chrome, Opera */
     color: #7e7e7e;
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: #7e7e7e;
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: #7e7e7e;
-} 
+}
 
 .current-link {
     position: relative;
