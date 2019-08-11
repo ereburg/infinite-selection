@@ -1,0 +1,660 @@
+/*
+
+ ! Первый экран. 
+ Стилизуем Интро-секцию. 
+
+*/
+
+.intro-container {
+    overflow: hidden;
+}
+
+.intro {
+    padding-bottom: 100px;
+}
+
+/* Left Column */
+
+.description-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 370px;
+    height: 100%;
+    padding: 20px 0 0;
+}
+
+.description-title {
+    font-size: 50px;
+    line-height: 62px;
+    margin-bottom: 20px;
+}
+
+.description-text {
+    color: #a7a7a7;
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 35px;
+    max-width: 300px;
+}
+
+.description-btn {
+    width: 190px;
+    height: 52px;
+    padding: 18px 35px;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    background-color: #0b0b0b;
+    cursor: pointer;
+    border: 0;
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+    box-sizing: border-box;
+}
+
+
+/* Right Column */
+
+
+.animate-container {
+    display: grid;
+    grid-template-columns: minmax(170px, 360px) minmax(180px, 390px);
+    grid-template-rows: repeat(2, minmax(130px, 275px));
+    justify-content: center;
+    padding: 25px 0 0;
+}
+
+.animate {
+    position: relative;
+    width: 100%;
+    animation: 5s cubic-bezier(.25, .25, .25, .5) infinite alternate;
+    object-fit: contain;
+    grid-row: 1 / 3;
+}
+
+.leftSneaker {
+    align-self: start;
+    animation-name: leftSneaker;
+}
+
+.rightSneaker {
+    align-self: end;
+    animation-name: rightSneaker;
+}
+
+/* Animations for our Sneakers */
+
+@keyframes leftSneaker {
+    from {}
+
+    to {
+        transform: translateX(20px) translateY(-10px);
+    }
+}
+
+@keyframes rightSneaker {
+    from {
+        transform: translateX(-10px) translateY(-8px);
+    }
+
+    to {
+        transform: translateX(-34px) translateY(-30px);
+    }
+}
+
+/* End of Animations */
+
+/* Responsive */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .animate-container {
+        grid-template-rows: repeat(2, minmax(130px, 225px));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .animate-container {
+        grid-template-columns: minmax(130px, 315px) minmax(150px, 315px);
+        grid-template-rows: repeat(2, minmax(130px, 225px));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .animate-container {
+        grid-column-gap: 20px;
+        grid-template-columns: minmax(130px, 250px) minmax(150px, 250px);
+        grid-template-rows: repeat(2, minmax(130px, 195px));
+        padding: 30px 0 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .animate-container {
+        grid-column-gap: 8vmin;
+        grid-template-columns: repeat(2, minmax(80px, 195px));
+        grid-template-rows: repeat(2, minmax(130px, 135px));
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .animate-container {
+        grid-template-columns: repeat(2, minmax(190px, 195px));
+        grid-template-rows: repeat(2, minmax(130px, 135px));
+    }
+}
+
+/* End Resposive for intro-container */
+
+/* 
+
+
+ ! Секция Вторая, Новые поступуления
+
+
+*/
+
+.releases-line {
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.releases-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.releases-item {
+    font-family: "Roboto", serif;
+}
+
+.releases-item-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px;
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+.releases-item-link:hover {
+    transform: scale(1.1);
+}
+
+.releases-image {
+    max-width: 150px;
+    height: 140px;
+}
+
+.releases-item p {
+    margin-bottom: 0;
+}
+
+.releases-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0b0b0b;
+}
+
+.releases-value {
+    margin-top: 4px;
+    color: #a7a7a7;
+    font-size: 13px;
+}
+
+.releases-cost {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #0b0b0b;
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+
+    .releases-item {
+        width: calc(100% / 6);
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    main {
+        overflow: hidden;
+    }
+
+    .releases-item {
+        width: calc((100% / 3) - 30px);
+        margin: 0 0 15px;
+    }
+
+    .description-column {
+        text-align: center;
+    }
+
+    .description-title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .description-text {
+        font-size: 14px;
+        margin: 0 auto 35px;
+        max-width: 300px;
+    }
+
+    .description-btn {
+        margin: 0 auto;
+    }
+
+    .releases-container {
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .releases-item {
+        width: calc(100% / 2);
+    }
+
+    .releases-image {
+        width: 120px;
+    }
+}
+
+/* 
+
+
+! Секция 3 - Уникальность
+
+
+*/
+
+.homepage-authenticity {
+    padding: 70px 0;
+    background: #0b0b0b;
+}
+
+.homepage-authenticity-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-authenticity-text {
+    margin-bottom: 35px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 38px;
+    font-weight: 400;
+    color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+
+    .homepage-authenticity-text {
+        font-size: 28px;
+        line-height: 45px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .homepage-authenticity-text {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+}
+
+@media screen and (max-width: 567px) {
+
+    .homepage-authenticity {
+        padding: 50px 0;
+        background: #0b0b0b;
+    }
+
+    .homepage-authenticity-text {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .btn-authenticity {
+        max-width: 160px;
+        font-size: 11px;
+        padding: 12px 0;
+    }
+
+}
+
+
+/* 
+
+
+ ! Добавляем основные секции с контентом
+
+
+*/
+
+/* Cleaning section / Как мы чистим */
+
+.clean {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 0;
+}
+
+.clean-text {
+    text-transform: capitalize;
+    color: #0b0b0b;
+    ;
+}
+
+.clean-image {
+    max-width: 550px;
+    max-height: 350px;
+    width: 100%;
+    margin: 30px 0;
+    object-fit: contain;
+}
+
+.clean-link {
+    font-size: 16px;
+    color: #7e7e7e;
+}
+
+.clean-link::after {
+    display: block;
+    content: '';
+    position: relative;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #7e7e7e;
+}
+
+@media screen and (max-width: 568px) {
+
+    .clean-image {
+        margin: 50px 0;
+    }
+
+}
+
+
+/* Call to action / Баннер с покупкой */
+
+.action {
+    display: grid;
+    grid-template-columns: 300px 500px;
+    grid-template-rows: 200px 50px 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.action-text {
+    grid-column: 1 / 2;
+    margin-bottom: 0;
+    font-size: 40px;
+    color: #0b0b0b;
+    line-height: 50px;
+}
+
+.action-image {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    max-width: 500px;
+    max-height: 300px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.action-link {
+    grid-column: 1 / 2;
+}
+
+@media screen and (max-width: 840px) {
+
+    .action {
+        display: grid;
+        grid-template-columns: minmax(320px, 500px);
+        grid-template-rows: max-content minmax(200px, 300px) max-content;
+        grid-row-gap: 40px;
+    }
+
+    .action-text {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        text-align: center;
+    }
+
+    .action-image {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        width: 100%;
+        height: 100%;
+    }
+
+    .action-link {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        max-width: 200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+/* work-cycle Section / Как мы работаем */
+
+.work-cycle {
+    padding: 75px 25px;
+}
+
+.work-scheme-item,
+.advantages-item,
+.testimonials-item {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.text-grey {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: #a7a7a7;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .work-scheme-item:nth-of-type(3) {
+        margin: 0px auto;
+    }
+}
+
+
+/* Advantages section / Наши преимущщества */
+
+.advantages-item {
+    display: grid;
+    grid-template-rows: max-content 110px 57px;
+}
+
+.subheader-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.subheader-text-small {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.advantages-item-action {
+    display: flex;
+    align-items: center;
+}
+
+.advantages-list {
+    padding-left: 15px;
+}
+
+.advantages-list li {
+    position: relative;
+}
+
+.advantages-list li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5.5px;
+    left: -15px;
+    width: 7px;
+    height: 7px;
+    background: #0b0b0b;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.advantages-button {
+    max-width: 165px;
+    margin-right: 35px;
+}
+
+.advantages-image {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .advantages-item {
+        grid-template-rows: repeat(3, max-content);
+    }
+}
+
+@media screen and (max-width: 374px) {
+
+    .advantages-item-action {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .advantages-button {
+        max-width: 135px;
+        margin-right: 0px;
+    }
+}
+
+
+/* Action-2 Section / Баннер с покупкой 2 */
+
+.action-2 {
+    display: grid;
+    grid-template-columns: 400px 420px;
+    grid-template-rows: 200px 55px 45px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.action-2-text {
+    grid-column: 1 / 2;
+    margin-bottom: 0;
+    font-size: 40px;
+    color: #0b0b0b;
+    line-height: 50px;
+}
+
+.action-2-image {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.action-2-link {
+    grid-column: 1 / 2;
+}
+
+@media screen and (max-width: 840px) {
+
+    .action-2 {
+        display: grid;
+        grid-template-columns: minmax(320px, 500px);
+        grid-template-rows: max-content minmax(200px, 300px) max-content;
+        grid-row-gap: 70px;
+    }
+
+    .action-2-text {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        text-align: center;
+    }
+
+    .action-2-image {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        width: 100%;
+        height: 100%;
+    }
+
+    .action-2-link {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        max-width: 200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+/* Testimonials Section / Отзывы пользователей */
+
+.testimonials .infinite-header-small {
+    margin-bottom: 0;
+}
+
+.testimonials-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.testimonials-image {
+    margin-right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonials-date {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+}

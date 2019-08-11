@@ -1,0 +1,28 @@
+.authenticity-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #7e7e7e;
+}
+
+.authenticity-title {
+    margin-top: 72px;
+    margin-bottom: 36px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #0b0b0b;
+    text-align: center;
+}
+
+.authenticity-text {
+    font-size: 14px;
+    color: #a7a7a7;
+    text-align: justify;
+}
+
+.authenticity-text:last-child {
+    margin-bottom: 72px;
+}

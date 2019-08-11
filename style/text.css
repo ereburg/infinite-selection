@@ -42,8 +42,23 @@
     line-height: 23px;
 }
 
+.text-dark-bold {
+    font-weight: 800;
+    color: #0b0b0b;
+}
 
 /* Links */
+
+
+.regular-link {
+    color: #0b0b0b;
+    font-weight: 700;
+}
+
+.regular-link:hover {
+    color: #bb2424;
+    font-weight: 700;
+}
 
 
 .infinite-link,
@@ -132,4 +147,27 @@
     color: #fff;
     background: #0b0b0b;
     outline: 1px solid #fff;
+}
+
+/* Для договора и лицензий */
+
+.paragraph-privacy {
+    display: block;
+    margin: 35px 0;
+    color: #0b0b0b;
+    font-weight: 700;
+    text-align: center;
+}
+
+.emptySpace {
+    display: block;
+    height: 20px;
+}
+
+.regular-list {
+    padding:  0 17px;
+}
+
+.list-item {
+    list-style-type: circle;
 }

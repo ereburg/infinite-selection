@@ -1,0 +1,129 @@
+.rent-banner {
+    display: grid;
+    grid-template-columns: minmax(400px, 1fr) 380px minmax(400px, 1fr);
+    grid-template-rows: 450px;
+    background-color: #F9F9F8;
+}
+
+.rent-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rent-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.rent-middle-text {
+    display: block;
+    margin: 10px auto 40px;
+}
+
+@media screen and (max-width: 1180px) {
+    .rent-banner {
+        grid-template-columns: minmax(290px, 1fr) minmax(200px, 360px) minmax(290px, 1fr);
+        grid-template-rows: 350px;
+    }
+}
+
+@media screen and (max-width: 955px) {
+
+    .rent-banner h2 {
+        font-size: 35px;
+    }
+
+    .rent-middle-text {
+        margin: 5px auto 30px;
+    }
+}
+
+@media screen and (max-width: 894px) {
+    .rent-banner {
+        grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+        grid-template-rows: 300px 350px;
+    }
+
+    .rent-text-container {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .rent-image {
+        grid-row: 2 / 3;
+    }
+
+    .rent-image-left {
+        grid-column: 1 / 2;
+    }
+
+    .rent-image-right {
+        grid-column: 2 / 3;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .rent-banner {
+        grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
+        grid-template-rows: 250px 250px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .rent-banner {
+        grid-template-columns: minmax(300px, 1fr);
+        grid-template-rows: 300px 200px 300px;
+    }
+
+    .rent-text-container {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .rent-image {
+        grid-column: 1 / 2;
+    }
+
+    .rent-image-left {
+        grid-row: 1 / 2;
+    }
+
+    .rent-image-right {
+        grid-row: 3 / 4;
+    }
+}
+
+/* Основной контент */
+
+.rent-content {
+    padding: 70px 25px;
+}
+
+
+
+
+/* rent-action */
+
+.rent-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 25px;
+    text-align: center;
+    border-top: 1px solid #e2e2e2;
+}
+
+.rent-small-text {
+    display: block;
+    margin: 15px 0 30px;
+    /* font-weight: bold; */
+}

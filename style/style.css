@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto&display=swap');
 @import url('../style/core.css');
 @import url('../style/text.css');
-@import url('../style/header.css');
-@import url('../style/authenticity.css');
-@import url('../style/footer.css');
-@import url('../style/intro.css');
-@import url('../style/sections.css');
+@import url('../style/header-and-footer.css');
+@import url('../style/homepage.css');
+@import url('../style/authenticity-guarantee.css');
+@import url('../style/ways-to-rent.css');
