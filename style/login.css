@@ -1,0 +1,78 @@
+/* Стилизация страницы для Входа */
+
+.login-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 70px auto;
+}
+
+.infinite-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 320px;
+    width: 100%;
+}
+
+.login-link {
+    margin: 25px 0 45px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.form-text {
+    font-size: 10px;
+}
+
+.form-field{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 52px;
+    max-width: 350px;
+    width: 100%;
+    padding: 18px 20px;
+    color: #0b0b0b;
+    font-size: 13px;
+    border: 1px solid #e3e3e3;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+small {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.infinite-button.login-button {
+    font-size: 13px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.login-light-button {
+    margin-top: 25px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #e3e3e3;
+    cursor: pointer;
+    color: #0b0b0b;
+    outline: 1px solid transparent;
+    -webkit-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s;
+}
+
+/* Стилизация страницы создания аккаунта */
+

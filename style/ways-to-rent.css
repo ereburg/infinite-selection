@@ -278,7 +278,7 @@ td {
 @media screen and (max-width: 700px) {
     .rent-perks {
         grid-template-columns: minmax(320px, calc(100vw - 50px));
-        grid-template-rows: 140px 380px max-content;
+        grid-template-rows: 98px 380px max-content;
     }
 
     .grid-title {
@@ -302,7 +302,7 @@ td {
 @media screen and (max-width: 460px) {
     .rent-perks {
         grid-template-columns: minmax(320px, calc(100vw - 50px));
-        grid-template-rows: 140px 350px max-content;
+        grid-template-rows: 98px 350px max-content;
     }
 
     .rent-perks-image {
