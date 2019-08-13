@@ -55,10 +55,16 @@ small {
     font-weight: 300;
 }
 
+/* Кнопки форм */
+
 .infinite-button.login-button {
     font-size: 13px;
     max-width: 320px;
     width: 100%;
+}
+
+.login-button:hover {
+    outline: 1px solid #0b0b0b !important;
 }
 
 .login-light-button {
@@ -74,5 +80,67 @@ small {
     transition: color .2s;
 }
 
+.login-light-button:hover {
+    outline: none !important;
+    background-color: #cccccc;
+}
+
+
 /* Стилизация страницы создания аккаунта */
 
+
+.form-paragraph {
+    width: 90%;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #7e7e7e;
+    font-size: 13px;
+}
+
+.form-links {
+    color: #0b0b0b;
+    font-weight: 500;
+}
+
+.form-links:hover {
+    color: #0b0b0bb4;
+}
+
+
+/* Потерянный пароль */
+
+.container-center {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    max-width: 320px;
+    transform: translate(-50%);
+}
+
+.lost-text {
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    border-left: 5px solid #0b0b0b;
+    font-size: 13px;
+    color: #7e7e7e;
+    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+}
+
+.lost-form {
+    padding: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+}
+
+.lost-button {
+    padding: 12px 0;
+    margin-bottom: 25px;
+}
+
+.lost-form  .form-text {
+    color: #0b0b0b;
+    font-size: 13px;
+}
+
+.lost-form  .form-text:hover {
+    color: #0b0b0ba4;
+}
