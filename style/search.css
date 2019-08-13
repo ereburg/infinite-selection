@@ -1,0 +1,132 @@
+.search {
+    margin-top: 70px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-input-form {
+    padding-bottom: 25px;
+}
+
+.search-input-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 870px;
+    margin: 0 auto;
+    color: #0b0b0b85;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 1.17;
+    border: 0;
+    text-align: center;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.search-input::placeholder {
+    color: #0b0b0b85;
+}
+
+.button-search {
+    border: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #0b0b0b;
+    padding: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+/* Section of Browse */
+
+.search-section {
+    padding: 70px 0;
+    border-top: 1px solid #dbdbdb;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.sneakers-browse-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.browse-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 4);
+}
+
+.browse-item-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    transition: all .5s ease;
+}
+
+.browse-item-link:hover {
+    transform: scale(1.1);
+}
+
+.browse-image {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.browse-item p {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .browse-item {
+        width: calc(100% / 3);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .browse-item {
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .sneakers-browse-container {
+        padding: 0;
+    }
+    .browse-item-link {
+        padding: 10px;
+    }
+}
