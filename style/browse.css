@@ -2,6 +2,10 @@
     margin: 70px auto;
 }
 
+.browse-filter {
+    margin: 0 auto;
+}
+
 .browse-top-line {
     margin-bottom: 45px;
 }
@@ -17,10 +21,6 @@
 }
 
 /* Контейнеры книопок и фильтрации */
-
-.filter-brands {
-    /* background: pink; */
-}
 
 .browse-select {
     display: flex;

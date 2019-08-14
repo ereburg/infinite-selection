@@ -257,11 +257,16 @@
     position: relative;
     width: 40px;
     height: 40px;
-    margin: 0 10px 10px;
+    margin-bottom: 10px;
     border-radius: 30%;
     box-shadow: 0 5px 15px -5px #00000070;
     overflow: hidden;
     color: #7e7e7e;
+}
+
+.social-link:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .social-link i {
