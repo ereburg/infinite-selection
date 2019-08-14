@@ -9,12 +9,12 @@
 
 .text-container-404 {
     max-width: 750px;
-    /* padding: 0 15px; */
 }
 
 .text-404 {
     margin: 10px 0 40px;
-    font-size: 22px;;
+    font-size: 22px;
+    ;
     font-weight: 300;
 }
 
@@ -38,8 +38,8 @@ picture.not-found {
     .text-404 {
         font-size: 18px;
     }
-
 }
+
 @media screen and (max-width: 576px) {
     .text-container-404 .infinite-title-main {
         font-size: 36px;
@@ -49,7 +49,6 @@ picture.not-found {
         font-size: 14px;
         max-width: 350px;
     }
-
 }
 
 @media screen and (max-width: 387px) {
@@ -61,5 +60,4 @@ picture.not-found {
         font-size: 13px;
         max-width: 350px;
     }
-
 }
