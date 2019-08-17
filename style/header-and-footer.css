@@ -217,26 +217,53 @@
 
 .footer-menu {
     padding: 0;
-    margin: 26px 0 16px;
+    margin: 0;
 }
 
 .footer-nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    grid-template-rows: 55.2px;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    align-content: center;
+    /* flex-wrap: wrap; */
 }
 
 .footer-link {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
     color: #7e7e7e;
     font-size: 14px;
     font-weight: 500;
-    margin: 0 10px;
     transition: all .3s ease-out;
 }
 
 .footer-link:hover {
     color: #d3d3d3;
+}
+@media screen and (max-width: 992px) {
+    .footer-container {
+        padding: 70px 0 40px;
+    
+    }
+    .footer-nav {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 382px) {
+    .footer-nav {
+        grid-template-rows: repeat(2, 45.2px);
+        grid-template-columns: repeat(2, max-content);
+        text-align: center;
+        margin: 40px 0;
+    }
+    .footer-link {
+        justify-content: center;
+    }
 }
 
 /* Сслыки на социальные сети */

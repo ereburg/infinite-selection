@@ -52,6 +52,7 @@
 .description-link {
     max-width: 380px;
     margin: 30px auto;
+    border: 1px solid #0b0b0b;
 }
 
 .description-meta {
