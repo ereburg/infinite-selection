@@ -1,0 +1,639 @@
+/*
+
+ ! Первый экран.
+ Стилизуем Интро-секцию.
+
+*/
+
+.intro-container {
+  overflow: hidden;
+}
+
+.intro {
+  padding: 70px 0;
+}
+
+/* Left Column */
+
+.description-column {
+  display: flex;
+  flex: 1 1 370px;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 20px 0 0;
+}
+
+.description-title {
+  margin-bottom: 20px;
+  font-size: 50px;
+  line-height: 62px;
+}
+
+.description-text {
+  max-width: 300px;
+  margin-bottom: 35px;
+  color: #a7a7a7;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.description-btn {
+  box-sizing: border-box;
+  width: 190px;
+  height: 52px;
+  padding: 18px 35px;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  background-color: #0b0b0b;
+  border: 0;
+  cursor: pointer;
+  // -webkit-transition: color 0.5s;
+  // -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+
+/* Right Column */
+
+
+.animate-container {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(130px, 275px));
+  grid-template-columns: minmax(170px, 360px) minmax(180px, 390px);
+  justify-content: center;
+  padding: 25px 0 0;
+}
+
+.animate {
+  position: relative;
+  grid-row: 1 / 3;
+  width: 100%;
+  object-fit: contain;
+  animation: 5s cubic-bezier(0.25, 0.25, 0.25, 0.5) infinite alternate;
+}
+
+.leftSneaker {
+  align-self: start;
+  animation-name: leftSneaker;
+}
+
+.rightSneaker {
+  align-self: end;
+  animation-name: rightSneaker;
+}
+
+/* Animations for our Sneakers */
+
+@keyframes leftSneaker {
+  to {
+    transform: translateX(20px) translateY(-10px);
+  }
+}
+
+@keyframes rightSneaker {
+  from {
+    transform: translateX(-10px) translateY(-8px);
+  }
+
+  to {
+    transform: translateX(-34px) translateY(-30px);
+  }
+}
+
+/* End of Animations */
+
+/* Responsive */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .animate-container {
+    grid-template-rows: repeat(2, minmax(130px, 225px));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .animate-container {
+    grid-template-rows: repeat(2, minmax(130px, 225px));
+    grid-template-columns: minmax(130px, 315px) minmax(150px, 315px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .animate-container {
+    grid-column-gap: 20px;
+    grid-template-rows: repeat(2, minmax(130px, 195px));
+    grid-template-columns: minmax(130px, 250px) minmax(150px, 250px);
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .animate-container {
+    grid-column-gap: 8vmin;
+    grid-template-rows: repeat(2, minmax(130px, 135px));
+    grid-template-columns: repeat(2, minmax(80px, 195px));
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .animate-container {
+    grid-template-rows: repeat(2, minmax(130px, 135px));
+    grid-template-columns: repeat(2, minmax(190px, 195px));
+  }
+}
+
+/* End Resposive for intro-container */
+
+/*
+
+
+ ! Секция Вторая, Новые поступуления
+
+
+*/
+
+.releases-section {
+  padding: 70px 15px;
+}
+
+.releases-line {
+  align-items: center;
+}
+
+.releases-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0 0;
+}
+
+.releases-item {
+  font-family: "Roboto", serif;
+}
+
+.releases-item-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.releases-item-link:hover {
+  transform: scale(1.1);
+}
+
+.releases-image {
+  max-width: 150px;
+  height: 140px;
+}
+
+.releases-item p {
+  margin-bottom: 0;
+}
+
+.releases-title {
+  color: #0b0b0b;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.releases-value {
+  margin-top: 4px;
+  color: #a7a7a7;
+  font-size: 13px;
+}
+
+.releases-cost {
+  margin-top: 6px;
+  color: #0b0b0b;
+  font-size: 12px;
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+  .releases-item {
+    width: calc(100% / 6);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    overflow: hidden;
+  }
+
+  .releases-item {
+    width: calc((100% / 3) - 30px);
+    margin: 0 0 15px;
+  }
+
+  .description-column {
+    text-align: center;
+  }
+
+  .description-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .description-text {
+    max-width: 300px;
+    margin: 0 auto 35px;
+    font-size: 14px;
+  }
+
+  .description-btn {
+    margin: 0 auto;
+  }
+
+  .releases-container {
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .releases-item {
+    width: calc(100% / 2);
+  }
+
+  .releases-image {
+    width: 120px;
+  }
+}
+
+/*
+
+
+! Секция 3 - Уникальность
+
+
+*/
+
+.homepage-authenticity {
+  padding: 70px 0;
+  background: #0b0b0b;
+}
+
+.homepage-authenticity-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-authenticity-text {
+  margin-bottom: 70px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 55px;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .homepage-authenticity-text {
+    font-size: 28px;
+    line-height: 45px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .homepage-authenticity-text {
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .homepage-authenticity {
+    background: #0b0b0b;
+  }
+
+  .homepage-authenticity-text {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .btn-authenticity {
+    max-width: 160px;
+    padding: 12px 0;
+    font-size: 11px;
+  }
+}
+
+
+/*
+
+
+ ! Добавляем основные секции с контентом
+
+
+*/
+
+/* Cleaning section / Как мы чистим */
+
+.clean {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0;
+}
+
+.clean-text {
+  color: #0b0b0b;
+  text-transform: capitalize;
+}
+
+.clean-image {
+  width: 100%;
+  max-width: 550px;
+  max-height: 350px;
+  margin: 70px 0;
+  object-fit: contain;
+}
+
+.clean-link {
+  color: #7e7e7e;
+  font-size: 16px;
+}
+
+.clean-link::after {
+  position: relative;
+  bottom: -10px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #7e7e7e;
+  content: "";
+}
+
+@media screen and (max-width: 568px) {
+  .clean-image {
+    margin: 50px 0;
+  }
+}
+
+
+/* Call to action / Баннер с покупкой */
+
+.action {
+  display: grid;
+  grid-template-rows: 200px 50px 50px;
+  grid-template-columns: 300px 500px;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 15px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.action-text {
+  grid-column: 1 / 2;
+}
+
+.action-image {
+  grid-row: 1 / 4;
+  grid-column: 2 / 3;
+  max-width: 500px;
+  max-height: 300px;
+  // -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.action-link {
+  grid-column: 1 / 2;
+}
+
+@media screen and (max-width: 840px) {
+  .action {
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-rows: max-content minmax(200px, 300px) max-content;
+    grid-template-columns: minmax(320px, 500px);
+  }
+
+  .action-text {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    text-align: center;
+  }
+
+  .action-image {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+  }
+
+  .action-link {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+
+/* work-cycle Section / Как мы работаем */
+
+.work-cycle {
+  padding: 70px 15px;
+}
+
+.work-scheme-item,
+.advantages-item,
+.testimonials-item {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.text-grey {
+  color: #a7a7a7;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+@media screen and (max-width: 768px) {
+  .work-scheme-item:nth-of-type(3) {
+    margin: 0 auto;
+  }
+}
+
+
+/* Advantages section / Наши преимущщества */
+
+.advantages-item {
+  display: grid;
+  grid-template-rows: max-content 110px 57px;
+}
+
+.subheader-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.subheader-text-small {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.advantages-item-action {
+  display: flex;
+  align-items: center;
+}
+
+.advantages-list {
+  padding-left: 15px;
+}
+
+.advantages-list li {
+  position: relative;
+}
+
+.advantages-list li::before {
+  position: absolute;
+  top: 5.5px;
+  left: -15px;
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  background: #0b0b0b;
+  border-radius: 50%;
+  content: "";
+}
+
+.advantages-button {
+  max-width: 165px;
+  margin-right: 35px;
+}
+
+.advantages-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .advantages-item {
+    grid-template-rows: repeat(3, max-content);
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .advantages-item-action {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .advantages-button {
+    max-width: 135px;
+    margin-right: 0;
+  }
+}
+
+
+/* Action-2 Section / Баннер с покупкой 2 */
+
+.action-2 {
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-rows: 200px 55px 45px;
+  grid-template-columns: 400px 420px;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 20px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.action-2-text {
+  grid-column: 1 / 2;
+  margin-bottom: 0;
+  color: #0b0b0b;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.action-2-image {
+  grid-row: 1 / 4;
+  grid-column: 2 / 3;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  // -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.action-2-link {
+  grid-column: 1 / 2;
+}
+
+@media screen and (max-width: 840px) {
+  .action-2 {
+    display: grid;
+    grid-row-gap: 70px;
+    grid-template-rows: max-content minmax(200px, 300px) max-content;
+    grid-template-columns: minmax(320px, 500px);
+  }
+
+  .action-2-text {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    text-align: center;
+  }
+
+  .action-2-image {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+  }
+
+  .action-2-link {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+
+/* Testimonials Section / Отзывы пользователей */
+
+.testimonials .infinite-header-small {
+  margin-bottom: 0;
+}
+
+.testimonials-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.testimonials-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 25px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonials-date {
+  display: block;
+  font-weight: 300;
+  font-size: 12px;
+}

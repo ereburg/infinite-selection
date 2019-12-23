@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infinity Selection</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="fonts/fontawesome/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.min.css">
+</head>
+
+<body>
+
+    <header class="header" id="topPage">
+        <div class="fixed-top bg-white">
+            <nav class="navbar navbar-expand-lg  container">
+                <a class="basket-icon d-flex d-lg-none"></a>
+                <a class="navbar-brand brand-logo" href="index.html"></a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" id="mobileMenu"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex juctify-content-between">
+                        <li class="nav-item">
+                            <a class="nav-link" href="browse-sneakers.html">Browse Sneakers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="how-we-clean.html">How We Clean</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ways-to-rent.html">Ways to Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="authenticity-guarantee.html">Authenticity
+                                Guarantee</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="authorization-layout d-none d-lg-flex">
+                    <a class="nav-text" href="login.html">Login</a>
+                    <div class="searchbar">
+                        <input class="search_input" type="text" name="" placeholder="Search...">
+                        <a href="search.html" class="search_icon"><i class="fas fa-search"></i></a>
+                    </div>
+                    <a class="basket-icon"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="container login-layout">
+
+            <h2 class="infinite-title text-center ">Login</h2>
+            <form class="infinite-form infinite-form-validation" novalidate>
+                <a class="infinite-link-dark login-link" href="create-account.html">Create Account</a>
+                <div class="form-group">
+                    <input type="email" class="form-control form-field" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="E-mail" required>
+                    <small id="emailHelp" class="form-text text-grey">We'll never share your email with anyone
+                        else.</small>
+                    <div class="invalid-feedback">
+                        Please enter a valid Email address.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control form-field" id="exampleInputPassword1"
+                        placeholder="Password" aria-describedby="passwordHelp" minlength="8" maxlength="20" required>
+                    <small id="passwordHelp" class="form-text text-grey">Your Password will'be carefuly saved, sleep
+                        well.</small>
+                    <div class="invalid-feedback">
+                        Your password must be 8-20 characters long,
+                        contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <button type="submit" class="infinite-button login-button">Login</button>
+                <a class="infinite-button login-button login-light-button" href="lost-password.html">I Forgot E-mail or
+                    Password</a>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer-container">
+                <div class="col-12 col-lg footer-logo-container">
+                    <a class="footer-logo-link" href="#topPage">
+                        <img class="footer-logo" src="images/logo/logo-white.svg" alt="Infinite Selection">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-5 footer-menu">
+                    <nav class="footer-nav">
+                        <a class="footer-link" href="contact-us.html">Contact Us</a>
+                        <a class="footer-link" href="terms-of-service.html">Terms of Services</a>
+                        <a class="footer-link" href="privacy-policy.html">Privacy Policy</a>
+                        <a class="footer-link" href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+                <div class="col-12 col-lg footer-socials">
+                    <div class="socials-container">
+                        <a class="social-link facebook-link" href="https://www.facebook.com" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="social-link instagram-link" href="https://www.instagram.com" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="social-link twitter-link" href="https://twitter.com" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <p class="footer-text">
+                        © 2019 Infinity by Ereburg. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="script/validation-form.js"></script> -->
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- Font Awesome CSS -->
+    <script src="scripts/fontawesome.min.js" defer></script>
+    <!-- Custom JS -->
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

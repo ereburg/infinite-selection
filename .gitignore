@@ -1,2 +1,10 @@
-unused/
-hidden/
+.DS_Store
+.idea
+*.ai
+*.psd
+*.pdf
+*.log
+npm-debug.*
+node_modules/
+.sass-cache/
+*.map

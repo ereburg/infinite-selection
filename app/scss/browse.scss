@@ -1,0 +1,104 @@
+.browse {
+  margin: 70px auto;
+}
+
+.browse-filter {
+  margin: 0 auto;
+}
+
+.browse-top-line {
+  margin-bottom: 45px;
+}
+
+.browse-main-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.browse p {
+  margin-bottom: 0;
+}
+
+/* Контейнеры книопок и фильтрации */
+
+.browse-select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px 0 30px;
+}
+
+/* Стилизуем кнопки выбора */
+
+.browse-button {
+  margin: 5px 5px 5px 0;
+  color: #a7a7a7;
+  border: 1px solid #a7a7a7b0;
+  border-radius: 0;
+  outline: 0;
+  box-shadow: 0;
+}
+
+.brands-button {
+  width: calc(50% - 5px);
+  padding: 15px;
+}
+
+.size-button {
+  width: calc(20% - 5px);
+  padding: 10px;
+}
+
+.brands-button:hover,
+.size-button:hover {
+  color: #696969;
+  background: #f2f2f2;
+  border: 1px solid #a7a7a7dc;
+}
+
+.brands-button.active,
+.size-button.active {
+  color: #ffffff;
+  background-color: #0b0b0b;
+  border: 1px solid #0b0b0b;
+  box-shadow: none;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
+
+/* Календарь */
+
+.form-group.browse-select {
+  max-width: 100%;
+}
+
+#datetimepicker {
+  width: calc(100% - 5px);
+  font-family: "Roboto", sans-serif;
+}
+
+.input-group-text,
+.input-group-text:focus {
+  color: #ffffff;
+  font-size: 14px;
+  background: #0b0b0b;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+input.datetimepicker-input {
+  background: #ffffff;
+  border: 1px solid #a7a7a7dc;
+  border-radius: 0;
+}
+
+input.datetimepicker-input:focus {
+  border-color: #0b0b0b;
+  outline: none;
+  box-shadow: none;
+}

@@ -1,0 +1,94 @@
+{
+  "extends": [
+    "stylelint-config-htmlacademy",
+    "stylelint-config-rational-order"
+    ],
+  "plugins": [
+  "stylelint-order", 
+    ],
+  "rules": {
+    "at-rule-no-unknown": [true, {"ignoreAtRules": ["function", "if", "each", "else", "include", "mixin"]}],
+    "order/order": [
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "supports"
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "parameter": \(--light\)
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "parameter": \(--dark\)
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "parameter": \(--retina\)
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "parameter": \(--mobile-large\)
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "parameter": \(--tablet\)
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "parameter": \(--tablet-large\)
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "parameter": \(--desktop\)
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "parameter": \(--desktop-large\)
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "parameter": \(--desktop-extra-large\)
+      },
+      {
+        "type": "rule",
+        "selector": "^&::(before|after),"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::before"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::after"
+      },
+      {
+        "type": "rule",
+        "selector": "^&:\\w"
+      },
+      {
+        "type": "rule",
+        "selector": "^& \\+ &"
+      },
+      {
+        "type": "rule",
+        "selector": "^&--"
+      },
+      {
+        "type": "rule",
+        "selector": "^."
+      },
+      "rules"
+    ],
+  },
+  "syntax": "scss",
+}

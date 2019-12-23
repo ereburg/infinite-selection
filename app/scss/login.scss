@@ -1,0 +1,156 @@
+/* Стилизация страницы для Входа */
+
+.login-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 70px auto;
+}
+
+.infinite-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.login-link {
+  margin: 25px 0 45px;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 25px;
+}
+
+.form-text {
+  font-size: 10px;
+}
+
+.form-field {
+  // -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 350px;
+  height: 52px;
+  padding: 18px 20px;
+  color: #0b0b0b;
+  font-size: 13px;
+  border: 1px solid #e3e3e3;
+  // -webkit-border-radius: 0;
+  border-radius: 0;
+  // -webkit-box-shadow: none;
+  box-shadow: none;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  appearance: none;
+}
+
+small {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+/* Кнопки форм */
+
+.infinite-button.login-button {
+  width: 100%;
+  max-width: 320px;
+  font-size: 13px;
+}
+
+.login-button:hover {
+  outline: 1px solid #0b0b0b !important;
+}
+
+.login-light-button {
+  // -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 25px;
+  color: #0b0b0b;
+  background-color: #e3e3e3;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  // -webkit-transition: color 0.2s;
+  // -o-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.login-light-button:hover {
+  background-color: #cccccc;
+  outline: none !important;
+}
+
+
+/* Стилизация страницы создания аккаунта */
+
+
+.form-paragraph {
+  width: 90%;
+  margin-bottom: 25px;
+  color: #7e7e7e;
+  font-size: 13px;
+  text-align: center;
+}
+
+.form-links {
+  color: #0b0b0b;
+  font-weight: 500;
+}
+
+.form-links:hover {
+  color: #0b0b0bb4;
+}
+
+
+/* Потерянный пароль */
+
+.container-center {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 320px;
+  transform: translate(-50%);
+}
+
+.lost-text {
+  margin-bottom: 25px;
+  padding: 15px 25px;
+  color: #7e7e7e;
+  font-size: 13px;
+  border-left: 5px solid #0b0b0b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+}
+
+.lost-form {
+  padding: 25px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+}
+
+.lost-button {
+  margin-bottom: 25px;
+  padding: 12px 0;
+}
+
+.lost-form .form-text {
+  color: #0b0b0b;
+  font-size: 13px;
+}
+
+.lost-form .form-text:hover {
+  color: #0b0b0ba4;
+}
+
+@media screen and (max-width: 576px) {
+  .container-center {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 320px;
+    transform: translate(0);
+  }
+}

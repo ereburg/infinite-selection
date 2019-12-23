@@ -1,0 +1,198 @@
+// /* Major Headings */
+
+
+.infinite-title-main {
+  font-size: 50px;
+  line-height: 62px;
+  text-transform: capitalize;
+}
+
+.infinite-title {
+  margin-bottom: 0;
+  color: #0b0b0b;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: capitalize;
+}
+
+
+/* Regular Text */
+
+
+.infinite-header {
+  color: #0b0b0b;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: capitalize;
+}
+
+.infinite-header-small {
+  color: #0b0b0b;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
+.infinite-text {
+  color: #0b0b0b;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.text-dark-medium {
+  color: #0b0b0b;
+  font-weight: 600;
+}
+
+.text-dark-bold {
+  color: #0b0b0b;
+  font-weight: 800;
+}
+
+/* Links */
+
+
+.regular-link {
+  color: #0b0b0b;
+  font-weight: 700;
+}
+
+.regular-link:hover {
+  color: #bb2424;
+  font-weight: 700;
+}
+
+.infinite-link,
+.infinite-link-dark {
+  color: #7e7e7e;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.1s ease;
+}
+
+.infinite-link::after,
+.infinite-link-dark::after {
+  position: relative;
+  bottom: -5px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #7e7e7e;
+  transition: all 0.1s ease;
+  content: "";
+}
+
+.infinite-link:hover {
+  color: #0b0b0b;
+}
+
+.infinite-link:hover::after {
+  background-color: #0b0b0b;
+}
+
+.infinite-link-dark {
+  color: #0b0b0b;
+}
+
+.infinite-link-dark::after {
+  background-color: #0b0b0b;
+}
+
+.infinite-link-dark:hover {
+  color: #0b0b0bad;
+}
+
+.infinite-link-dark:hover::after {
+  background-color: #0b0b0bad;
+}
+
+
+/* Buttons */
+
+
+.infinite-button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 200px;
+  padding: 18px 0;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  background-color: #0b0b0b;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.infinite-button:hover {
+  color: #0b0b0b;
+  background-color: #ffffff;
+  outline: 1px solid #0b0b0b;
+}
+
+.button-white {
+  color: #0b0b0b;
+  background: #ffffff;
+  outline: 1px solid #0b0b0b;
+}
+
+.button-white:hover {
+  color: #ffffff;
+  background: #0b0b0b;
+  outline: 1px solid #ffffff;
+}
+
+.rent-banner-button:hover {
+  background-color: #f9f9f8;
+}
+
+/* Для договора и лицензий; списки / Lists */
+
+.paragraph-privacy {
+  display: block;
+  margin: 35px 0;
+  color: #0b0b0b;
+  font-weight: 700;
+  text-align: center;
+}
+
+.emptySpace {
+  display: block;
+  height: 20px;
+}
+
+.regular-list {
+  padding: 0 17px;
+}
+
+.list-item {
+  position: relative;
+}
+
+.list-item::before {
+  position: absolute;
+  top: 6.25px;
+  left: -17px;
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: #7e7e7e;
+  border-radius: 50%;
+  content: "";
+}
+
+.rent-perks .list-item::before {
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #0b0b0b;
+  transform: translateX(-200%) translateY(120%);
+}
