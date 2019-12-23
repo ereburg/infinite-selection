@@ -3,5 +3,5 @@
 
 
 ## Links
-- [Link to GitHub Pages.](https://ereburg.github.io/Infinite-Selection/index.html)
+- [Link to GitHub Pages.](https://ereburg.github.io/infinite-selection/build/)
 - [Reference](https://www.behance.net/gallery/82806707/Infinite-Selection)

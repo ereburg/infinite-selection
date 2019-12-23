@@ -1,8 +1,14 @@
 .header {
-  height: 95px;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
 
   &.scroll {
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .fixed-top {
+    position: static;
   }
 }
 
@@ -69,8 +75,8 @@
   .navbar-nav {
     align-items: center;
     justify-content: flex-start;
-    height: calc(100vh - 90px);
-    margin-top: 35px;
+    height: calc(100vh - 95px);
+    padding-top: 80px;
   }
 
   .nav-link {

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	window.addEventListener('scroll', () => {
 		let y = window.pageYOffset;
 
-		if (y > 95) {
+		if (y > 1) {
 			header.classList.add('scroll');
 		} else {
 			header.classList.remove('scroll');
