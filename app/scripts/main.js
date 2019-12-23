@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Search
 
-	document.querySelector('#elastic').oninput = function () {
+	document.querySelector('#exampleInputText').oninput = function () {
 		let val = this.value.trim();
-		let elasticItems = document.querySelectorAll('.elastic li');
+		let elasticItems = document.querySelectorAll('.browse-item');
 		if (val != '') {
 			elasticItems.forEach(function (elem) {
 				if (elem.innerText.search(val) == -1) {

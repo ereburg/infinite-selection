@@ -573,8 +573,22 @@
   width: 100%;
   max-width: 500px;
   height: 100%;
-  // -o-object-fit: contain;
   object-fit: contain;
+  animation: bottomSneaker 3s ease infinite alternate;
+}
+
+@keyframes bottomSneaker {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  35% {
+    transform: translateX(34px) rotate(25deg) translateY(30px);
+  }
+
+  100% {
+    transform: translateX(-50px) rotate(-15deg)  translateY(-60px);
+  }
 }
 
 .action-2-link {
