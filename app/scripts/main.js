@@ -17,25 +17,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Фильтрация по ключевым словам в поиске
 	const inputSearch = document.querySelector('.search-input');
-	
-	inputSearch.addEventListener('keyup', () => {
-		const parentContainer = document.querySelector('.sneakers-browse-container');
-		const exampleItems = document.querySelectorAll('.browse-item');
-		let filter, itemTitle, isItemTitle;
-		filter = inputSearch.value.trim().toUpperCase();
-		
-		for (let i = 0; i < exampleItems.length; i++) {
-			itemTitle = exampleItems[i].querySelector(".releases-title");
-			isItemTitle = itemTitle.textContent || itemTitle.innerText;
-			let notFound = document.createElement('p');
-			notFound.textContent = 'Not Found :(';
+	const wrapper = document.querySelector('.sneakers-browse-container');
+	const browseItem = document.querySelectorAll('.browse-item');
 
-			if (isItemTitle.trim().toUpperCase().indexOf(filter) > -1) {
-				exampleItems[i].style.display = "";
-				// parentContainer.remove(notFound);
+
+	function Check() {
+		let counter = 0;
+		let p = document.createElement('p');
+		p.classList.add('added');
+		p.textContent = `We tried hard and couldn't find anything...  But you can hire Eugene, if you like his work :)`;
+
+		browseItem.forEach(e => {
+			if (e.hasAttribute('hidden', '')) {
+				counter++;
+			}
+		});
+
+		let newEl = document.querySelector('.added');
+
+		if (counter < browseItem.length && wrapper.contains(newEl)) {
+			newEl.remove();
+		}
+		else if (counter >= browseItem.length && !wrapper.contains(newEl)) {
+			wrapper.append(p);
+		}
+	}
+
+	inputSearch.addEventListener('keyup', () => {
+		let filter, browseItemTitle, browseItemTitleText;
+		filter = inputSearch.value.trim().toUpperCase();
+
+		for (let i = 0; i < browseItem.length; i++) {
+			browseItemTitle = browseItem[i].querySelector(".releases-title"),
+			browseItemTitleText = browseItemTitle.textContent || browseItemTitle.innerText,
+			checkBrowseItem = browseItemTitleText.trim().toUpperCase().indexOf(filter) > -1;
+
+			if (checkBrowseItem) {
+				browseItem[i].removeAttribute('hidden', '');
+				Check();
 			} else {
-				exampleItems[i].style.display = "none";
-				// parentContainer.append(notFound);
+				browseItem[i].setAttribute('hidden', '');
+				Check();
 			}
 
 
