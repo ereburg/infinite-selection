@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.168" height="21.168" viewBox="0 0 21.168 21.168">
+    <defs>
+        <style>
+            .cls-1{fill:#000}
+        </style>
+    </defs>
+    <path id="multiply-2"
+          d="M21.168 1.84L19.328 0l-8.744 8.744L1.84 0 0 1.84l8.744 8.744L0 19.328l1.84 1.84 8.744-8.744 8.744 8.744 1.84-1.84-8.744-8.744z"
+          class="cls-1"/>
+</svg>

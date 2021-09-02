@@ -2,12 +2,24 @@
   "extends": [
     "stylelint-config-htmlacademy",
     "stylelint-config-rational-order"
-    ],
+  ],
   "plugins": [
-  "stylelint-order", 
-    ],
+    "stylelint-order"
+  ],
   "rules": {
-    "at-rule-no-unknown": [true, {"ignoreAtRules": ["function", "if", "each", "else", "include", "mixin"]}],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "function",
+          "if",
+          "each",
+          "else",
+          "include",
+          "mixin"
+        ]
+      }
+    ],
     "order/order": [
       "declarations",
       {
@@ -17,47 +29,47 @@
       {
         "type": "at-rule",
         "name": "media",
-        "parameter": \(--light\)
+        "parameter": "(--light)"
       },
       {
         "type": "at-rule",
         "name": "media",
-        "parameter": \(--dark\)
+        "parameter": "(--dark)"
       },
       {
         "type": "at-rule",
         "name": "media",
-        "parameter": \(--retina\)
+        "parameter": "(--retina)"
       },
       {
         "type": "at-rule",
         "name": "media",
-        "parameter": \(--mobile-large\)
+        "parameter": "(--mobile-large)"
       },
       {
         "type": "at-rule",
         "name": "media",
-        "parameter": \(--tablet\)
+        "parameter": "(--tablet)"
       },
       {
         "type": "at-rule",
         "name": "media",
-        "parameter": \(--tablet-large\)
+        "parameter": "(--tablet-large)"
       },
       {
         "type": "at-rule",
         "name": "media",
-        "parameter": \(--desktop\)
+        "parameter": "(--desktop)"
       },
       {
         "type": "at-rule",
         "name": "media",
-        "parameter": \(--desktop-large\)
+        "parameter": "(--desktop-large)"
       },
       {
         "type": "at-rule",
         "name": "media",
-        "parameter": \(--desktop-extra-large\)
+        "parameter": "(--desktop-extra-large)"
       },
       {
         "type": "rule",
@@ -88,7 +100,7 @@
         "selector": "^."
       },
       "rules"
-    ],
+    ]
   },
-  "syntax": "scss",
+  "syntax": "scss"
 }
