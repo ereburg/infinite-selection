@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "main": "gulpfile.mjs",
+  "homepage": "https://ereburg.github.io/infinite-selection",
   "engines": {
     "node": ">=12"
   },
@@ -11,7 +12,9 @@
     "start": "gulp dev",
     "build": "gulp build",
     "style:lint": "stylelint 'src/app/styles/**/*.scss' --syntax scss",
-    "style:fix": "stylelint 'src/app/styles/**/*.scss' --syntax scss --fix"
+    "style:fix": "stylelint 'src/app/styles/**/*.scss' --syntax scss --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": {
     "name": "Eugene Kotsarev",
@@ -21,6 +24,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^6.0.0",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
