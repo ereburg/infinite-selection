@@ -1,26 +1,28 @@
-module.exports = function () {
-  $.gulp.task("tiny", () => {
-    return $.gulp.src("./app/images/*.{png,jpg,jpeg}")
-      .pipe($.plugins.tinypngWeb({ verbose: true }))
-      .pipe($.gulp.dest("./build/images/"));
-  });
+import gulp from 'gulp'
+import tinyPNG from 'gulp-tinypng-web';
+import toWEBP from 'gulp-webp'
+import rename from 'gulp-rename'
+import svgStore from 'gulp-svgstore'
 
-  $.gulp.task("webp", () => {
-    return $.gulp.src("./build/images/**/*.{png,jpg,jpeg}")
-      .pipe($.plugins.webp({ quality: 80 }))
-      .pipe($.gulp.dest("./build/images/"));
-  });
+const tiny = () => {
+  return gulp.src('./app/images/*.{png,jpg,jpeg}')
+    .pipe(tinyPNG({verbose: true}))
+    .pipe(gulp.dest('./build/images/'));
+}
+const webp = () => {
+  return gulp.src('./build/images/**/*.{png,jpg,jpeg}')
+    .pipe(toWEBP({quality: 80}))
+    .pipe(gulp.dest('./build/images/'));
+}
+const sprite = () => {
+  return gulp.src('./app/images/sprite/sp-*.svg')
+    .pipe(svgStore())
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('./build/images/'));
+}
+const svgMove = () => {
+  return gulp.src('./app/images/**/*.svg')
+    .pipe(gulp.dest('./build/images/'));
+}
 
-  $.gulp.task("sprite", () => {
-    return $.gulp.src("./app/images/sprite/sp-*.svg")
-      .pipe($.plugins.svgstore())
-      .pipe($.plugins.rename("sprite.svg"))
-      .pipe($.gulp.dest("./build/images/"));
-  });
-
-  $.gulp.task("svg:remove", () => {
-    return $.gulp.src("./app/images/**/*.svg")
-      .pipe($.gulp.dest("./build/images/"));
-  });
-  $.gulp.task('images', $.gulp.series('tiny', 'webp', 'sprite', 'svg:remove'));
-};
+export const images = () => gulp.series(tiny, webp, sprite, svgMove)

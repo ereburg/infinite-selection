@@ -1,0 +1,109 @@
+.cleaning {
+  margin-bottom: 50px;
+}
+
+/* Первая секция */
+
+.cleaning-banner {
+  margin: 30px 0 0;
+}
+
+.cleaning-banner .col-12 {
+  padding: 0;
+}
+
+.cleaning-subtitle-text {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  color: #a7a7a7;
+  font-size: 14px;
+}
+
+.cleaning-video {
+  width: 100%;
+  height: 540px;
+}
+
+/* Основной контент, описание этапов очистки */
+
+.cleaning-container {
+  margin: 100px 0 0;
+}
+
+.cleaning-text-container {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.cleaning-step {
+  margin-bottom: 5px;
+  color: #0b0b0b;
+  font-size: 14px;
+}
+
+.cleaning-header {
+  margin-bottom: 13px;
+}
+
+/* Добавляем изображения */
+
+.cleaning-image {
+  width: 100%;
+  height: 650px;
+  background: url("../assets/images/cleaning/cleaning-1.jpg") center no-repeat;
+  background-size: contain;
+}
+
+.cleaning-image-2 {
+  background: url("../assets/images/cleaning/cleaning-2.jpg") center no-repeat;
+  background-size: contain;
+}
+
+.cleaning-image-3 {
+  background: url("../assets/images/cleaning/cleaning-3.jpg") center no-repeat;
+  background-size: contain;
+}
+
+.cleaning-image-4 {
+  background: url("../assets/images/cleaning/cleaning-4.jpg") center no-repeat;
+  background-size: contain;
+}
+
+.cleaning-image-5 {
+  background: url("../assets/images/cleaning/cleaning-5.jpg") center no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 992px) {
+  .cleaning-video {
+    height: 408px;
+  }
+
+  .cleaning-image {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cleaning-video {
+    height: 268px;
+  }
+
+  .cleaning-image {
+    height: 330px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cleaning-video {
+    height: 50vmin;
+    max-height: 268px;
+  }
+
+  .cleaning-image {
+    height: 60vmin;
+    max-height: 330px;
+    padding: 0;
+  }
+}

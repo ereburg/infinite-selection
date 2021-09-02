@@ -1,37 +1,26 @@
 {
   "name": "infinite-selection",
-  "version": "1.0.0",
-  "description": "Infinite Selection - test project website",
-  "main": "gulpfile.js",
-  "repository": {
-    "type": "git",
-    "url": "https//github.com/Ereburg/infinite-selection"
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "main": "gulpfile.mjs",
+  "engines": {
+    "node": ">=12"
   },
   "scripts": {
-    "style:lint": "stylelint 'app/scss/**/*.scss' --syntax scss",
-    "style:fix": "stylelint 'app/scss/**/*.scss' --syntax scss --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp dev",
+    "build": "gulp build",
+    "style:lint": "stylelint 'src/app/styles/**/*.scss' --syntax scss",
+    "style:fix": "stylelint 'src/app/styles/**/*.scss' --syntax scss --fix"
   },
-  "keywords": [
-    "gulpplugin",
-    "purgecss",
-    "image",
-    "terser",
-    "sass",
-    "minify",
-    "compress",
-    "png",
-    "jpg",
-    "jpeg",
-    "svg"
-  ],
   "author": {
     "name": "Eugene Kotsarev",
     "email": "eugene.kotsarev@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",

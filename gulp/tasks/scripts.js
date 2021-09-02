@@ -1,21 +1,17 @@
-module.exports = function () {
-    // $.gulp.task('scripts-libs', () => {
-    //     return $.gulp.src([ // Берем все необходимые библиотеки
-    //         './app/scripts/libs/**/*.js'
-    //         ])
-    //         .pipe($.plugins.sourcemaps.init())
-    //         .pipe($.plugins.concat('libs.min.js')) // Собираем их в кучу в новом файле
-    //         .pipe($.plugins.terser()) // Сжимаем JS файл
-    //         .pipe($.plugins.sourcemaps.write('./')) 
-    //         .pipe($.gulp.dest('./build/scripts'));
-    // });
-    $.gulp.task('scripts', () => {
-        return $.gulp.src(['./app/scripts/main.js'])
-            .pipe($.plugins.sourcemaps.init())
-            .pipe($.plugins.rename({ suffix: '.min' }))
-            .pipe($.plugins.terser()) // Сжимаем JS файл
-            .pipe($.plugins.sourcemaps.write('./')) 
-            .pipe($.gulp.dest('./build/scripts'));
-    });
-    // $.gulp.task('scripts', $.gulp.series('scripts-libs', 'scripts-main'));
-};
+import sourcemaps from 'gulp-sourcemaps'
+import rename from 'gulp-rename'
+import terser from 'gulp-terser'
+import pkg from 'gulp'
+import { server } from './server.js';
+
+const {src, dest} = pkg
+
+export const scripts = () => {
+  return src([`${$.conf.app}/${$.conf.pathJS}/*.js`])
+    .pipe(sourcemaps.init())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(terser())
+    .pipe(sourcemaps.write('./'))
+    .pipe(dest(`${$.conf.outputPath}/${$.conf.pathJS}`))
+    .pipe(server.stream())
+}

@@ -8,3 +8,5 @@ npm-debug.*
 node_modules/
 .sass-cache/
 *.map
+.tmp
+dist
