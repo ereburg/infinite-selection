@@ -1,67 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+{{!Home}}
 
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../assets/favicon/site.webmanifest">
-  <link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#e68a2c">
-  <meta name="msapplication-TileColor" content="#603cba">
-  <meta name="theme-color" content="#ffffff">
-
-  <title>Infinite Selection</title>
-  <!-- Bootstrap CSS -->
-  <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="../styles/vendors.min.css">
-  <link rel="stylesheet" href="../styles/styles.min.css">
-</head>
-<body>
-<header class="header" id="topPage">
-  <div class="fixed-top bg-white">
-    <nav class="navbar navbar-expand-lg  container">
-      <a class="basket-icon d-flex d-lg-none"></a>
-      <a class="navbar-brand brand-logo" href="#topPage"></a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" id="mobileMenu"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav d-flex juctify-content-between">
-          <li class="nav-item ">
-            <a class="nav-link" href="browse-sneakers.html">Browse Sneakers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="how-we-clean.html">How We Clean</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="ways-to-rent.html">Ways to Rent</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="authenticity-guarantee.html">Authenticity Guarantee</a>
-          </li>
-        </ul>
-      </div>
-      <div class="authorization-layout d-none d-lg-flex">
-        <a class="nav-text" href="login.html">Login</a>
-        <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search...">
-          <a href="search.html" class="search_icon"><i class="fas fa-search"></i></a>
-        </div>
-        <a class="basket-icon"></a>
-      </div>
-    </nav>
-  </div>
-</header>
+{{> layout/head }}
+{{> blocks/header }}
 <main class="main">
   <section class="container intro-container">
     <div class="row intro">
@@ -73,7 +13,7 @@
           <p class="description-text">
             Rent Collectable Sneakers From Top Brands Like Nike, Air Jordan, Adidas and More
           </p>
-          <a href="browse-sneakers.html" class="infinite-button mx-auto mx-lg-0">Rent Now</a>
+          <a href='browse-sneakers.hbs' class="infinite-button mx-auto mx-lg-0">Rent Now</a>
         </div>
       </div>
       <div class="col-lg-8 col-xl-7 order-1 order-lg-2 animate-container">
@@ -89,11 +29,11 @@
         <h3 class="infinite-header">
           New Releases
         </h3>
-        <a class="infinite-link-dark" href="browse-sneakers.html">View All</a>
+        <a class="infinite-link-dark" href='browse-sneakers.hbs'>View All</a>
       </div>
       <div class="col-12 releases-container">
         <div class="releases-item">
-          <a href="example.html" class="releases-item-link">
+          <a href='example.hbs' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-1.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -101,7 +41,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href="example.html" class="releases-item-link">
+          <a href='example.hbs' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-2.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -109,7 +49,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href="example.html" class="releases-item-link">
+          <a href='example.hbs' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-3.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -117,7 +57,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href="example.html" class="releases-item-link">
+          <a href='example.hbs' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-4.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -125,7 +65,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href="example.html" class="releases-item-link">
+          <a href='example.hbs' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-5.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -133,7 +73,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href="example.html" class="releases-item-link">
+          <a href='example.hbs' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-6.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -152,7 +92,7 @@
             We Feel You, No One Should Ever Spend Money On Fake Sneakers.
             Or Have To Spend Hundreds To Rock The Real Ones.
           </h2>
-          <a href="authenticity-guarantee.html" class="button-white infinite-button">Authenticity
+          <a href='authenticity-guarantee.hbs' class="button-white infinite-button">Authenticity
             Guarantee</a>
         </div>
       </div>
@@ -164,14 +104,14 @@
       How we clean
     </h2>
     <img class="clean-image" src="../assets/images/homepage-section/section-clean.jpg" alt="How we clean">
-    <a href="how-we-clean.html" class="infinite-link mx-auto mx-lg-0">Learn More</a>
+    <a href='how-we-clean.hbs' class="infinite-link mx-auto mx-lg-0">Learn More</a>
   </section>
 
   <section class="action">
     <h2 class="action-text infinite-title">
       Same Sneakers, Better Prices
     </h2>
-    <a href="browse-sneakers.html" class="infinite-button action-link">Rent Now</a>
+    <a href='browse-sneakers.hbs' class="infinite-button action-link">Rent Now</a>
     <img class="action-image" src="../assets/images/homepage-section/section-action.png" alt="How we clean">
   </section>
 
@@ -236,8 +176,8 @@
               </ul>
             </div>
             <div class="advantages-item-action">
-              <a href="browse-sneakers.html" class="infinite-button advantages-button">Rent Now</a>
-              <a href="ways-to-rent.html" class="infinite-link">Learn More</a>
+              <a href='browse-sneakers.hbs' class="infinite-button advantages-button">Rent Now</a>
+              <a href='ways-to-rent.hbs' class="infinite-link">Learn More</a>
             </div>
 
           </div>
@@ -260,8 +200,8 @@
               </ul>
             </div>
             <div class="advantages-item-action">
-              <a href="browse-sneakers.html" class="infinite-button advantages-button">Rent Now</a>
-              <a href="ways-to-rent.html" class="infinite-link">Learn More</a>
+              <a href='browse-sneakers.hbs' class="infinite-button advantages-button">Rent Now</a>
+              <a href='ways-to-rent.hbs' class="infinite-link">Learn More</a>
             </div>
 
           </div>
@@ -341,75 +281,10 @@
     <h2 class="infinite-title action-2-text">
       Become the Sneakerhead You've Always Dreamed of
     </h2>
-    <a href="browse-sneakers.html" class="infinite-button action-2-link">Rent Now</a>
+    <a href='browse-sneakers.hbs' class="infinite-button action-2-link">Rent Now</a>
     <img class="action-2-image" src="../assets/images/homepage-section/section-action-2.png" alt="Lucky You Are!">
   </section>
 
 </main>
-<footer class="footer">
-  <div class="container">
-    <div class="row footer-container">
-      <div class="col-12 col-lg footer-logo-container">
-        <a class="footer-logo-link" href="#topPage">
-          <img class="footer-logo" src="../assets/images/logo/logo-white.svg" alt="Infinite Selection">
-        </a>
-      </div>
-      <div class="col-12 col-lg-5 footer-menu">
-        <nav class="footer-nav">
-          <a class="footer-link" href="contact-us.html">Contact Us</a>
-          <a class="footer-link" href="terms-of-service.html">Terms of Services</a>
-          <a class="footer-link" href="privacy-policy.html">Privacy Policy</a>
-          <a class="footer-link" href="faq.html">FAQ</a>
-        </nav>
-      </div>
-      <div class="col-12 col-lg footer-socials">
-        <div class="socials-container">
-          <a class="social-link facebook-link" href="https://www.facebook.com" target="_blank"
-             rel="noopener noreferrer">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a class="social-link instagram-link" href="https://www.instagram.com" target="_blank"
-             rel="noopener noreferrer">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a class="social-link twitter-link" href="https://twitter.com" target="_blank"
-             rel="noopener noreferrer">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </div>
-        <p class="footer-text">
-          © 2019 Infinity by Ereburg. All rights reserved.
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Bootstrap CSS -->
-<script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"
-    defer
->
-</script>
-<script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"
-    defer
->
-</script>
-<script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
-    defer
->
-</script>
-<!-- Font Awesome CSS -->
-<script src="../scripts/vendors.min.js" defer type="module"></script>
-<!-- Custom JS -->
-<script src="../scripts/main.min.js" defer></script>
-</body>
-</html>
+{{> blocks/footer }}
+{{> layout/bottom }}

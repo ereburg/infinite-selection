@@ -5,7 +5,13 @@ import { server } from './server.js'
 const { src, dest } = pkg
 
 export const optHTML = () => {
-  return src(`${$.conf.app}/${$.conf.htmlPages}/**/*.html`)
+  return src(`${$.conf.app}/${$.conf.pathHTML}/${$.conf.htmlPages}/*.html`)
+    .pipe(
+      fileinclude({
+        prefix: '@@',
+        basepath: '@file',
+      })
+    )
     .pipe(
       htmlmin({
         collapseWhitespace: true,

@@ -1,3 +1,5 @@
+{{!Login}}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Infinite Selection - Contact Us</title>
+    <title>Infinite Selection - LogIn Page</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -21,7 +23,7 @@
         <div class="fixed-top bg-white">
             <nav class="navbar navbar-expand-lg  container">
                 <a class="basket-icon d-flex d-lg-none"></a>
-                <a class="navbar-brand brand-logo" href="index.html"></a>
+                <a class="navbar-brand brand-logo" href='home.hbs'></a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -29,25 +31,26 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex juctify-content-between">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="browse-sneakers.html">Browse Sneakers</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href='browse-sneakers.hbs'>Browse Sneakers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="how-we-clean.html">How We Clean</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="ways-to-rent.html">Ways to Rent</a>
+                            <a class="nav-link" href='how-we-clean.hbs'>How We Clean</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="authenticity-guarantee.html">Authenticity Guarantee</a>
+                            <a class="nav-link" href='ways-to-rent.hbs'>Ways to Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href='authenticity-guarantee.hbs'>Authenticity
+                                Guarantee</a>
                         </li>
                     </ul>
                 </div>
                 <div class="authorization-layout d-none d-lg-flex">
-                    <a class="nav-text" href="login.html">Login</a>
+                    <a class="nav-text" href="login.hbs">Login</a>
                     <div class="searchbar">
-                        <input class="search_input" type="text" name="" placeholder="Search...">
-                        <a href="search.html" class="search_icon"><i class="fas fa-search"></i></a>
+                        <input class="search_input" type="text" name="" placeholder="Search..." required>
+                        <a href='search.hbs' class="search_icon"><i class="fas fa-search"></i></a>
                     </div>
                     <a class="basket-icon"></a>
                 </div>
@@ -56,19 +59,44 @@
     </header>
 
     <main class="main">
-        <section class="container layout-404 ">
-            <div class="text-container-404">
-                <h2 class="infinite-title-main text-center">We lost this page</h2>
-                <p class="infinite-text text-404">
-                    We searched high and low but couldn’t find what you’re looking for.
-                    Let’s find a better place for you to go.
-                </p>
-                <a href="index.html" class="infinite-button mx-auto">Back to Home</a>
-            </div>
-            <picture class="not-found">
-                <img class="not-found-image" src="../assets/images/other/404.png" alt="404">
-            </picture>
+
+        <section class="container login-layout">
+
+            <h2 class="infinite-title text-center ">Login</h2>
+            <form class="infinite-form infinite-form-validation" novalidate>
+                <a class="infinite-link-dark login-link" href='create-account.hbs'>Create Account</a>
+                <div class="form-group">
+                    <input type="email" class="form-control form-field" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="E-mail" required>
+                    <small id="emailHelp" class="form-text text-grey">We'll never share your email with anyone
+                        else.</small>
+                    <div class="invalid-feedback">
+                        Please enter a valid Email address.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control form-field" id="exampleInputPassword1"
+                        placeholder="Password" aria-describedby="passwordHelp" minlength="8" maxlength="20" required>
+                    <small id="passwordHelp" class="form-text text-grey">Your Password will'be carefuly saved, sleep
+                        well.</small>
+                    <div class="invalid-feedback">
+                        Your password must be 8-20 characters long,
+                        contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <button type="submit" class="infinite-button login-button">Login</button>
+                <a class="infinite-button login-button login-light-button" href='lost-password.hbs'>I Forgot E-mail or
+                    Password</a>
+            </form>
+
         </section>
+
     </main>
 
     <footer class="footer">
@@ -81,10 +109,10 @@
                 </div>
                 <div class="col-12 col-lg-5 footer-menu">
                     <nav class="footer-nav">
-                        <a class="footer-link" href="contact-us.html">Contact Us</a>
-                        <a class="footer-link" href="terms-of-service.html">Terms of Services</a>
-                        <a class="footer-link" href="privacy-policy.html">Privacy Policy</a>
-                        <a class="footer-link" href="faq.html">FAQ</a>
+                        <a class="footer-link" href='contact-us.hbs'>Contact Us</a>
+                        <a class="footer-link" href='terms-of-service.hbs'>Terms of Services</a>
+                        <a class="footer-link" href='privacy-policy.hbs'>Privacy Policy</a>
+                        <a class="footer-link" href='faq.hbs'>FAQ</a>
                     </nav>
                 </div>
                 <div class="col-12 col-lg footer-socials">
@@ -109,7 +137,6 @@
             </div>
         </div>
     </footer>
-
 
     <!-- <script src="script/validation-form.js"></script> -->
     <!-- Bootstrap CSS -->

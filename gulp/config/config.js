@@ -1,4 +1,5 @@
 export default {
+  siteName: 'Infinite Selection',
   prod: 'dist',
   dev: '.tmp',
   src: './src',
@@ -7,5 +8,7 @@ export default {
   pathStyles: 'styles',
   pathJS: 'scripts',
   pathHTML: 'html',
-  pathAssets: 'assets'
+  pathAssets: 'assets',
+  pathPreviews: 'previews',
+  useWEBP: false,
 }
