@@ -1,17 +1,33 @@
-import sourcemaps from 'gulp-sourcemaps'
-import rename from 'gulp-rename'
-import terser from 'gulp-terser'
 import pkg from 'gulp'
-import { server } from './server.js';
+import { server } from './server.js'
+import gulpEsbuild, { createGulpEsbuild } from 'gulp-esbuild'
 
-const {src, dest} = pkg
+const { src, dest } = pkg
 
 export const scripts = () => {
-  return src([`${$.conf.app}/${$.conf.pathJS}/*.js`])
-    .pipe(sourcemaps.init())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(terser())
-    .pipe(sourcemaps.write('./'))
-    .pipe(dest(`${$.conf.outputPath}/${$.conf.pathJS}`))
+  const esbuild = $.conf.isProd
+    ? gulpEsbuild
+    : createGulpEsbuild({ incremental: true })
+  const startPath = [`${$.conf.app}/${$.conf.pathJS}/*.{js,ts}`]
+  const endPath = `${$.conf.outputPath}/${$.conf.pathJS}`
+
+  return src(startPath)
+    .pipe(
+      esbuild({
+        // outfile: 'theme.min.js',
+        outdir: '.',
+        bundle: true,
+        minify: $.conf.isProd,
+        sourcemap: !$.conf.isProd,
+        loader: {
+          '.ts': 'ts',
+        },
+        // format: "esm",
+        platform: 'browser',
+        target: ['es6'],
+        entryNames: '[name].min',
+      })
+    )
+    .pipe(dest(endPath))
     .pipe(server.stream())
 }

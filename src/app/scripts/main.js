@@ -1,67 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Add class to header on scroll
-  const header = document.querySelector('.header');
+  const header = document.querySelector('.header')
 
   window.addEventListener('scroll', () => {
-    let y = window.pageYOffset;
+    let y = window.pageYOffset
 
     if (y > 1) {
-      header.classList.add('scroll');
+      header.classList.add('scroll')
     } else {
-      header.classList.remove('scroll');
+      header.classList.remove('scroll')
     }
-  });
-
+  })
 
   // Search
 
   // Фильтрация по ключевым словам в поиске
-  const inputSearch = document.querySelector('.search-input');
-  const wrapper = document.querySelector('.sneakers-browse-container');
-  const browseItem = document.querySelectorAll('.browse-item');
-
+  const inputSearch = document.querySelector('.search-input')
+  const wrapper = document.querySelector('.sneakers-browse-container')
+  const browseItem = document.querySelectorAll('.browse-item')
 
   function Check() {
-    let counter = 0;
-    let p = document.createElement('p');
-    p.classList.add('added');
-    p.textContent = `We tried hard and couldn't find anything...  But you can hire Eugene, if you like his work :)`;
+    let counter = 0
+    let p = document.createElement('p')
+    p.classList.add('added')
+    p.textContent = `We tried hard and couldn't find anything...  But you can hire Eugene, if you like his work :)`
 
-    browseItem.forEach(e => {
+    browseItem.forEach((e) => {
       if (e.hasAttribute('hidden', '')) {
-        counter++;
+        counter++
       }
-    });
+    })
 
-    let newEl = document.querySelector('.added');
+    let newEl = document.querySelector('.added')
 
     if (counter < browseItem.length && wrapper.contains(newEl)) {
-      newEl.remove();
+      newEl.remove()
     } else if (counter >= browseItem.length && !wrapper.contains(newEl)) {
-      wrapper.append(p);
+      wrapper.append(p)
     }
   }
 
-  inputSearch && inputSearch.addEventListener('keyup', () => {
-    let filter, browseItemTitle, browseItemTitleText;
-    filter = inputSearch.value.trim().toUpperCase();
+  inputSearch &&
+    inputSearch.addEventListener('keyup', () => {
+      let filter, browseItemTitle, browseItemTitleText
+      filter = inputSearch.value.trim().toUpperCase()
 
-    for (let i = 0; i < browseItem.length; i++) {
-      browseItemTitle = browseItem[i].querySelector('.releases-title'),
-        browseItemTitleText = browseItemTitle.textContent || browseItemTitle.innerText,
-        checkBrowseItem = browseItemTitleText.trim().toUpperCase().indexOf(filter) > -1;
+      for (let i = 0; i < browseItem.length; i++) {
+        ;(browseItemTitle = browseItem[i].querySelector('.releases-title')),
+          (browseItemTitleText =
+            browseItemTitle.textContent || browseItemTitle.innerText),
+          (checkBrowseItem =
+            browseItemTitleText.trim().toUpperCase().indexOf(filter) > -1)
 
-      if (checkBrowseItem) {
-        browseItem[i].removeAttribute('hidden', '');
-        Check();
-      } else {
-        browseItem[i].setAttribute('hidden', '');
-        Check();
+        if (checkBrowseItem) {
+          browseItem[i].removeAttribute('hidden', '')
+          Check()
+        } else {
+          browseItem[i].setAttribute('hidden', '')
+          Check()
+        }
       }
-
-
-    }
-  });
+    })
 
   // document.querySelector('#exampleInputText').oninput = function () {
   // 	let val = this.value.trim();
@@ -93,18 +92,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Validation
 
-  window.addEventListener('load', function () {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('infinite-form-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function (form) {
-      form.addEventListener('submit', function (event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-});
+  window.addEventListener(
+    'load',
+    function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.getElementsByClassName('infinite-form-validation')
+      // Loop over them and prevent submission
+      const validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener(
+          'submit',
+          function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+          },
+          false
+        )
+      })
+    },
+    false
+  )
+})

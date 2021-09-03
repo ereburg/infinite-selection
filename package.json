@@ -13,6 +13,8 @@
     "build": "gulp build",
     "style:lint": "stylelint 'src/app/styles/**/*.scss' --syntax scss",
     "style:fix": "stylelint 'src/app/styles/**/*.scss' --syntax scss --fix",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx src",
+    "eslint:dump": "eslint --print-config ./.eslintrc.json",
     "predeploy": "gulp build",
     "deploy": "gh-pages -d dist"
   },
@@ -22,14 +24,21 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^16.7.10",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
     "autoprefixer": "^10.3.4",
     "browser-sync": "^2.27.5",
     "cssnano": "^5.0.8",
     "del": "^6.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "fibers": "^5.0.0",
     "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
+    "gulp-esbuild": "^0.8.6",
     "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^9.0.1",
@@ -37,7 +46,6 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgstore": "^8.0.0",
-    "gulp-terser": "^2.0.1",
     "gulp-tinypng-web": "^1.0.1",
     "gulp-webp": "^4.0.1",
     "node-sass-tilde-importer": "^1.0.2",
@@ -47,7 +55,8 @@
     "stylelint": "^13.13.1",
     "stylelint-config-htmlacademy": "^0.1.10",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-order": "^4.1.0"
+    "stylelint-order": "^4.1.0",
+    "typescript": "^4.4.2"
   },
   "browserslist": {
     "production": [

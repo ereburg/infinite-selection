@@ -12,7 +12,7 @@ import cssnano from 'cssnano'
 import { server } from './server.js'
 
 const SCSS = gulpSass(sass)
-const {src, dest} = pkg
+const { src, dest } = pkg
 
 export const styles = () => {
   const sheets = [`${$.conf.app}/${$.conf.pathStyles}/*.scss`]
@@ -22,40 +22,48 @@ export const styles = () => {
   switch ($.conf.isProd) {
     case true:
       return src(sheets)
-        .pipe(SCSS.sync({
+        .pipe(
+          SCSS.sync({
             importer: tilde,
             includePaths: ['./node_modules'],
             fiber: Fibers,
-          }).on('error', SCSS.logError))
+          }).on('error', SCSS.logError)
+        )
         .pipe(gulpPostcss(PostCSSPlugins))
-        .pipe(cleanCSS({
-              level: {
-                1: {
-                  all: true,
-                  normalizeUrls: false,
-                },
-                2: {
-                  restructureRules: true,
-                },
+        .pipe(
+          cleanCSS({
+            level: {
+              1: {
+                all: true,
+                normalizeUrls: false,
               },
-              debug: true,
-              compatibility: '*',
-            }))
+              2: {
+                restructureRules: true,
+              },
+            },
+            debug: true,
+            compatibility: '*',
+          })
+        )
         .pipe(rename({ extname: '.min.css' }))
         .pipe(dest(destPath))
     case false:
       return src(sheets)
         .pipe(sourcemaps.init())
-        .pipe(SCSS.sync({
+        .pipe(
+          SCSS.sync({
             importer: tilde,
             includePaths: ['./node_modules'],
             fiber: Fibers,
-          }).on('error', SCSS.logError))
+          }).on('error', SCSS.logError)
+        )
         .pipe(gulpPostcss(PostCSSPlugins))
-        .pipe(cleanCSS({
-              debug: true,
-              compatibility: '*',
-            }))
+        .pipe(
+          cleanCSS({
+            debug: true,
+            compatibility: '*',
+          })
+        )
         .pipe(sourcemaps.write())
         .pipe(rename({ extname: '.min.css' }))
         .pipe(dest(destPath))

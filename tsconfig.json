@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "es2015",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "outDir": "dist",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@app/*": ["app/scripts/*"]
+    },
+    "lib": ["es2018", "dom"]
+  },
+  "include": ["src/app/scripts/**/*"],
+  "exclude": ["node_modules", "dist", ".tmp"]
+}
