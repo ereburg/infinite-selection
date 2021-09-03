@@ -1,41 +1,158 @@
 {
   "nav": {
-    "home": [
-      {
-        "name": "Browse Sneakers",
-        "url": "./browse-sneakers.html"
-      },
-      {
-        "name": "How We Clean",
-        "url": "./how-we-clean.html"
-      },
-      {
-        "name": "Ways to Rent",
-        "url": "./ways-to-rent.html"
-      },
-      {
-        "name": "Authenticity Guarantee",
-        "url": "./authenticity-guarantee.html"
-      }
-    ],
-    "authenticity": [
-      {
-        "name": "Browse Sneakers",
-        "url": "./browse-sneakers.html"
-      },
-      {
-        "name": "How We Clean",
-        "url": "./how-we-clean.html"
-      },
-      {
-        "name": "Ways to Rent",
-        "url": "./ways-to-rent.html"
-      },
-      {
-        "name": "Authenticity Guarantee",
-        "url": "./authenticity-guarantee.html",
-        "current": true
-      }
-    ]
+    "header": {
+      "home": [
+        {
+          "name": "Browse Sneakers",
+          "url": "./browse-sneakers.html"
+        },
+        {
+          "name": "How We Clean",
+          "url": "./how-we-clean.html"
+        },
+        {
+          "name": "Ways to Rent",
+          "url": "./ways-to-rent.html"
+        },
+        {
+          "name": "Authenticity Guarantee",
+          "url": "./authenticity-guarantee.html"
+        }
+      ],
+      "authenticity": [
+        {
+          "name": "Browse Sneakers",
+          "url": "./browse-sneakers.html"
+        },
+        {
+          "name": "How We Clean",
+          "url": "./how-we-clean.html"
+        },
+        {
+          "name": "Ways to Rent",
+          "url": "./ways-to-rent.html"
+        },
+        {
+          "name": "Authenticity Guarantee",
+          "url": "./authenticity-guarantee.html",
+          "current": true
+        }
+      ],
+      "browse": [
+        {
+          "name": "Browse Sneakers",
+          "url": "./browse-sneakers.html",
+          "current": true
+        },
+        {
+          "name": "How We Clean",
+          "url": "./how-we-clean.html"
+        },
+        {
+          "name": "Ways to Rent",
+          "url": "./ways-to-rent.html"
+        },
+        {
+          "name": "Authenticity Guarantee",
+          "url": "./authenticity-guarantee.html"
+        }
+      ],
+      "clean": [
+        {
+          "name": "Browse Sneakers",
+          "url": "./browse-sneakers.html"
+        },
+        {
+          "name": "How We Clean",
+          "url": "./how-we-clean.html",
+          "current": true
+        },
+        {
+          "name": "Ways to Rent",
+          "url": "./ways-to-rent.html"
+        },
+        {
+          "name": "Authenticity Guarantee",
+          "url": "./authenticity-guarantee.html"
+        }
+      ],
+      "rent": [
+        {
+          "name": "Browse Sneakers",
+          "url": "./browse-sneakers.html"
+        },
+        {
+          "name": "How We Clean",
+          "url": "./how-we-clean.html"
+        },
+        {
+          "name": "Ways to Rent",
+          "url": "./ways-to-rent.html",
+          "current": true
+        },
+        {
+          "name": "Authenticity Guarantee",
+          "url": "./authenticity-guarantee.html"
+        }
+      ]
+    },
+    "footer": {
+      "default": [
+        {
+          "name": "Contact Us",
+          "url": "./contact-us.html"
+        },
+        {
+          "name": "Terms of Services",
+          "url": "./terms-of-service.html"
+        },
+        {
+          "name": "Privacy Policy",
+          "url": "./privacy-policy.html"
+        },
+        {
+          "name": "FAQ",
+          "url": "./faq.html"
+        }
+      ],
+      "terms": [
+        {
+          "name": "Contact Us",
+          "url": "./contact-us.html"
+        },
+        {
+          "name": "Terms of Services",
+          "url": "./terms-of-service.html",
+          "current": true
+        },
+        {
+          "name": "Privacy Policy",
+          "url": "./privacy-policy.html"
+        },
+        {
+          "name": "FAQ",
+          "url": "./faq.html"
+        }
+      ],
+      "privacy": [
+        {
+          "name": "Contact Us",
+          "url": "./contact-us.html"
+        },
+        {
+          "name": "Terms of Services",
+          "url": "./terms-of-service.html"
+        },
+        {
+          "name": "Privacy Policy",
+          "url": "./privacy-policy.html",
+          "current": true
+        },
+        {
+          "name": "FAQ",
+          "url": "./faq.html"
+        }
+      ]
+    }
   }
 }

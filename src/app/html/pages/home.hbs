@@ -1,7 +1,8 @@
 {{!Home}}
 
 {{> layout/head page-title="Infinite Selection"}}
-{{> blocks/header nav-menu=nav.home}}
+{{> blocks/header page="home" nav-menu=nav.header.home}}
+
 <main class="main">
   <section class="container intro-container">
     <div class="row intro">
@@ -13,7 +14,7 @@
           <p class="description-text">
             Rent Collectable Sneakers From Top Brands Like Nike, Air Jordan, Adidas and More
           </p>
-          <a href='browse-sneakers.hbs' class="infinite-button mx-auto mx-lg-0">Rent Now</a>
+          <a href='browse-sneakers.html' class="infinite-button mx-auto mx-lg-0">Rent Now</a>
         </div>
       </div>
       <div class="col-lg-8 col-xl-7 order-1 order-lg-2 animate-container">
@@ -29,11 +30,11 @@
         <h3 class="infinite-header">
           New Releases
         </h3>
-        <a class="infinite-link-dark" href='browse-sneakers.hbs'>View All</a>
+        <a class="infinite-link-dark" href='browse-sneakers.html'>View All</a>
       </div>
       <div class="col-12 releases-container">
         <div class="releases-item">
-          <a href='example.hbs' class="releases-item-link">
+          <a href='example.html' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-1.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -41,7 +42,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href='example.hbs' class="releases-item-link">
+          <a href='example.html' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-2.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -49,7 +50,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href='example.hbs' class="releases-item-link">
+          <a href='example.html' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-3.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -57,7 +58,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href='example.hbs' class="releases-item-link">
+          <a href='example.html' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-4.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -65,7 +66,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href='example.hbs' class="releases-item-link">
+          <a href='example.html' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-5.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -73,7 +74,7 @@
           </a>
         </div>
         <div class="releases-item">
-          <a href='example.hbs' class="releases-item-link">
+          <a href='example.html' class="releases-item-link">
             <img class="releases-image" src="../assets/images/releases/releases-6.jpg" alt="sneakers">
             <p class="releases-title">Adidas Yeezy 500</p>
             <p class="releases-value">&#36;330 Value</p>
@@ -92,7 +93,7 @@
             We Feel You, No One Should Ever Spend Money On Fake Sneakers.
             Or Have To Spend Hundreds To Rock The Real Ones.
           </h2>
-          <a href='authenticity-guarantee.hbs' class="button-white infinite-button">Authenticity
+          <a href='authenticity-guarantee.html' class="button-white infinite-button">Authenticity
             Guarantee</a>
         </div>
       </div>
@@ -104,14 +105,14 @@
       How we clean
     </h2>
     <img class="clean-image" src="../assets/images/homepage-section/section-clean.jpg" alt="How we clean">
-    <a href='how-we-clean.hbs' class="infinite-link mx-auto mx-lg-0">Learn More</a>
+    <a href='how-we-clean.html' class="infinite-link mx-auto mx-lg-0">Learn More</a>
   </section>
 
   <section class="action">
     <h2 class="action-text infinite-title">
       Same Sneakers, Better Prices
     </h2>
-    <a href='browse-sneakers.hbs' class="infinite-button action-link">Rent Now</a>
+    <a href='browse-sneakers.html' class="infinite-button action-link">Rent Now</a>
     <img class="action-image" src="../assets/images/homepage-section/section-action.png" alt="How we clean">
   </section>
 
@@ -176,8 +177,8 @@
               </ul>
             </div>
             <div class="advantages-item-action">
-              <a href='browse-sneakers.hbs' class="infinite-button advantages-button">Rent Now</a>
-              <a href='ways-to-rent.hbs' class="infinite-link">Learn More</a>
+              <a href='browse-sneakers.html' class="infinite-button advantages-button">Rent Now</a>
+              <a href='ways-to-rent.html' class="infinite-link">Learn More</a>
             </div>
 
           </div>
@@ -200,8 +201,8 @@
               </ul>
             </div>
             <div class="advantages-item-action">
-              <a href='browse-sneakers.hbs' class="infinite-button advantages-button">Rent Now</a>
-              <a href='ways-to-rent.hbs' class="infinite-link">Learn More</a>
+              <a href='browse-sneakers.html' class="infinite-button advantages-button">Rent Now</a>
+              <a href='ways-to-rent.html' class="infinite-link">Learn More</a>
             </div>
 
           </div>
@@ -281,10 +282,11 @@
     <h2 class="infinite-title action-2-text">
       Become the Sneakerhead You've Always Dreamed of
     </h2>
-    <a href='browse-sneakers.hbs' class="infinite-button action-2-link">Rent Now</a>
+    <a href='browse-sneakers.html' class="infinite-button action-2-link">Rent Now</a>
     <img class="action-2-image" src="../assets/images/homepage-section/section-action-2.png" alt="Lucky You Are!">
   </section>
 
 </main>
+
 {{> blocks/footer }}
 {{> layout/bottom }}

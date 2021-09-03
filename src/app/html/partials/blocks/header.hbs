@@ -2,7 +2,7 @@
   <div class="fixed-top bg-white">
     <nav class="navbar navbar-expand-lg  container">
       <a class="basket-icon d-flex d-lg-none"></a>
-      <a class="navbar-brand brand-logo" href="#topPage"></a>
+      <a class="navbar-brand brand-logo" href="{{#ifCond page 'home'}}#topPage{{else}}home.html{{/ifCond}}"></a>
       <button
         class="navbar-toggler collapsed" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
