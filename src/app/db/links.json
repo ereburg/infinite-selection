@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": [
+      {
+        "name": "Browse Sneakers",
+        "url": "./browse-sneakers.html"
+      },
+      {
+        "name": "How We Clean",
+        "url": "./how-we-clean.html"
+      },
+      {
+        "name": "Ways to Rent",
+        "url": "./ways-to-rent.html"
+      },
+      {
+        "name": "Authenticity Guarantee",
+        "url": "./authenticity-guarantee.html"
+      }
+    ],
+    "authenticity": [
+      {
+        "name": "Browse Sneakers",
+        "url": "./browse-sneakers.html"
+      },
+      {
+        "name": "How We Clean",
+        "url": "./how-we-clean.html"
+      },
+      {
+        "name": "Ways to Rent",
+        "url": "./ways-to-rent.html"
+      },
+      {
+        "name": "Authenticity Guarantee",
+        "url": "./authenticity-guarantee.html",
+        "current": true
+      }
+    ]
+  }
+}

@@ -14,17 +14,19 @@ export const initServer = () => {
   return server.init({
     server: [$.conf.outputPath, $.conf.app],
     startPath: $.conf.htmlPages,
-    notify: false, // уведомления отключены
+    ui: false,
+    notify: false,
+    logSnippet: false,
     port: 3000,
     browser: 'google chrome',
   })
 }
 
 export const initWatcher = () => {
-  const watchHBS = [`${$.conf.app}/${$.conf.pathHTML}/**/*`, `${$.conf.app}/${$.conf.db}/db/*`]
+  const watchHBS = [`${$.conf.app}/${$.conf.pathHTML}/**/*`, `${$.conf.app}/${$.conf.pathDB}/**/*`]
   // watch(`${$.conf.app}/${$.conf.pathHTML}/**/*.html`, series(optHTML))
   watch(`${$.conf.app}/${$.conf.pathStyles}/**/*.scss`, series(styles))
   watch(`${$.conf.app}/${$.conf.pathJS}/**/*.js`, series(scripts))
   watch(`${$.conf.src}/${$.conf.pathAssets}/**/*`, series(assets))
-  watch(watchHBS, series([convertHBS, prepareHtmlDev]))
+  watch(watchHBS, series(convertHBS, prepareHtmlDev))
 }

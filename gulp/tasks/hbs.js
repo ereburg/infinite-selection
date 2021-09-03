@@ -1,10 +1,9 @@
 import gulpCompileHandlebars from 'gulp-compile-handlebars'
 import htmlMin from 'gulp-htmlmin'
+import fs from 'fs'
 import pkg from 'gulp'
 import rename from 'gulp-rename'
 import { server } from './server.js'
-import * as base from '../../src/app/db/db.js'
-import * as links from '../../src/app/db/links.js'
 
 const { src, dest } = pkg
 
@@ -58,6 +57,9 @@ export const convertHBS = (buildProd = false) => {
       },
     },
   }
+  const base = JSON.parse(fs.readFileSync(`${$.conf.app}/${$.conf.pathDB}/db.json`).toString())
+  const links = JSON.parse(fs.readFileSync(`${$.conf.app}/${$.conf.pathDB}/links.json`).toString())
+
   const db = { ...initParams, ...base, ...links }
   const startPath = [`${$.conf.app}/${$.conf.pathHTML}/pages/*.hbs`]
   const destPath = `${$.conf.outputPath}/${$.conf.htmlPages}`

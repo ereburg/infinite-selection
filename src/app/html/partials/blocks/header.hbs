@@ -3,25 +3,18 @@
     <nav class="navbar navbar-expand-lg  container">
       <a class="basket-icon d-flex d-lg-none"></a>
       <a class="navbar-brand brand-logo" href="#topPage"></a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon" id="mobileMenu"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav d-flex juctify-content-between">
-          <li class="nav-item ">
-            <a class="nav-link" href='browse-sneakers.html'>Browse Sneakers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href='how-we-clean.html'>How We Clean</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href='ways-to-rent.html'>Ways to Rent</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href='authenticity-guarantee.html'>Authenticity Guarantee</a>
-          </li>
+        <ul class="navbar-nav d-flex justify-content-between">
+          {{#each nav-menu}}
+            {{>blocks/menu-link}}
+          {{/each}}
         </ul>
       </div>
       <div class="authorization-layout d-none d-lg-flex">

@@ -8,6 +8,7 @@ export default {
   pathStyles: 'styles',
   pathJS: 'scripts',
   pathHTML: 'html',
+  pathDB: 'db',
   pathAssets: 'assets',
   pathPreviews: 'previews',
   useWEBP: false,
