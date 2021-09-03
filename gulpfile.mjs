@@ -1,13 +1,11 @@
-import {
-  assets, initServer, initWatcher, clean, images, scripts, styles, optHTML
-} from './gulp/tasks/index.js';
+import { assets, clean, initServer, initWatcher, optHTML, scripts, styles } from './gulp/tasks/index.js'
 import conf from './gulp/config/config.js'
-import { setMode } from './gulp/config/mode.js';
+import { setMode } from './gulp/config/mode.js'
 import pkg from 'gulp'
 
-const {parallel, series} = pkg
+const { parallel, series } = pkg
 
-global.$ = {conf};
+global.$ = { conf }
 
 const serve = parallel(initServer, initWatcher)
 const transpile = parallel(assets, optHTML, styles, scripts)
