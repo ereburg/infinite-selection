@@ -1,0 +1,29 @@
+.menu-item {
+  &__link {
+    display: inline-block;
+    padding: .5rem;
+    @include font-14;
+    @include text-center;
+    @include base-link-hover;
+
+    &--active {
+      position: relative;
+      transition: all 0.3s ease;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        display: block;
+        height: 1px;
+        background-color: #7e7e7e;
+        content: "";
+      }
+
+      &:hover::before {
+        background-color: #0b0b0b;
+      }
+    }
+  }
+}

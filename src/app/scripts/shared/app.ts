@@ -1,7 +1,7 @@
 export const app = (): void => {
   document.addEventListener('DOMContentLoaded', () => {
     // Add class to header on scroll
-    const header = document.querySelector('.header')
+    const header = document.querySelector('.js-header')
 
     window.addEventListener('scroll', () => {
       const y: number = window.scrollY

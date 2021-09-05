@@ -7,7 +7,7 @@ import Fibers from 'fibers'
 import tilde from 'node-sass-tilde-importer'
 import cleanCSS from 'gulp-clean-css'
 import autoprefixer from 'autoprefixer'
-import gulpPostcss from 'gulp-postcss'
+import postcss from 'gulp-postcss'
 import cssnano from 'cssnano'
 import plumber from 'gulp-plumber'
 import { server } from './server.js'
@@ -30,7 +30,7 @@ export const styles = () => {
             fiber: Fibers,
           }).on('error', SCSS.logError)
         )
-        .pipe(gulpPostcss(PostCSSPlugins))
+        .pipe(postcss(PostCSSPlugins))
         .pipe(
           cleanCSS({
             level: {
@@ -59,7 +59,7 @@ export const styles = () => {
             fiber: Fibers,
           }).on('error', SCSS.logError)
         )
-        .pipe(gulpPostcss(PostCSSPlugins))
+        .pipe(postcss(PostCSSPlugins))
         .pipe(
           cleanCSS({
             debug: true,

@@ -1,0 +1,11 @@
+@mixin flex-gap($s: 0) {
+  @supports (gap: 10px) and (display: flex) {
+    gap: $s;
+  }
+
+  @supports not ((gap: 10px) and (display: flex)){
+    > * + * {
+      margin-left: $s;
+    }
+  }
+}

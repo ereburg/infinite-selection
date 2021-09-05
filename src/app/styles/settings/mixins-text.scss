@@ -1,0 +1,28 @@
+@mixin base-link-hover {
+  color: #7e7e7e;
+
+  &:hover {
+    color: #0b0b0b;
+  }
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin font-14 {
+  font-size: .875rem;
+}
+
+@mixin font-16 {
+  font-size: 1rem;
+}
+
+@mixin btn-clear {
+  background: none;
+  border: none;
+}
+
+@mixin btn-base {
+  cursor: pointer;
+}

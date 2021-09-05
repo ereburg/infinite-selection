@@ -1,0 +1,15 @@
+.btn-icon {
+  display: inline-flex;
+  place-items: center;
+  padding: .5rem;
+  @include text-center;
+  @include font-16;
+  @include btn-clear;
+  @include base-link-hover;
+  @include btn-base;
+
+  svg {
+    font-size: inherit;
+    transition: color .3s ease;
+  }
+}

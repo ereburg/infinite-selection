@@ -1,226 +1,62 @@
-.header {
+.header-main {
+  $side-base: 135px;
+
   position: sticky;
   top: 0;
   z-index: 10000;
+  font-size: .875rem;
   background-color: $color-white;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.05);
-  transition: box-shadow .25s ease-in-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow .3s ease;
 
   &.scroll {
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
-  }
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-text,
-.nav-link {
-  color: #7e7e7e;
-  font-size: 14px;
-  text-align: center;
-}
-
-.nav-text:hover,
-.nav-link:hover {
-  color: #0b0b0b;
-}
-
-@media screen and (min-width: 1200px) {
-  .nav-item:not(:last-child) {
-    margin-right: 25px;
-  }
-}
-
-
-/*
-
-    Navigation toggler & mobile resposive behavior
-
-*/
-
-
-.navbar {
-  justify-content: space-between;
-  padding: 20px 25px;
-  background-color: #ffffff;
-}
-
-.navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-toggler.collapsed > #mobileMenu {
-  width: 20px;
-  height: 17px;
-  background-image: url("../assets/images/logo/mobile-menu-icon.svg");
-}
-
-.navbar-toggler {
-  padding: 0;
-}
-
-@media screen and (max-width: 991px) {
-  .fixed-top {
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
 
-  .navbar-brand {
-    margin-right: 0;
-  }
-
-  .navbar-nav {
+  &__content {
+    display: flex;
     align-items: center;
-    justify-content: flex-start;
-    height: calc(100vh - 95px);
-    padding-top: 80px;
+    justify-content: space-between;
+    padding: 20px 0;
   }
 
-  .nav-link {
-    color: #0b0b0b;
-    font-weight: 600;
-    font-size: 25px;
-    font-family: "Playfair Display", serif;
-    line-height: 1.6;
+  &__brand {
+    flex: 0 1 $side-base;
   }
 
-  .nav-link:hover {
-    color: #7e7e7e;
+  &__brand-logo {
+    display: flex;
+    place-items: center;
+
+    img {
+      height: 55px;
+    }
   }
 
-  .navbar-toggler > #mobileMenu {
-    width: 20px;
-    height: 17px;
-    background-image: url("../assets/images/logo/icon-close.svg");
-  }
-}
-
-
-/* Logo */
-
-.brand-logo {
-  display: block;
-  width: 85px;
-  height: 55px;
-  background: url("../assets/images/logo/logo-black.svg") no-repeat;
-}
-
-/*
-
-    Login, search input and basket
-    Stylish
-
-*/
-
-.authorization-layout {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  min-width: 100px;
-  background: #ffffff;
-}
-
-/* Login */
-
-.authorization-text {
-  color: #7e7e7e;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 15px;
-}
-
-/* Search Icon & hover behavior */
-
-.searchbar {
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  margin: 0 15px;
-  background-color: transparent;
-  border-radius: 30px;
-}
-
-.search_input {
-  width: 0;
-  color: white;
-  line-height: 40px;
-  background: none;
-  border: 0;
-  outline: 0;
-  transition: all 0.8s ease-in-out;
-  caret-color: transparent;
-}
-
-.searchbar:hover {
-  background-color: #0b0b0b;
-}
-
-.searchbar:hover > .search_input {
-  width: 200px;
-  padding: 0 10px;
-  caret-color: #e74c3c;
-}
-
-@media screen and (max-width: 1200px) {
-
-  /* Searchbar */
-  .searchbar:hover > .search_input {
-    width: 150px;
-  }
-}
-
-.searchbar:hover > .search_icon {
-  color: #0b0b0b;
-  background: white;
-}
-
-.search_icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: #7e7e7e;
-  border-radius: 50%;
-}
-
-/* Basket */
-
-.basket-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: url("../assets/images/logo/shopping-basket.svg") center no-repeat;
-  background-size: contain;
-}
-
-/*
-
-    End of the Header
-    Start of the Footer
-
-*/
-
-
-
-.current-link {
-  position: relative;
-  transition: all 0.3s ease;
-
-  &::before {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    display: block;
-    height: 1px;
-    background-color: #7e7e7e;
-    content: "";
+  &__toggle {
+    @include media(tabletSmall, up) {
+      display: none;
+    }
   }
 
-  &:hover::before {
-    background-color: #0b0b0b;
+  &__nav {}
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    @include flex-gap(25px);
+  }
+
+  &__actions {
+    @include media(tablet, up) {
+      flex: 0 1 $side-base;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      @include flex-gap(10px);
+    }
+    @include media(tablet) {
+      display: none;
+    }
   }
 }

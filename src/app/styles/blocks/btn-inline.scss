@@ -1,0 +1,8 @@
+.btn-inline {
+  display: inline-block;
+  @include text-center;
+  @include font-14;
+  @include btn-clear;
+  @include base-link-hover;
+  @include btn-base;
+}

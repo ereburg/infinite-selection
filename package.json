@@ -1,6 +1,6 @@
 {
   "name": "infinite-selection",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "private": true,
   "type": "module",
   "main": "gulpfile.mjs",
@@ -59,6 +59,9 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-order": "^4.1.0",
     "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   },
   "browserslist": {
     "production": [

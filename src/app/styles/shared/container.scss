@@ -1,11 +1,9 @@
 .container {
-  padding: 0 15px;
+  padding: 0 25px;
+  margin: 0 auto;
 
   @media (min-width: 1300px) {
     max-width: 1270px;
   }
 }
 
-.d-block {
-  display: block;
-}

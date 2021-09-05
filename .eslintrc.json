@@ -8,7 +8,7 @@
     "es2017": true
   },
   "root": true,
-  "ignorePatterns": ["dist", "projects/**/*", ".tmp", "gulp", "db"],
+  "ignorePatterns": ["dist", "projects/**/*", ".tmp", "gulp", "db", "*.config.js"],
   // Плагин с наборами правил для TypeScript
   "plugins": ["@typescript-eslint", "prettier"],
   // Наборы правил
