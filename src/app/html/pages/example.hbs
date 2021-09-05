@@ -125,54 +125,9 @@
       <a class="infinite-link-dark" href='browse-sneakers.html'>View All</a>
     </div>
     <div class="col-12 releases-container">
-      <div class="releases-item">
-        <a href="example.hbs" class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-7.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href="example.hbs" class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-8.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href="example.hbs" class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-9.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href="example.hbs" class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-10.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href="example.hbs" class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-11.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href="example.hbs" class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-12.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
+      {{#each product-single.products}}
+        {{>blocks/product-card}}
+      {{/each}}
     </div>
   </section>
 

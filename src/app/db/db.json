@@ -1,1 +1,82 @@
-{}
+{
+  "home": {
+    "products": [
+      {
+        "img": "1.jpg",
+        "title": "Adidas Yeezy 500",
+        "price": "330",
+        "price-sale": "130"
+      },
+      {
+        "img": "2.jpg",
+        "title": "Adidas Yeezy 300",
+        "price": "830",
+        "price-sale": "530"
+      },
+      {
+        "img": "3.jpg",
+        "title": "Adidas Yeezy 100",
+        "price": "530",
+        "price-sale": "370"
+      },
+      {
+        "img": "4.jpg",
+        "title": "Nike Air 1990",
+        "price": "230",
+        "price-sale": "180"
+      },
+      {
+        "img": "5.jpg",
+        "title": "Adidas Boost 100",
+        "price": "280",
+        "price-sale": "150"
+      },
+      {
+        "img": "6.jpg",
+        "title": "Adidas Beers 650",
+        "price": "400",
+        "price-sale": "330"
+      }
+    ]
+  },
+  "product-single": {
+    "products": [
+      {
+        "img": "7.png",
+        "title": "Adidas Yeezy 500",
+        "price": "330",
+        "price-sale": "130"
+      },
+      {
+        "img": "8.png",
+        "title": "Adidas Yeezy 300",
+        "price": "830",
+        "price-sale": "530"
+      },
+      {
+        "img": "9.png",
+        "title": "Adidas Yeezy 100",
+        "price": "530",
+        "price-sale": "370"
+      },
+      {
+        "img": "10.png",
+        "title": "Nike Air 1990",
+        "price": "230",
+        "price-sale": "180"
+      },
+      {
+        "img": "11.png",
+        "title": "Adidas Boost 100",
+        "price": "280",
+        "price-sale": "150"
+      },
+      {
+        "img": "12.png",
+        "title": "Adidas Beers 650",
+        "price": "400",
+        "price-sale": "330"
+      }
+    ]
+  }
+}

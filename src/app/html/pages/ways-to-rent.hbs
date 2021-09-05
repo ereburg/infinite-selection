@@ -4,7 +4,6 @@
 {{> blocks/header nav-menu=nav.header.rent}}
 
 <main class="page-content__main">
-
   <section class="rent-banner">
     <img src="../assets/images/rent/rent-left.png" alt="Rent Image" class="rent-image rent-image-left">
     <div class="rent-text-container">
@@ -16,7 +15,6 @@
     </div>
     <img src="../assets/images/rent/rent-right.png" alt="Rent Image" class="rent-image rent-image-right">
   </section>
-
   <section class="container rent-works">
     <h2 class="infinite-header text-center works-title">How it works</h2>
     <div class="rent-works-item">
@@ -44,7 +42,6 @@
       </p>
     </div>
   </section>
-
   <section class="container rent-ways">
     <h3 class="infinite-header grid-title">
       two ways to rent
@@ -101,7 +98,6 @@
       </table>
     </div>
   </section>
-
   <section class="container rent-perks">
     <h3 class="infinite-header grid-title">
       Perks of unlimited
@@ -115,64 +111,17 @@
       <li class="list-item"> free cleaning</li>
     </ul>
   </section>
-
   <section class="container rent-exclusives">
     <h3 class="infinite-header">
       Unlimited Exclusives
     </h3>
     <div class="col-12 releases-container">
-      <div class="releases-item">
-        <a href='example.html' class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-7.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href='example.html' class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-8.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href='example.html' class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-9.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href='example.html' class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-10.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href='example.html' class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-11.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
-      <div class="releases-item">
-        <a href='example.html' class="releases-item-link">
-          <img class="releases-image" src="../assets/images/releases/releases-12.png" alt="sneakers">
-          <p class="releases-title">Adidas Yeezy 500</p>
-          <p class="releases-value">&#36;330 Value</p>
-          <p class="releases-cost">&#36;130</p>
-        </a>
-      </div>
+      {{#each product-single.products}}
+        {{>blocks/product-card}}
+      {{/each}}
     </div>
     <a href='browse-sneakers.html' class="infinite-button action-link">Unlimited Rentals</a>
   </section>
-
   <section class="rent-action">
     <h2 class="infinite-title">
       Afraid Of Commitment
@@ -180,7 +129,6 @@
     </h2>
     <a href='browse-sneakers.html' class="infinite-button action-link">Browse Sneakers</a>
   </section>
-
 </main>
 
 {{> blocks/footer }}
