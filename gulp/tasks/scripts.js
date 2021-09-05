@@ -1,17 +1,17 @@
 import pkg from 'gulp'
 import { server } from './server.js'
 import gulpEsbuild, { createGulpEsbuild } from 'gulp-esbuild'
+import plumber from 'gulp-plumber'
 
 const { src, dest } = pkg
 
 export const scripts = () => {
-  const esbuild = $.conf.isProd
-    ? gulpEsbuild
-    : createGulpEsbuild({ incremental: true })
+  const esbuild = $.conf.isProd ? gulpEsbuild : createGulpEsbuild({ incremental: true })
   const startPath = [`${$.conf.app}/${$.conf.pathJS}/*.{js,ts}`]
   const endPath = `${$.conf.outputPath}/${$.conf.pathJS}`
 
   return src(startPath)
+    .pipe(plumber())
     .pipe(
       esbuild({
         // outfile: 'theme.min.js',

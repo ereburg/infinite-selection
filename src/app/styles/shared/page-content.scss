@@ -1,0 +1,13 @@
+.page-content {
+  display: flex;
+  flex-direction: column;
+
+  &__header,
+  &__footer {
+    flex: 0 0;
+  }
+
+  &__main {
+    flex: 1 1 auto;
+  }
+}

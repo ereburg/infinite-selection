@@ -1,1 +1,2 @@
-import './libs/fontawesome.min.js'
+// import './libs/fontawesome.min.js'
+export {}

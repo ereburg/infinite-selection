@@ -1,32 +1,28 @@
-<header class="header" id="topPage">
-  <div class="fixed-top bg-white">
-    <nav class="navbar navbar-expand-lg  container">
-      <a class="basket-icon d-flex d-lg-none"></a>
-      <a class="navbar-brand brand-logo" href="{{#ifCond page 'home'}}#topPage{{else}}home.html{{/ifCond}}"></a>
-      <button
-        class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon" id="mobileMenu"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav d-flex justify-content-between">
-          {{#each nav-menu}}
-            {{>blocks/menu-link}}
-          {{/each}}
-        </ul>
+<header class="page-content__header header" id="topPage">
+  <nav class="navbar navbar-expand-lg container">
+    <a class="basket-icon d-flex d-lg-none"></a>
+    <a class="navbar-brand brand-logo" href="{{#ifCond page 'home'}}#topPage{{else}}home.html{{/ifCond}}"></a>
+    <button
+      class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon" id="mobileMenu"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav d-flex justify-content-between">
+        {{#each nav-menu}}
+          {{>blocks/menu-link}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="authorization-layout d-none d-lg-flex">
+      <a class="nav-text" href='login.html'>Login</a>
+      <div class="searchbar">
+        <input class="search_input" type="text" name="" placeholder="Search...">
+        <a href='search.html' class="search_icon"><i class="fas fa-search"></i></a>
       </div>
-      <div class="authorization-layout d-none d-lg-flex">
-        <a class="nav-text" href='login.html'>Login</a>
-        <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search...">
-          <a href='search.html' class="search_icon"><i class="fas fa-search"></i></a>
-        </div>
-        <a href="#" class="basket-icon">
-<!--          <span class="material-icons-outlined">shopping_basket</span>-->
-        </a>
-      </div>
-    </nav>
-  </div>
+      <a href="#" class=""><i class="basket-icon"></i></a>
+    </div>
+  </nav>
 </header>

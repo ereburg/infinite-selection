@@ -18,27 +18,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  position: relative;
-  z-index: 10;
-}
-
 a {
   text-decoration: none !important;
-}
-
-header a {
   transition: all 0.3s ease;
-}
-
-.container {
-  padding: 0 15px;
-}
-
-@media (min-width: 1300px) {
-  .container {
-    max-width: 1270px;
-  }
 }
 
 h1,
@@ -66,35 +48,18 @@ button {
   color: #7e7e7e;
 }
 
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #7e7e7e;
+input {
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #7e7e7e;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #7e7e7e;
+  }
 }
 
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #7e7e7e;
-}
-
-.current-link {
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.current-link::before {
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  left: 0%;
-  display: block;
-  height: 1px;
-  background-color: #7e7e7e;
-  content: "";
-}
-
-.current-link:hover::before {
-  background-color: #0b0b0b;
-}
 
 /* Изображения */
 

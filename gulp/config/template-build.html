@@ -89,7 +89,7 @@
       height: 100%;
     }
 
-    .header {
+    .t-header {
       position: fixed;
       top: 0;
       left: 0;
@@ -104,7 +104,7 @@
       position: relative;
     }
 
-    .header .container {
+    .t-header .container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -113,7 +113,7 @@
       align-items: center;
     }
 
-    .header__title, .header__hover-block {
+    .t-header__title, .t-header__hover-block {
       margin: 0;
       font-weight: 700;
       font-size: 30px;
@@ -121,13 +121,13 @@
       color: white;
     }
 
-    .header__title {
+    .t-header__title {
       -webkit-box-flex: 1;
       -ms-flex: auto;
       flex: auto;
     }
 
-    .header__hover-block {
+    .t-header__hover-block {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -147,14 +147,14 @@
       margin: 0 auto;
     }
 
-    .main {
+    .t-main {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
       flex: 1 1 100%;
       padding: 85px 0 50px;
     }
 
-    .main__list {
+    .t-main__list {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -164,7 +164,7 @@
       list-style-type: none;
     }
 
-    .main__item {
+    .t-main__item {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 calc((100% / 4) - 30px);
       flex: 1 1 calc((100% / 4) - 30px);
@@ -173,14 +173,14 @@
       max-width: calc((100% / 4) - 30px);
     }
 
-    .main__article {
+    .t-main__article {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
     }
 
-    .main__title {
+    .t-main__title {
       display: block;
       margin-bottom: 10px;
       width: 100%;
@@ -194,7 +194,7 @@
       transition: all var(--transition-fn);
     }
 
-    .main__link {
+    .t-main__link {
       position: relative;
       display: flex;
       padding-top: 115%;
@@ -209,7 +209,7 @@
       transition: all 350ms linear;
     }
 
-    .main__link img {
+    .t-main__link img {
       position: absolute;
       top: 0;
       left: 0;
@@ -227,11 +227,11 @@
       transition: all var(--transition-fn);
     }
 
-    .main__link--default {
+    .t-main__link--default {
       background-color: #fff;
     }
 
-    .main__link--default img {
+    .t-main__link--default img {
       display: block;
       max-width: 75%;
       margin: 0 auto;
@@ -241,46 +241,46 @@
       object-fit: contain;
     }
 
-    .main__link:hover,
-    .main__link:focus {
+    .t-main__link:hover,
+    .t-main__link:focus {
       box-shadow: 0 15px 20px -10px rgba(230, 85, 23, .8), 0 0 5px 0 rgba(230, 85, 23, .8);
       -webkit-box-shadow: var(--main-link-shadow-hover);
       box-shadow: var(--main-link-shadow-hover);
     }
 
-    .footer {
+    .t-footer {
       margin-bottom: 20px;
     }
 
-    .footer .container {
+    .t-footer .container {
       padding-top: 10px;
       padding-bottom: 10px;
     }
 
-    .footer__credits {
+    .t-footer__credits {
       font-size: 13px;
       font-weight: 500;
     }
 
-    .footer__credits span {
+    .t-footer__credits span {
       font-weight: 600;
     }
 
     @media screen and (max-width: 1023px) {
-      .main__item {
+      .t-main__item {
         -webkit-box-flex: 1;
         -ms-flex: 1 1 calc((100% / 3) - 30px);
         flex: 1 1 calc((100% / 3) - 30px);
         max-width: calc((100% / 3) - 30px);
       }
 
-      .header__hover-block {
+      .t-header__hover-block {
         display: none;
       }
     }
 
     @media screen and (max-width: 767px) {
-      .main__item {
+      .t-main__item {
         -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
         flex: 1 1 100%;
@@ -288,29 +288,28 @@
       }
     }
   </style>
-
 </head>
 <body class="page">
 
 <div class="page__inner">
-  <header class="header js-header">
+  <header class="t-header js-header">
     <div class="container">
-      <h1 class="header__title">{{siteName}}</h1>
-      <span class="header__hover-block js-content-paste"></span>
+      <h1 class="t-header__title">{{siteName}}</h1>
+      <span class="t-header__hover-block js-content-paste"></span>
     </div>
   </header>
 
-  <main class="main">
+  <main class="t-main">
     <div class="container">
-      <ul class="main__list js-content-hover">
+      <ul class="t-main__list js-content-hover">
         {{items}}
       </ul>
     </div>
   </main>
 
-  <footer class="footer">
+  <footer class="t-footer">
     <div class="container">
-      <span class="footer__credits">Build date: <span class="js-build-date">{{buildDate}}</span></span>
+      <span class="t-footer__credits">Build date: <span class="js-build-date">{{buildDate}}</span></span>
     </div>
   </footer>
 </div>
@@ -345,6 +344,5 @@
     });
   });
 </script>
-
 </body>
 </html>

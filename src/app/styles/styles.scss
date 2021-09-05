@@ -1,14 +1,4 @@
-@import
-"pages/core",
-"pages/text",
-"pages/header-and-footer",
-"pages/homepage",
-"pages/authenticity-guarantee",
-"pages/ways-to-rent",
-"pages/cleaning",
-"pages/login",
-"pages/search",
-"pages/faq",
-"pages/browse",
-"pages/404",
-"pages/example";
+@import "settings/index";
+@import "shared/index";
+@import "layout/index";
+@import "pages/index";

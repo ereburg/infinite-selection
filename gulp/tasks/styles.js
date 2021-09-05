@@ -9,6 +9,7 @@ import cleanCSS from 'gulp-clean-css'
 import autoprefixer from 'autoprefixer'
 import gulpPostcss from 'gulp-postcss'
 import cssnano from 'cssnano'
+import plumber from 'gulp-plumber'
 import { server } from './server.js'
 
 const SCSS = gulpSass(sass)
@@ -49,6 +50,7 @@ export const styles = () => {
         .pipe(dest(destPath))
     case false:
       return src(sheets)
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(
           SCSS.sync({

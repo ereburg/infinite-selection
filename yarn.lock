@@ -4962,6 +4962,18 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"gulp-plumber@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "gulp-plumber@npm:1.2.1"
+  dependencies:
+    chalk: ^1.1.3
+    fancy-log: ^1.3.2
+    plugin-error: ^0.1.2
+    through2: ^2.0.3
+  checksum: 95f880be326c0fab9286956539861a84416f02c41633f670a7540287c089e49b2853f39c4379e6e2da83450e6fc2e4055a7efddf929a1960b61a0aef376f770a
+  languageName: node
+  linkType: hard
+
 "gulp-postcss@npm:^9.0.1":
   version: 9.0.1
   resolution: "gulp-postcss@npm:9.0.1"
@@ -5640,6 +5652,7 @@ fsevents@~2.3.2:
     gulp-compile-handlebars: ^0.6.1
     gulp-esbuild: ^0.8.6
     gulp-htmlmin: ^5.0.1
+    gulp-plumber: ^1.2.1
     gulp-postcss: ^9.0.1
     gulp-rename: ^2.0.0
     gulp-sass: ^5.0.0
