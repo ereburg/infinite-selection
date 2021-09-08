@@ -52,13 +52,13 @@ export const prepareHtmlBuild = () => {
     }
 
     const imgSrc = `./${$.conf.pathAssets}/${$.conf.pathPreviews}/${pages[pageName].image ?? '1000_default.svg'}`
-    const linkClass = pages[pageName].image === undefined ? 'main__link main__link--default' : 'main__link'
+    const linkClass = pages[pageName].image === undefined ? 't-main__link t-main__link--default' : 't-main__link'
 
     // Генерируем данные в наш массив со страницами
     html.push(`
-        <li class='main__item'>
-          <article class='main__article'>
-            <h2 class='main__title'>${pages[pageName].title}</h2>
+        <li class='t-main__item'>
+          <article class='t-main__article'>
+            <h2 class='t-main__title'>${pages[pageName].title}</h2>
             <a
               class='${linkClass}'
               href='./${$.conf.htmlPages}/${pageName}.html'
