@@ -179,7 +179,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 20px;
+  padding: 10px 15px;
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -189,8 +189,11 @@
 }
 
 .releases-image {
-  max-width: 150px;
-  height: 140px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  //max-width: 150px;
+  //height: 140px;
 }
 
 .releases-item p {
@@ -251,10 +254,6 @@
 }
 
 @media screen and (max-width: 568px) {
-  .releases-item {
-    //width: calc(100% / 2);
-  }
-
   .releases-image {
     width: 120px;
   }
