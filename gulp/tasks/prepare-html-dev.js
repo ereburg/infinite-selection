@@ -24,7 +24,7 @@ export const prepareHtmlDev = () => {
     html.push(`<li><a href='${pageName}.html'>${pages[pageName].title}</a></li>`)
   }
 
-  const templateFile = fs.readFileSync('./gulp/config/template-dev.html').toString()
+  const templateFile = fs.readFileSync($.conf.pathTemplateDev).toString()
 
   fs.writeFileSync(
     `${$.conf.outputPath}/${$.conf.htmlPages}/index.html`,
