@@ -1,0 +1,66 @@
+.footer-socials {
+  display: flex;
+  text-align: center;
+  @include flex-gap(10px);
+
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    color: #7e7e7e;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+
+    &::before {
+      position: absolute;
+      top: 90%;
+      left: -110%;
+      width: 120%;
+      height: 120%;
+      background-color: #7e7e7e;
+      transform: rotate(45deg);
+      content: "";
+      transition: all 500ms ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        top: -10%;
+        left: -10%;
+        //animation: socialsIconHover 0.7s ease forwards;
+      }
+
+      .footer-socials__icon {
+        color: #0b0b0b;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 24px;
+    line-height: 40px;
+    transition: 0.2s linear;
+  }
+}
+
+//@keyframes socialsIconHover {
+//  0% {
+//    top: 90%;
+//    left: -110%;
+//  }
+//
+//  50% {
+//    top: -30%;
+//    left: 10%;
+//  }
+//
+//  100% {
+//    top: -10%;
+//    left: -10%;
+//  }
+//}

@@ -1,0 +1,26 @@
+.footer-nav {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include flex-gap(20px);
+
+    @include media(mobileMedium) {
+      grid-template-columns: repeat(2, max-content);
+    }
+  }
+
+  &__link {
+    display: block;
+    color: #7e7e7e;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      color: #d3d3d3;
+    }
+  }
+}

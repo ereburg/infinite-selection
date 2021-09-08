@@ -24,15 +24,6 @@
     flex: 0 1 $side-base;
   }
 
-  &__brand-logo {
-    display: flex;
-    place-items: center;
-
-    img {
-      height: 55px;
-    }
-  }
-
   &__toggle {
     @include media(tabletSmall, up) {
       display: none;

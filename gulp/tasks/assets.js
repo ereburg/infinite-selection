@@ -6,8 +6,7 @@ const { src, dest } = pkg
 export const assets = () => {
   switch ($.conf.isProd) {
     case true:
-      return src([`${$.conf.src}/${$.conf.pathAssets}/**/*`])
-        .pipe(dest(`${$.conf.outputPath}/${$.conf.pathAssets}`))
+      return src([`${$.conf.src}/${$.conf.pathAssets}/**/*`]).pipe(dest(`${$.conf.outputPath}/${$.conf.pathAssets}`))
     case false:
       return src([
         `${$.conf.src}/${$.conf.pathAssets}/**/*`,

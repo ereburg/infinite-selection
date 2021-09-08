@@ -1,41 +1,41 @@
-<footer class="page-content__footer footer">
-  <div class="container">
-    <div class="row footer-container">
-      <div class="col-12 col-lg footer-logo-container">
-        <a class="footer-logo-link" href="#topPage">
-          <img class="footer-logo" src="../assets/images/logo/logo-white.svg" alt="Infinite Selection">
+<footer class="page-content__footer footer-main">
+  <div class="footer-main__container container">
+    <div class="footer-main__content">
+      <div class="footer-main__logo">
+        <a class="page-logo" href="home.html">
+          <img src="../assets/images/logo/logo-white.svg" alt="Infinite Selection logo.">
         </a>
       </div>
-      <div class="col-12 col-lg-5 footer-menu">
+      <div class="footer-main__menu">
         <nav class="footer-nav">
-          {{#if footer-nav}}
-            {{#each footer-nav}}
-              {{>blocks/footer-link}}
-            {{/each}}
-          {{else}}
-            {{#each nav.footer.default}}
-              {{>blocks/footer-link}}
-            {{/each}}
-          {{/if}}
+          <ul class="footer-nav__list">
+            {{#if footer-nav}}
+              {{#each footer-nav}}
+                {{>blocks/footer-link}}
+              {{/each}}
+            {{else}}
+              {{#each nav.footer.default}}
+                {{>blocks/footer-link}}
+              {{/each}}
+            {{/if}}
+          </ul>
         </nav>
       </div>
-      <div class="col-12 col-lg footer-socials">
-        <div class="socials-container">
-          <a class="social-link facebook-link" href="https://www.facebook.com" target="_blank"
-             rel="noopener noreferrer">
-            <i class="fab fa-facebook-f"></i>
+      <div class="footer-main__bottom">
+        <div class="footer-main__socials footer-socials">
+          <a class="footer-socials__link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <i class="footer-socials__icon fab fa-facebook-f"></i>
           </a>
-          <a class="social-link instagram-link" href="https://www.instagram.com" target="_blank"
-             rel="noopener noreferrer">
-            <i class="fab fa-instagram"></i>
+          <a class="footer-socials__link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <i class="footer-socials__icon fab fa-instagram"></i>
           </a>
-          <a class="social-link twitter-link" href="https://twitter.com" target="_blank"
-             rel="noopener noreferrer">
-            <i class="fab fa-twitter"></i>
+          <a class="footer-socials__link" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <i class="footer-socials__icon fab fa-twitter"></i>
           </a>
         </div>
-        <p class="footer-text">
-          © 2019 Infinity by Ereburg. All rights reserved.
+        <p class="footer-main__copyright">
+          © <span class="js-current-date">2019</span>
+          Made by <a href="https://github.com/ereburg">Ereburg</a>. All rights reserved.
         </p>
       </div>
     </div>
