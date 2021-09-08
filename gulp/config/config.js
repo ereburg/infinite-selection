@@ -12,4 +12,5 @@ export default {
   pathAssets: 'assets',
   pathPreviews: 'previews',
   useWEBP: false,
+  pathTemplateBuild: './gulp/config/template-build.html',
 }

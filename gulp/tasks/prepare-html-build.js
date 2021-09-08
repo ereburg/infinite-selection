@@ -77,8 +77,9 @@ export const prepareHtmlBuild = () => {
 
   // Сортируем полученный массив элементов в соответствии с порядком, заданным в мета-изображениях
   html.sort((a, b) => {
-    let tempA = a.substring(a.lastIndexOf('.meta/') + 6, a.lastIndexOf('_'))
-    let tempB = b.substring(b.lastIndexOf('.meta/') + 6, b.lastIndexOf('_'))
+    const pathLength = $.conf.pathPreviews.length + 1
+    let tempA = a.substring(a.lastIndexOf(`${$.conf.pathPreviews}/`) + pathLength, a.lastIndexOf('_'))
+    let tempB = b.substring(b.lastIndexOf(`${$.conf.pathPreviews}/`) + pathLength, b.lastIndexOf('_'))
 
     tempA.charAt(0) === '0' ? (tempA = tempA.slice(1)) : tempA
     tempB.charAt(0) === '0' ? (tempB = tempB.slice(1)) : tempB
@@ -86,7 +87,7 @@ export const prepareHtmlBuild = () => {
     return Number(tempA) - Number(tempB)
   })
 
-  const sourceTemplate = fs.readFileSync('./gulp/config/template-build.html').toString()
+  const sourceTemplate = fs.readFileSync($.conf.pathTemplateBuild).toString()
   // Получаем время сборки
   const date = new Date()
   const options = {
