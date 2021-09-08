@@ -12,7 +12,7 @@ export const server = bs.create()
 
 export const initServer = () => {
   return server.init({
-    server: [$.conf.outputPath, $.conf.app],
+    server: [$.conf.outputPath],
     startPath: $.conf.htmlPages,
     ui: false,
     notify: false,
