@@ -1,13 +1,14 @@
 import gulp from 'gulp'
-import tinyPNG from 'gulp-tinypng-web';
+import tinyPNG from 'gulp-tinypng-web'
 import toWEBP from 'gulp-webp'
 import rename from 'gulp-rename'
 import svgStore from 'gulp-svgstore'
 
 const tiny = () => {
-  return gulp.src('./app/images/*.{png,jpg,jpeg}')
-    .pipe(tinyPNG({verbose: true}))
-    .pipe(gulp.dest('./build/images/'));
+  return gulp
+    .src('./app/images/*.{png,jpg,jpeg}')
+    .pipe(tinyPNG({ verbose: true }))
+    .pipe(gulp.dest('./build/images/'))
 }
 const webp = () => {
   return gulp.src('./build/images/**/*.{png,jpg,jpeg}')
