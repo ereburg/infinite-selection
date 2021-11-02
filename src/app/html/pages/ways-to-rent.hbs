@@ -1,7 +1,7 @@
 {{!Ways to Rent}}
 
 {{> layout/head page-title="Infinite Selection - Ways to Rent"}}
-{{> blocks/header nav-menu=nav.header.rent}}
+{{> blocks/header/header nav-menu=nav.header.rent}}
 
 <main class="page-content__main">
   <section class="rent-banner">
@@ -117,7 +117,7 @@
     </h3>
     <div class="col-12 releases-container">
       {{#each product-single.products}}
-        {{>blocks/product-card}}
+        {{>blocks/shared/product-card}}
       {{/each}}
     </div>
     <a href='browse-sneakers.html' class="infinite-button action-link">Unlimited Rentals</a>
@@ -131,5 +131,5 @@
   </section>
 </main>
 
-{{> blocks/footer }}
+{{> blocks/footer/footer }}
 {{> layout/bottom }}

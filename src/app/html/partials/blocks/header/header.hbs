@@ -2,8 +2,10 @@
   <div class="container">
     <div class="header-main__content">
       <div class="header-main__toggle toggle-menu">
-        <button class="mobile-menu__btn" type="button">
+        <button class="mobile-menu__btn js-mobile-menu" type="button">
           <img src="../assets/images/logo/mobile-menu-icon.svg" class="mobile-menu__icon" alt="Mobile menu icon" />
+          <img src="../assets/images/logo/mobile-menu-icon-close.svg" class="mobile-menu__icon_close" alt="Mobile menu
+          icon" />
         </button>
       </div>
       <div class="header-main__brand">
@@ -20,7 +22,7 @@
       <nav class="header-main__nav">
         <ul class="header-main__nav-list">
           {{#each nav-menu}}
-            {{>blocks/menu-link}}
+            {{>blocks/shared/menu-link}}
           {{/each}}
         </ul>
       </nav>

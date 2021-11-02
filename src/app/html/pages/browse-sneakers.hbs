@@ -1,7 +1,7 @@
 {{!Browse Sneakers}}
 
 {{> layout/head page-title="Infinite Selection - Browse Sneakers"}}
-{{> blocks/header nav-menu=nav.header.browse}}
+{{> blocks/header/header nav-menu=nav.header.browse}}
 
 <main class="page-content__main">
   <article class="container browse">
@@ -83,16 +83,16 @@
         </div>
         <div class="col-12 sneakers-browse-container">
           {{#each home.products}}
-            {{>blocks/product-card}}
+            {{>blocks/shared/product-card}}
           {{/each}}
           {{#each product-single.products}}
-            {{>blocks/product-card}}
+            {{>blocks/shared/product-card}}
           {{/each}}
           {{#each home.products}}
-            {{>blocks/product-card}}
+            {{>blocks/shared/product-card}}
           {{/each}}
           {{#each product-single.products}}
-            {{>blocks/product-card}}
+            {{>blocks/shared/product-card}}
           {{/each}}
         </div>
       </section>
@@ -100,5 +100,5 @@
   </article>
 </main>
 
-{{> blocks/footer }}
+{{> blocks/footer/footer }}
 {{> layout/bottom }}

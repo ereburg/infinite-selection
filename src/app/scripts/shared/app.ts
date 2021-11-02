@@ -9,6 +9,16 @@ export const app = (): void => {
       y > 1 ? header.classList.add('scroll') : header.classList.remove('scroll')
     })
 
+    // Toggle class to header on opened
+    if (header) {
+      const btnMobile = document.querySelector('.js-mobile-menu')
+      btnMobile.addEventListener('click', (event) => {
+        if (event.target.closest('.js-mobile-menu')) {
+          header.classList.toggle('opened')
+        }
+      })
+    }
+
     // Search
 
     // Фильтрация по ключевым словам в поиске

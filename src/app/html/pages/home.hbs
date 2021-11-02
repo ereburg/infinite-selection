@@ -1,7 +1,7 @@
 {{!Home}}
 
 {{> layout/head page-title="Infinite Selection"}}
-{{> blocks/header page="home" nav-menu=nav.header.home}}
+{{> blocks/header/header page="home" nav-menu=nav.header.home}}
 
 <main class="page-content__main">
   <section class="container intro-container">
@@ -33,7 +33,7 @@
       </div>
       <div class="col-12 releases-container">
         {{#each home.products}}
-          {{>blocks/product-card}}
+          {{>blocks/shared/product-card}}
         {{/each}}
       </div>
     </div>
@@ -236,5 +236,5 @@
   </section>
 </main>
 
-{{> blocks/footer }}
+{{> blocks/footer/footer }}
 {{> layout/bottom }}

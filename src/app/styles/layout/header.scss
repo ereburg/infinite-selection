@@ -4,10 +4,10 @@
   position: sticky;
   top: 0;
   z-index: 10000;
-  font-size: .875rem;
+  font-size: 0.875rem;
   background-color: $color-white;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  transition: box-shadow .3s ease;
+  transition: all 0.8s ease;
 
   &.scroll {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -25,12 +25,13 @@
   }
 
   &__toggle {
-    @include media(tabletSmall, up) {
-      display: none;
-    }
+    display: none;
   }
 
-  &__nav {}
+  .mobile-menu__btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
 
   &__nav-list {
     display: flex;
@@ -39,15 +40,109 @@
   }
 
   &__actions {
-    @include media(tablet, up) {
-      flex: 0 1 $side-base;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      @include flex-gap(10px);
+    display: flex;
+    flex: 0 1 $side-base;
+    align-items: center;
+    justify-content: flex-end;
+    @include flex-gap(10px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-main {
+    &__nav-list {
+      @include flex-gap(0);
     }
-    @include media(tablet) {
+  }
+}
+
+@media (max-width: 992px) {
+  .header-main {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    &__toggle {
+      display: block;
+      order: 3;
+
+      .mobile-menu__btn {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 20px;
+          height: 17px;
+        }
+
+        .mobile-menu__icon_close {
+          display: none;
+        }
+      }
+    }
+
+    &__brand {
+      display: flex;
+      justify-content: center;
+      order: 2;
+    }
+
+    &__nav {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    &__actions {
+      flex: 0 1 auto;
+      order: 1;
+    }
+
+    &__actions-item:not(:last-child) {
       display: none;
+    }
+
+    &__actions-item:last-child {
+      path {
+        fill: #000000;
+      }
+    }
+  }
+
+  .header-main.opened {
+    transition: all 0.8s ease;
+
+    .header-main__toggle {
+      .mobile-menu__icon {
+        display: none;
+      }
+
+      .mobile-menu__icon_close {
+        display: block;
+      }
+    }
+
+    .header-main__nav {
+      height: calc(100vh - 95px);
+      max-height: 100vh;
+      background-color: $color-white;
+    }
+
+    .header-main__nav-list {
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 80px;
+      padding-bottom: 20px;
+    }
+
+    .menu-item__link {
+      color: #0b0b0b;
+      font-weight: 600;
+      font-size: 25px;
+      font-family: 'Playfair Display',serif;
+      line-height: 1.6;
     }
   }
 }
