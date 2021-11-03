@@ -18,7 +18,7 @@
 
     @include media(tabletSmall) {
       grid-template-columns: 1fr;
-      grid-gap: 40px;
+      gap: 35px;
     }
   }
 
