@@ -31,6 +31,7 @@
 }
 
 .form-text {
+  align-self: start;
   font-size: 10px;
 }
 
@@ -53,7 +54,7 @@
   appearance: none;
 }
 
-.form-field:focus {
+.form-control:focus {
   border-color: #76b8ff;
   outline: none;
   box-shadow: 0 0 4px 2px #76b8ff;
@@ -154,14 +155,25 @@ small {
 .lost-form {
   padding: 25px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+
+  .form-field {
+    max-width: 270px;
+    height: auto;
+    margin-top: 8px;
+    padding: 9px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
 }
 
 .lost-button {
   margin-bottom: 25px;
   padding: 12px 0;
+  line-height: 1.5;
 }
 
 .lost-form .form-text {
+  margin-top: 4px;
   color: #0b0b0b;
   font-size: 13px;
 }

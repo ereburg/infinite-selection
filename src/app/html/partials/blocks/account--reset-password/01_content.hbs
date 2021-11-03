@@ -1,0 +1,24 @@
+<section class="container-center  mx-auto">
+  <p class="infinite-text lost-text">
+    Please enter your email address. You will receive a link to create a new password via email.
+  </p>
+
+  <form class="infinite-form lost-form infinite-form-validation" novalidate>
+    {{> blocks/shared/account-form
+      label="Email Address"
+      type="email"
+      id="Email"
+      aria="emailHelp"
+      textInvalid="Please enter a valid Email address."
+      textValid="Looks good!"
+    }}
+
+    <button type="submit" class="infinite-button login-button lost-button">Get New Password</button>
+    <a class="form-text" href="account--login.html">Log In</a>
+    <a class="form-text" href="home.html">&#8592; Back to Infinite Selection</a>
+  </form>
+
+</section>
+
+
+
