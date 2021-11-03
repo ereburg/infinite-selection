@@ -1,0 +1,14 @@
+<div class="form-group">
+  <input type="{{type}}" {{#if name}} name="{{name}}" {{/if}} class="form-control form-field"
+         id="exampleInput{{id}}"
+         aria-describedby="{{aria}}" placeholder="{{placeholder}}" required>
+  <small id="{{aria}}" class="form-text text-grey">
+    {{textSmall}}
+  </small>
+  <div class="invalid-feedback">
+    {{textInvalid}}
+  </div>
+  <div class="valid-feedback">
+    {{textValid}}
+  </div>
+</div>

@@ -78,5 +78,90 @@
         "price-sale": "330"
       }
     ]
+  },
+  "accountCreate": {
+    "forms": [
+      {
+        "type": "text",
+        "name": "Name",
+        "id": "Name",
+        "aria": "nameHelp",
+        "placeholder": "Name",
+        "textSmall": "Better to use a real name.",
+        "textInvalid": "Please enter a valid Name.",
+        "textValid": "Thats right!"
+      },
+      {
+        "type": "text",
+        "name": "Last Name",
+        "id": "LastName",
+        "aria": "lastNameHelp",
+        "placeholder": "Last Name",
+        "textSmall": "Better to use a real Last Name.",
+        "textInvalid": "Please enter a valid Last Name.",
+        "textValid": "Thats right!"
+      },
+      {
+        "type": "email",
+        "name": "Email",
+        "id": "Email1",
+        "aria": "emailHelp",
+        "placeholder": "E-mail Address",
+        "textSmall": "We'll never share your email with anyone else.",
+        "textInvalid": "Please enter a valid Email address.",
+        "textValid": "Looks good!"
+      },
+      {
+        "type": "phone",
+        "name": "Phone",
+        "id": "Phone",
+        "aria": "phoneHelp",
+        "placeholder": "Phone Number",
+        "textInvalid": "Please enter a valid Phone Number.",
+        "textValid": "Looks good!"
+      },
+      {
+        "type": "password",
+        "name": "Password",
+        "id": "Password1",
+        "aria": "passwordHelp",
+        "placeholder": "Password",
+        "textSmall": "Your Password requires at least 8 characters",
+        "textInvalid": "Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.",
+        "textValid": "Looks good!"
+      },
+      {
+        "type": "password",
+        "name": "Confirm Password",
+        "id": "Password1",
+        "aria": "passwordHelp",
+        "placeholder": "Confirm Password",
+        "textSmall": "Your Passwords must match.",
+        "textInvalid": "Your password doesn't seemed to be matched!",
+        "textValid": "Looks good!"
+      }
+    ]
+  },
+  "accountLogin": {
+    "forms": [
+      {
+        "type": "email",
+        "id": "Email1",
+        "aria": "emailHelp",
+        "placeholder": "E-mail",
+        "textSmall": "We'll never share your email with anyone else.",
+        "textInvalid": "Please enter a valid Email address.",
+        "textValid": "Looks good!"
+      },
+      {
+        "type": "password",
+        "id": "Password1",
+        "aria": "passwordHelp",
+        "placeholder": "Password",
+        "textSmall": "Your Password will'be carefuly saved, sleep well.",
+        "textInvalid": "Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.",
+        "textValid": "Looks good!"
+      }
+    ]
   }
 }

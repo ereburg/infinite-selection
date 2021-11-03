@@ -1,0 +1,27 @@
+{{#if create}}
+  {{#each accountCreate.forms}}
+    {{> blocks/shared/account-form}}
+  {{/each}}
+{{/if}}
+{{#if login}}
+  {{#each accountLogin.forms}}
+    {{> blocks/shared/account-form}}
+  {{/each}}
+{{/if}}
+{{#if create}}
+  <p class="form-paragraph">
+    Creating an account means you agree to our
+    <a class="form-links" href='terms-of-service.html'>Terms</a> and
+    <a class="form-links" href='privacy-policy.html'>Privacy Policy</a>
+  </p>
+{{/if}}
+
+<button type="submit" class="infinite-button login-button">{{textBtn}}</button>
+{{#if login}}
+  <a class="infinite-button login-button login-light-button" href='account--reset-password.html'>I Forgot E-mail or
+    Password</a>
+{{/if}}
+</form>
+</section>
+</main>
+

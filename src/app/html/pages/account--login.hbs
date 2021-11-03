@@ -3,46 +3,17 @@
 {{> layout/head page-title="Infinite Selection - LogIn Page"}}
 {{> blocks/header/header nav-menu=nav.header.home}}
 
-<main class="page-content__main">
-
-  <section class="container login-layout">
-
-    <h2 class="infinite-title text-center ">Login</h2>
-    <form class="infinite-form infinite-form-validation" novalidate>
-      <a class="infinite-link-dark login-link" href='account--create.html'>Create Account</a>
-      <div class="form-group">
-        <input type="email" class="form-control form-field" id="exampleInputEmail1"
-               aria-describedby="emailHelp" placeholder="E-mail" required>
-        <small id="emailHelp" class="form-text text-grey">We'll never share your email with anyone
-          else.</small>
-        <div class="invalid-feedback">
-          Please enter a valid Email address.
-        </div>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="form-group">
-        <input type="password" class="form-control form-field" id="exampleInputPassword1"
-               placeholder="Password" aria-describedby="passwordHelp" minlength="8" maxlength="20" required>
-        <small id="passwordHelp" class="form-text text-grey">Your Password will'be carefuly saved, sleep
-          well.</small>
-        <div class="invalid-feedback">
-          Your password must be 8-20 characters long,
-          contain letters and numbers, and must not contain spaces, special characters, or emoji.
-        </div>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <button type="submit" class="infinite-button login-button">Login</button>
-      <a class="infinite-button login-button login-light-button" href='account--reset-password.html'>I Forgot E-mail or
-        Password</a>
-    </form>
-
-  </section>
-
-</main>
+{{> blocks/account--create/01_intro
+          indent=true
+          title="Login"
+          href="account--create.html"
+          text="Create Account"
+}}
+{{> blocks/account--create/02_content
+          create=false
+          login=true
+          textBtn="Login"
+}}
 
 {{> blocks/footer/footer footer-nav=nav.footer.terms}}
 {{> layout/bottom }}

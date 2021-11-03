@@ -5,7 +5,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 70px auto;
+
+  .infinite-title {
+    text-align: center;
+  }
 }
 
 .infinite-form {
@@ -50,9 +53,31 @@
   appearance: none;
 }
 
+.form-field:focus {
+  border-color: #76b8ff;
+  outline: none;
+  box-shadow: 0 0 4px 2px #76b8ff;
+}
+
 small {
   font-weight: 300;
   font-size: 13px;
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  color: $color-invalid;
+  font-size: 80%;
+}
+
+.valid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  color: $color-valid;
+  font-size: 80%;
 }
 
 /* Кнопки форм */

@@ -3,102 +3,17 @@
 {{> layout/head page-title="Infinite Selection - Create Account"}}
 {{> blocks/header/header nav-menu=nav.header.home}}
 
-<main class="page-content__main">
-
-  <section class="container login-layout">
-
-    <h2 class="infinite-title text-center ">Create Account</h2>
-    <form class="infinite-form infinite-form-validation" novalidate>
-      <a class="infinite-link-dark login-link" href='account--login.html'>I Already Have an Account</a>
-      <div class="form-group">
-        <input type="text" name="Name" class="form-control form-field" id="exampleInputName"
-               aria-describedby="nameHelp" placeholder="Name" required>
-        <small id="nameHelp" class="form-text text-grey">
-          Better to use a real name.
-        </small>
-        <div class="invalid-feedback">
-          Please enter a valid Name.
-        </div>
-        <div class="valid-feedback">
-          Thats right!
-        </div>
-      </div>
-      <div class="form-group">
-        <input type="text" name="Last Name" class="form-control form-field" id="exampleInputLastName"
-               aria-describedby="lastNameHelp" placeholder="Last Name" required>
-        <small id="lastNameHelp" class="form-text text-grey">
-          Better to use a real Last Name.
-        </small>
-        <div class="invalid-feedback">
-          Please enter a valid Last Name.
-        </div>
-        <div class="valid-feedback">
-          Thats right!
-        </div>
-      </div>
-
-      <div class="form-group">
-        <input type="email" name="Email" class="form-control form-field" id="exampleInputEmail1"
-               aria-describedby="emailHelp" placeholder="E-mail Address" required>
-        <small id="emailHelp" class="form-text text-grey">
-          We'll never share your email with anyone else.
-        </small>
-        <div class="invalid-feedback">
-          Please enter a valid Email address.
-        </div>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="form-group">
-        <input type="phone" name="Phone" class="form-control form-field" id="exampleInputPhone"
-               aria-describedby="phoneHelp" placeholder="Phone Number" required>
-        <small id="phoneHelp" class="form-text text-grey">
-
-        </small>
-        <div class="invalid-feedback">
-          Please enter a valid Phone Number.
-        </div>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="form-group">
-        <input type="password" name="Password" class="form-control form-field" id="exampleInputPassword1"
-               placeholder="Password" aria-describedby="passwordHelp" minlength="8" maxlength="20" required>
-        <small id="passwordHelp" class="form-text text-grey">Your Password requires at least 8
-          characters</small>
-        <div class="invalid-feedback">
-          Your password must be 8-20 characters long,
-          contain letters and numbers, and must not contain spaces, special characters, or emoji.
-        </div>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="form-group">
-        <input type="password" name="Confirm Password" class="form-control form-field"
-               id="exampleInputPassword1" placeholder="Confirm Password" aria-describedby="passwordHelp"
-               minlength="8" maxlength="20" required>
-        <small id="passwordHelp" class="form-text text-grey">Your Passwords must match.</small>
-        <div class="invalid-feedback">
-          Your password doesn't seemed to be matched!
-        </div>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <p class="form-paragraph">
-        Creating an account means you agree to our
-        <a class="form-links" href='terms-of-service.html'>Terms</a> and
-        <a class="form-links" href='privacy-policy.html'>Privacy Policy</a>
-      </p>
-      <button type="submit" class="infinite-button login-button">Continue</button>
-    </form>
-
-  </section>
-
-</main>
+{{> blocks/account--create/01_intro
+        indent=true
+        title="Create Account"
+        href="account--login.html"
+        text="I Already Have an Account"
+}}
+{{> blocks/account--create/02_content
+        create=true
+        login=false
+        textBtn="Continue"
+}}
 
 {{> blocks/footer/footer }}
 {{> layout/bottom }}
