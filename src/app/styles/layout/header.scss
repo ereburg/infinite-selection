@@ -46,6 +46,47 @@
     justify-content: flex-end;
     @include flex-gap(10px);
   }
+
+  &__actions-item:nth-child(2) {
+    display: flex;
+  }
+
+  &__search {
+    max-width: 0;
+    caret-color: transparent;
+    color: $color-white;
+    border: none;
+    outline: none;
+    transition: all 0.8s ease-in-out;
+  }
+
+  &__actions-item:nth-child(2):hover {
+    position: relative;
+    height: 32px;
+    border: 1px solid #e3e3e3;
+    border-radius: 30px;
+
+    .btn-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      background-color: $color-white;
+      border-radius: 30px;
+    }
+
+
+    .header-main__search {
+      max-width: 170px;
+      padding: 0 10px;
+      caret-color: #ff0000;
+      color: $color-white;
+      background-color: #000000;
+      border-radius: 30px;
+      transition: all 0.8s ease-in-out;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
