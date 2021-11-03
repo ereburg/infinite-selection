@@ -1,0 +1,19 @@
+<main class="page-content__main {{#if indent}} page-content__indent{{/if}}">
+  <section class="authenticity-container">
+    <h1 class="authenticity-title">{{title}}</h1>
+    {{#if guarantee}}
+      {{> blocks/authenticity-guarantee/02_text}}
+    {{/if}}
+    {{#if service}}
+      {{> blocks/terms-of-service/01_text}}
+    {{/if}}
+    {{#if privacy}}
+      {{> blocks/privacy-policy/01_text}}
+    {{/if}}
+  </section>
+
+  {{> blocks/shared/action-section}}
+</main>
+
+
+
