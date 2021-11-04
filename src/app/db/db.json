@@ -163,5 +163,73 @@
         "textValid": "Looks good!"
       }
     ]
+  },
+  "carousel": {
+    "items": [
+      {
+        "img": "1.jpg",
+        "active": "active"
+      },
+      {
+        "img": "2.jpg"
+      },
+      {
+        "img": "3.jpg"
+      },
+      {
+        "img": "4.jpg"
+      },
+      {
+        "img": "5.jpg"
+      },
+      {
+        "img": "6.jpg"
+      },
+      {
+        "img": "7.jpg"
+      },
+      {
+        "img": "8.jpg"
+      },
+      {
+        "img": "9.jpg"
+      },
+      {
+        "img": "10.jpg"
+      }
+    ],
+    "slides": [
+      {
+        "num": "0",
+        "active": "active"
+      },
+      {
+        "num": "1"
+      },
+      {
+        "num": "2"
+      },
+      {
+        "num": "3"
+      },
+      {
+        "num": "4"
+      },
+      {
+        "num": "5"
+      },
+      {
+        "num": "6"
+      },
+      {
+        "num": "7"
+      },
+      {
+        "num": "8"
+      },
+      {
+        "num": "9"
+      }
+    ]
   }
 }

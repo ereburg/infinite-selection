@@ -1,0 +1,95 @@
+
+<main class="page-content__main">
+  <section class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {{#each carousel.slides}}
+          {{> blocks/shared/carousel-slide target="carouselExampleIndicators"}}
+        {{/each}}
+      </ol>
+      <div class="carousel-inner">
+        {{#each carousel.items}}
+          {{> blocks/shared/carousel-item}}
+        {{/each}}
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <section class="container sneakers-description">
+    <h2 class="infinite-header text-center works-title">Adidas 350 Clay</h2>
+    <p class="infinite-text description-line">
+      Condition: VNDS
+      <span class="condition-text-complimentary">$340 Value</span>
+    </p>
+    <p class="condition-text-complimentary description-cost">
+      4 DAYS: $60 <br>
+      8 DAYS: $110
+    </p>
+    <p class="infinite-header-small description-subheader">
+      Choose a Way to Rent
+    </p>
+    <button class="infinite-button button-white description-link">One Time Rental</button>
+    <div class="description-meta">
+      <p class="infinite-text description-meta-item">
+        <span class="condition-text-main">SKU</span>
+        <span class="condition-text-complimentary">EG7490</span>
+      </p>
+      <p class="infinite-text description-meta-item">
+        <span class="condition-text-main">RETAIL PRICE</span>
+        <span class="condition-text-complimentary">$220</span>
+      </p>
+      <p class="infinite-text description-meta-item">
+        <span class="condition-text-main">COLORWAY</span>
+        <span class="condition-text-complimentary">CLAY/CLAY/CLAY</span>
+      </p>
+      <p class="infinite-text description-meta-item">
+        <span class="condition-text-main">RELEASE DATE</span>
+        <span class="condition-text-complimentary">03/30/2019</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="container rent-works text-center">
+    <h2 class="infinite-header works-title">Our Promise</h2>
+    <div class="rent-works-item">
+      <h4 class="infinite-header-small works-header text-center ">No-Stress Insurance</h4>
+      <p class="infinite-text text-grey mb-0">
+        The $5 fee covers slips, spills and general clumsiness
+      </p>
+    </div>
+    <div class="rent-works-item">
+      <h4 class="infinite-header-small works-header text-center">100% Authentic Sneakers</h4>
+      <p class="infinite-text text-grey">
+        We guarantee every pair of sneakers you receive from us are 100% authentic or your money back
+      </p>
+    </div>
+    <div class="rent-works-item">
+      <h4 class="infinite-header-small works-header text-center">Free Returns</h4>
+      <p class="infinite-text text-grey">
+        We provide a prepaid label. Plus the cleaning’s on us
+      </p>
+    </div>
+  </section>
+
+  <section class="container rent-exclusives">
+    <div class="releases-line">
+      <h3 class="infinite-header">
+        You may also like
+      </h3>
+      <a class="infinite-link-dark" href='browse-sneakers.html'>View All</a>
+    </div>
+    <div class="releases-container">
+      {{#each product-single.products}}
+        {{>blocks/shared/product-card}}
+      {{/each}}
+    </div>
+  </section>
+
+</main>

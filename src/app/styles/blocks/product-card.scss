@@ -1,0 +1,71 @@
+
+.releases-item {
+  font-family: "Roboto", serif;
+}
+
+.releases-item-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.releases-item-link:hover {
+  transform: scale(1.1);
+}
+
+.releases-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  //max-width: 150px;
+  //height: 140px;
+}
+
+.releases-section {
+  .releases-image {
+    max-width: 150px;
+    height: 140px;
+  }
+}
+
+.releases-item p {
+  margin-bottom: 0;
+}
+
+.releases-title {
+  color: #0b0b0b;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.releases-value {
+  margin-top: 4px;
+  color: #a7a7a7;
+  font-size: 13px;
+}
+
+.releases-cost {
+  margin-top: 6px;
+  color: #0b0b0b;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 992px) {
+  .releases-item {
+    width: calc(33.333% - 30px);
+    margin: 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .releases-item {
+    width: 50%;
+  }
+
+  .releases-image {
+    width: 120px;
+  }
+}

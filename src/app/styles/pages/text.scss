@@ -33,6 +33,7 @@
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   text-transform: capitalize;
+  line-height: 1.2;
 }
 
 .infinite-text {
@@ -50,6 +51,11 @@
 .text-dark-bold {
   color: #0b0b0b;
   font-weight: 800;
+}
+
+.text-center {
+  align-self: center;
+  text-align: center;
 }
 
 /* Links */

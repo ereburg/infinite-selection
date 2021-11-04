@@ -10,6 +10,11 @@
 }
 
 .intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: -10px;
+  margin-left: -10px;
   padding: 70px 0;
 }
 
@@ -19,12 +24,11 @@
   display: flex;
   flex: 1 1 370px;
   flex-direction: column;
-  justify-content: center;
   height: 100%;
-  padding: 20px 0 0;
 }
 
 .description-title {
+  margin-top: 0;
   margin-bottom: 20px;
   font-size: 50px;
   line-height: 62px;
@@ -160,71 +164,22 @@
 }
 
 .releases-line {
+  display: flex;
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
 }
 
 .releases-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  grid-gap: 35px 15px;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   margin: 70px 0 0;
-}
-
-.releases-item {
-  font-family: "Roboto", serif;
-}
-
-.releases-item-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 15px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.releases-item-link:hover {
-  transform: scale(1.1);
-}
-
-.releases-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  //max-width: 150px;
-  //height: 140px;
-}
-
-.releases-item p {
-  margin-bottom: 0;
-}
-
-.releases-title {
-  color: #0b0b0b;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.releases-value {
-  margin-top: 4px;
-  color: #a7a7a7;
-  font-size: 13px;
-}
-
-.releases-cost {
-  margin-top: 6px;
-  color: #0b0b0b;
-  font-size: 12px;
 }
 
 @media screen and (max-width: 992px) {
   main {
     overflow: hidden;
-  }
-
-  .releases-item {
-    margin: 0 0 15px;
   }
 
   .description-column {
@@ -253,9 +208,9 @@
   }
 }
 
-@media screen and (max-width: 568px) {
-  .releases-image {
-    width: 120px;
+@media screen and (max-width: 668px) {
+  .releases-line .infinite-header {
+    font-size: 22px;
   }
 }
 
@@ -277,6 +232,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 950px;
+  padding: 0 15px;
 }
 
 .homepage-authenticity-text {
@@ -341,6 +298,7 @@
 .clean-text {
   color: #0b0b0b;
   text-transform: capitalize;
+  font-size: 32px;
 }
 
 .clean-image {
@@ -373,10 +331,57 @@
   }
 }
 
+/* action Section */
+
+.home {
+  .action {
+    padding-bottom: 70px;
+    border-bottom: 1px solid #e2e2e2;
+  }
+}
+
 /* work-cycle Section / Как мы работаем */
 
 .work-cycle {
-  padding: 70px 15px;
+  padding: 0 15px 70px 15px;
+}
+
+.works,
+.testimonials {
+  margin-top: 48px;
+}
+
+.works-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.works-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  flex: 0 1 33.33%;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.home {
+  .rent-works {
+    padding-bottom: 0;
+  }
+
+  .works-header {
+    margin-bottom: 16px;
+  }
+
+  .action-text {
+    font-size: 40px;
+  }
+}
+
+.works-main-title {
+  margin-bottom: 24px;
 }
 
 .work-scheme-item,
@@ -405,9 +410,13 @@
 
 /* Advantages section / Наши преимущщества */
 
-.advantages-item {
-  display: grid;
-  grid-template-rows: max-content 110px 57px;
+
+.advantages-item-text {
+  margin-bottom: 16px;
+}
+
+.advantages-image {
+  object-fit: cover;
 }
 
 .subheader-text {
@@ -426,9 +435,12 @@
 .advantages-item-action {
   display: flex;
   align-items: center;
+  margin-top: 16px;
 }
 
 .advantages-list {
+  flex: 1 1 auto;
+  margin-bottom: 16px;
   padding-left: 15px;
 }
 
@@ -458,9 +470,75 @@
   width: 100%;
 }
 
+
+@media (max-width: 1200px) {
+  .advantages-item-action {
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .home {
+    .rent-works {
+      grid-template-rows: 98px repeat(3, max-content);
+      grid-template-columns: 1fr;
+    }
+
+    .rent-works-item {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .rent-works-item:first-of-type {
+      grid-row: 2 / 3;
+    }
+
+    .rent-works-item:nth-of-type(2) {
+      grid-row: 3 / 4;
+      padding-top: 35px;
+    }
+
+    .rent-works-item:nth-of-type(3) {
+      grid-row: 4 / 5;
+      padding-top: 35px;
+    }
+  }
+
+  .advantages-item-action {
+    margin-top: auto;
+  }
+
+  .works-items {
+    justify-content: center;
+  }
+
+  .works-item {
+    flex: 0 1 50%;
+  }
+
+  .works {
+    .works-item:last-child {
+      display: none;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .advantages-item {
     grid-template-rows: repeat(3, max-content);
+  }
+
+  .home {
+    .works-items {
+      flex-direction: column;
+      max-width: 400px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .works-item {
+      flex: 0 1 100%;
+    }
   }
 }
 
