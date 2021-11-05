@@ -12,6 +12,7 @@
 .intro {
   display: flex;
   flex-wrap: wrap;
+  gap: 15px;
   align-items: center;
   margin-right: -10px;
   margin-left: -10px;
@@ -24,6 +25,7 @@
   display: flex;
   flex: 1 1 370px;
   flex-direction: column;
+  justify-content: center;
   height: 100%;
 }
 
@@ -343,11 +345,10 @@
 /* work-cycle Section / Как мы работаем */
 
 .work-cycle {
-  padding: 0 15px 70px 15px;
+  padding: 70px 15px;
 }
 
-.works,
-.testimonials {
+.works:nth-child(2) {
   margin-top: 48px;
 }
 
@@ -355,6 +356,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .works-item {
@@ -363,14 +366,10 @@
   max-width: 400px;
   flex: 0 1 33.33%;
   margin: 20px 0;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
 .home {
-  .rent-works {
-    padding-bottom: 0;
-  }
-
   .works-header {
     margin-bottom: 16px;
   }
