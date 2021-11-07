@@ -231,5 +231,39 @@
         "num": "9"
       }
     ]
+  },
+  "cleaning": {
+    "sections": [
+      {
+        "num": "1",
+        "header": "Scrubbing the shoes",
+        "text": "We scrub every inch of these shoes so they come out spotless and looking like new."
+      },
+      {
+        "num": "2",
+        "header": "Rinsing the Laces",
+        "text": "Each shoelace is rinsed clean with our solution."
+      },
+      {
+        "num": "3",
+        "header": "Washing the Insoles",
+        "text": "We wash the insoles to ensure they look and feel fresh."
+      },
+      {
+        "num": "4",
+        "header": "Lint Removal",
+        "text": "Lint is removed for a crisp inner lining."
+      },
+      {
+        "num": "5",
+        "header": "Smoothing the Creases",
+        "text": "We carefully smooth out creases to make the shoes look like new."
+      },
+      {
+        "num": "6",
+        "header": "Grading the Sneakers",
+        "text": "Our team of trained specialists assesses each pair of GOAT Clean shoes and assigns scores to specific areas. The scores are then combined for an overall grade."
+      }
+    ]
   }
 }

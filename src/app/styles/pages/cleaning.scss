@@ -6,9 +6,6 @@
 
 .cleaning-banner {
   margin: 30px 0 0;
-}
-
-.cleaning-banner .col-12 {
   padding: 0;
 }
 
@@ -28,9 +25,11 @@
 
 .cleaning-container {
   margin: 100px 0 0;
+  border-bottom: 1px solid transparent;
 }
 
 .cleaning-text-container {
+  max-width: 66.67%;
   margin: 0 auto;
   margin-bottom: 50px;
   text-align: center;
@@ -44,6 +43,7 @@
 
 .cleaning-header {
   margin-bottom: 13px;
+  line-height: 1.2;
 }
 
 /* Добавляем изображения */
@@ -96,6 +96,10 @@
 }
 
 @media screen and (max-width: 576px) {
+  .cleaning-text-container {
+    max-width: 100%;
+  }
+
   .cleaning-video {
     height: 50vmin;
     max-height: 268px;
