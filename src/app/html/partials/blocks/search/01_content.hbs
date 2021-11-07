@@ -1,0 +1,28 @@
+
+<main class="page-content__main">
+  <section class="container search">
+    <form class="search-form">
+      <div class="form-group search-input-container">
+        <input type="text" class="form-control search-input" id="exampleInputText"
+               placeholder="Air Jordan 1" autocomplete="off">
+      </div>
+      <button type="submit" class="button-search">Submit</button>
+    </form>
+    <div class="search-section">
+      <div class="sneakers-browse-container">
+        {{#each home.products}}
+          {{>blocks/shared/product-card}}
+        {{/each}}
+        {{#each product-single.products}}
+          {{>blocks/shared/product-card}}
+        {{/each}}
+        {{#each home.products}}
+          {{>blocks/shared/product-card}}
+        {{/each}}
+        {{#each product-single.products}}
+          {{>blocks/shared/product-card}}
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</main>

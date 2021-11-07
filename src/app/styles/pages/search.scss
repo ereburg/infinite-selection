@@ -1,5 +1,6 @@
 .search {
   margin-top: 70px;
+  padding: 0 15px;
 }
 
 .search-form {
@@ -23,7 +24,9 @@
 .search-input {
   width: 100%;
   max-width: 870px;
+  height: 66px;
   margin: 0 auto;
+  padding: 6px 12px;
   color: #0b0b0b85;
   font-weight: 500;
   font-size: 35px;
@@ -43,6 +46,7 @@
   color: #0b0b0b;
   font-weight: 500;
   font-size: 13px;
+  line-height: inherit;
   border: 0;
   cursor: pointer;
   opacity: 0;
@@ -59,38 +63,38 @@
 
 .sneakers-browse-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   margin: 0;
-}
 
-.browse-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .releases-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 
-.browse-item-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 15px;
-  transition: all 0.5s ease;
-}
+  .releases-item-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    transition: all 0.5s ease;
+  }
 
-.browse-item-link:hover {
-  transform: scale(1.1);
-}
+  .releases-item-link:hover {
+    transform: scale(1.1);
+  }
 
-.browse-image {
-  width: 100%;
-  max-width: 200px;
-  height: 100%;
-  object-fit: contain;
-}
+  .releases-image {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    object-fit: contain;
+  }
 
-.browse-item p {
-  margin: 0;
+  .releases-item p {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -102,10 +106,10 @@
 @media screen and (max-width: 376px) {
   .sneakers-browse-container {
     padding: 0;
-  }
 
-  .browse-item-link {
-    padding: 10px;
+    .releases-item-link {
+      padding: 10px;
+    }
   }
 }
 
