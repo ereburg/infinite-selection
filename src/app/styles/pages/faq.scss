@@ -12,6 +12,10 @@ body {
   font-family: "Roboto", sans-serif;
   // background: rgb(255, 255, 255);
   background: rgb(29, 30, 31);
+
+  .container {
+    padding: 0 15px;
+  }
 }
 
 .faq-container {
@@ -47,6 +51,7 @@ body {
   margin: 0 0 27px;
   font-weight: 300;
   font-size: 28px;
+  line-height: 1.2;
 }
 
 .faq-search {
@@ -54,6 +59,7 @@ body {
   padding: 20px 32px 21px 59px;
   color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
+  line-height: inherit;
   // background: rgba(0, 0, 0, 0.089);
   background: rgba(255, 255, 255, 0.144);
   border: none;
@@ -161,6 +167,7 @@ body {
   color: #000000;
   font-weight: 300;
   font-size: 18px;
+  line-height: 1.2;
 }
 
 .meta-content-text {
@@ -204,6 +211,7 @@ body {
 
 .faq-footer .faq-title {
   font-size: 24px;
+  line-height: 1.2;
 }
 
 .faq-list {
@@ -235,6 +243,7 @@ body {
 
 .faq-socials {
   display: flex;
+  margin-bottom: 16px;
 }
 
 .faq-socials-item {
