@@ -30,9 +30,32 @@
         <div class="header-main__actions-item">
           <a class="btn-inline" href="account--login.html">Login</a>
         </div>
-        <div class="header-main__actions-item _ml-1">
-          <input class="header-main__search" type="text" placeholder="Search...">
-          <a href="search.html" class="btn-icon">
+        <div class="header-main__actions-item header-search js-header-search">
+          <div class="header-search__opened js-header-search__dropdown">
+            <div class="header-search__inner">
+              <form>
+                <div class="header-search__header">
+                  <div class="header-search__field">
+                    <label class="header-search__label">
+                      <input class="header-search__input search-input js-header-search__input" type="search" name="q" autocomplete="off" placeholder="Search..">
+                    </label>
+                  </div>
+                  <button class="header-search__close js-header-search__close" type="button"><span class="icon-close"></span></button>
+                </div>
+                <div class="header-search__results js-header-search__results">
+                  <ul class="header-search__results-list">
+                    <li class="header-search__results-item"><a class="header-search__results-link" href="product-single.html">Adidas 350 Clay</a></li>
+                    <li class="header-search__results-item"><a class="header-search__results-link" href="how-we-clean.html">How to clean</a></li>
+                    <li class="header-search__results-item"><a class="header-search__results-link" href="ways-to-rent.html">Ways to rent</a></li>
+                    <li class="header-search__results-item"><a class="header-search__results-link" href="account--create.html">Create account</a></li>
+                    <li class="header-search__results-item"><a class="header-search__results-link" href="privacy-policy.html">Privacy policy</a></li>
+                    <li class="header-search__results-item"><a class="header-search__results-link" href="terms-of-service.html">Terms of service</a></li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+          </div>
+          <a href="#" class="header-search__btn btn-icon js-header-search__open">
             <svg aria-hidden="true" focusable="false" role="img" width="16" height="16" viewBox="0 0 20 20"
                  fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
