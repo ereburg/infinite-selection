@@ -1,3 +1,3 @@
-import { app } from '@app/shared/app'
+import { app } from '@app/core/app'
 
-app()
+;(() => app())()
