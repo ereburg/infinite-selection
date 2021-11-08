@@ -1,23 +1,65 @@
+.page-browse {
+  .container {
+    padding: 0 15px;
+  }
+}
+
 .browse {
   margin: 70px auto;
 }
 
+.browse-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 .browse-filter {
+  flex: 0 0 25%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .browse-top-line {
   margin-bottom: 45px;
 }
 
+.browse-main {
+  flex: 0 0 75%;
+  padding: 0 15px;
+
+  .infinite-header {
+    margin-top: 0;
+  }
+}
+
 .browse-main-top {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  padding: 0 15px;
 }
 
 .browse p {
   margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  .browse-filter {
+    max-width: 480px;
+    flex: 0 0 100%;
+  }
+
+  .browse-main {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .browse-filter {
+    max-width: 100%;
+  }
 }
 
 /* Контейнеры книопок и фильтрации */
@@ -38,6 +80,7 @@
   border-radius: 0;
   outline: 0;
   box-shadow: 0;
+  text-align: center;
 }
 
 .brands-button {
@@ -70,10 +113,33 @@
   box-shadow: none;
 }
 
+.btn-group > .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.btn-group-toggle > .btn input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+
 /* Календарь */
 
 .form-group.browse-select {
   max-width: 100%;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.input-group-append {
+  display: flex;
 }
 
 #datetimepicker {
@@ -91,7 +157,17 @@
   outline: none;
 }
 
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+}
+
 input.datetimepicker-input {
+  flex: 1 1 auto;
+  width: 1%;
+  height: 36px;
+  padding: 6px 12px;
   background: #ffffff;
   border: 1px solid #a7a7a7dc;
   border-radius: 0;
@@ -102,3 +178,9 @@ input.datetimepicker-input:focus {
   outline: none;
   box-shadow: none;
 }
+
+.sneakers-browse-container {
+  padding: 0 15px;
+}
+
+
