@@ -1,5 +1,5 @@
 .header-main {
-  $side-base: 135px;
+  $side-base: 125px;
 
   position: sticky;
   top: 0;
@@ -21,7 +21,8 @@
   }
 
   &__brand {
-    flex: 0 1 $side-base;
+    flex: 0 1;
+    margin-right: 16px;
   }
 
   &__toggle {
@@ -43,7 +44,7 @@
     display: flex;
     flex: 0 1 $side-base;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     @include flex-gap(10px);
   }
 
@@ -87,6 +88,16 @@
       transition: all 0.8s ease-in-out;
     }
   }
+
+  &__actions-item:last-child {
+    .btn-icon {
+      padding: 8px 0;
+    }
+
+    path {
+      fill: #000000;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
@@ -124,6 +135,7 @@
       display: flex;
       justify-content: center;
       order: 2;
+      margin-right: 0;
     }
 
     &__nav {
