@@ -29,7 +29,7 @@
     display: none;
   }
 
-  .mobile-menu__btn {
+  .toggle-menu__btn {
     background-color: transparent;
     border: 1px solid transparent;
   }
@@ -198,7 +198,7 @@
       display: block;
       order: 3;
 
-      .mobile-menu__btn {
+      .toggle-menu__btn {
         display: flex;
         align-items: center;
 
@@ -207,7 +207,7 @@
           height: 17px;
         }
 
-        .mobile-menu__icon_close {
+        .toggle-menu__close {
           display: none;
         }
       }
@@ -249,11 +249,11 @@
     transition: all 0.8s ease;
 
     .header-main__toggle {
-      .mobile-menu__icon {
+      .toggle-menu__open {
         display: none;
       }
 
-      .mobile-menu__icon_close {
+      .toggle-menu__close {
         display: block;
       }
     }
