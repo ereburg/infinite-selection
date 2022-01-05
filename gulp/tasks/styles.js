@@ -3,7 +3,7 @@ import sourcemaps from 'gulp-sourcemaps'
 import rename from 'gulp-rename'
 import gulpSass from 'gulp-sass'
 import sass from 'sass'
-import Fibers from 'fibers'
+// import Fibers from 'fibers'
 import tilde from 'node-sass-tilde-importer'
 import cleanCSS from 'gulp-clean-css'
 import autoprefixer from 'autoprefixer'
@@ -27,7 +27,7 @@ export const styles = () => {
           SCSS.sync({
             importer: tilde,
             includePaths: ['./node_modules'],
-            fiber: Fibers,
+            // fiber: Fibers,
           }).on('error', SCSS.logError)
         )
         .pipe(postcss(PostCSSPlugins))
@@ -56,7 +56,7 @@ export const styles = () => {
           SCSS.sync({
             importer: tilde,
             includePaths: ['./node_modules'],
-            fiber: Fibers,
+            // fiber: Fibers,
           }).on('error', SCSS.logError)
         )
         .pipe(postcss(PostCSSPlugins))

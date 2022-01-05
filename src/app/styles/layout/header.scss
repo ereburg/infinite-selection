@@ -37,6 +37,7 @@
   &__nav-list {
     display: flex;
     align-items: center;
+
     @include flex-gap(25px);
   }
 
@@ -45,10 +46,12 @@
     flex: 0 1 $side-base;
     align-items: center;
     justify-content: space-between;
+
     @include flex-gap(10px);
   }
 
   .header-search {
+    position: relative;
     display: flex;
   }
 
@@ -62,11 +65,11 @@
   }
 
   .header-search__opened {
-    display: none;
     position: absolute;
     top: 100%;
-    right: 25px;
+    right: 0;
     z-index: 10001;
+    display: none;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
@@ -92,11 +95,11 @@
 
   .header-search__input {
     display: block;
-    width: 100%;
+    width: clamp(5rem, 12vw, 230px);
     height: auto;
     font-size: 20px;
+    font-family: "Playfair Display", serif;
     text-align: start;
-    font-family: Playfair Display, serif;
   }
 
   .search-input::-ms-clear {
@@ -114,10 +117,10 @@
     justify-content: center;
     width: 25px;
     height: 25px;
-    transform: translateY(-50%);
     background-color: transparent;
-    cursor: pointer;
     border: none;
+    transform: translateY(-50%);
+    cursor: pointer;
   }
 
   .icon-close {
@@ -130,11 +133,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    content: "";
     display: block;
     width: 14px;
     height: 1.5px;
     background-color: #7e7e7e;
+    content: "";
   }
 
   .icon-close::before {
@@ -161,10 +164,10 @@
   }
 
   .header-search__results-link {
-    font-size: 18px;
-    line-height: 1.2;
     color: #7e7e7e;
+    font-size: 18px;
     font-family: Playfair Display, serif;
+    line-height: 1.2;
   }
 
   .header-search__results-link:hover {
@@ -265,9 +268,9 @@
     }
 
     .header-main__nav-list {
-      height: 100%;
       flex-direction: column;
       justify-content: space-between;
+      height: 100%;
       padding-top: 80px;
       padding-bottom: 20px;
     }
@@ -276,7 +279,7 @@
       color: #0b0b0b;
       font-weight: 600;
       font-size: 25px;
-      font-family: 'Playfair Display',serif;
+      font-family: "Playfair Display", serif;
       line-height: 1.6;
     }
   }
